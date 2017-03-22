@@ -79,3 +79,18 @@ background-color: #f1f1f1;
 }
 
 
+footer{
+    padding: 0.5em;
+    color:#ffffff;
+    background-color:#000000;
+    clear: left;
+    text-align: center;
+}
+
+
+#nav img{
+   padding: 10px;
+    width:110px;
+    height:auto;
+
+}
