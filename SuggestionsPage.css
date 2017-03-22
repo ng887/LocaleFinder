@@ -1,0 +1,32 @@
+body
+{
+	background-color: #d9b3ff;
+	margin-top: 4%;
+	font-size: 1.3em;
+
+
+}
+h2
+{
+	color: #cc0066;
+}
+#suggestions,#crime,#schools,#grocery,#transport,#income,#houses
+{
+	text-align: center;
+	margin-top: 3%;
+}
+@media only screen and (max-device-width:450px) 
+{
+	#suggestions,#crime,#schools,#grocery,#transport,#income,#houses
+	{
+		font-size:2em;
+	}
+}
+@media only screen and (min-device-width:450px) and (max-device-width:700px)
+{
+	#suggestions,#crime,#schools,#grocery,#transport,#income,#houses
+	{
+		font-size:1.5em;
+	}
+}
+
