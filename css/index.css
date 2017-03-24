@@ -49,6 +49,11 @@
 #descr h2 {
   text-align: center;
 }
+/*added by Rashmitha*/
+p 
+{
+    text-align: center;
+}
 #start {
   width: 100%;
 }
