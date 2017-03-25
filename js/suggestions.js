@@ -18,7 +18,7 @@ if (survey.kids === "YES") {
 
         //crime
         $('#area' + i).append('<div id="crime"></div>');
-        $('#area' + i).find('div#crime').append('<h4 class="suggestions">No. of crimes(per 1000K): ' + safeArea.crimeCount + '</h4>');
+        $('#area' + i).find('div#crime').append('<h4 class="suggestions">No. of crimes(per 100K): ' + safeArea.crimeCount + '</h4>');
 
         //schools
         $('#area' + i).append('<div id="schools"></div>');
@@ -47,7 +47,7 @@ function getCrimeDetails() {
         { crimeCount: '3,903', area: 'South Lake Union' },
         { crimeCount: '3,749', area: 'Downtown' },
         { crimeCount: '7,153', area: 'University District' },
-        { crimeCount: '2,448', area: 'Queens Anne' },
+        { crimeCount: '2,448', area: 'Queen Anne' },
         { crimeCount: '3,292', area: 'Fremont' }
     ];
     return crimeRecords;
