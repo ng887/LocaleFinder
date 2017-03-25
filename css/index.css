@@ -2,28 +2,17 @@
 * {
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 /*#main {
-=======
-#main {
->>>>>>> origin/master
   padding: 10px;
   background-image: url("../image/seattle.jpg");
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-<<<<<<< HEAD
 }*/
 /* modified by neha */
 .indexPageAction1,.indexPageAction2,.indexPageAction3 { /*modified by Rashmitha*/
   background-color: #FDB116;
-=======
-}
-/* modified by neha */
-.indexPageAction {
-  background-color: #4CAF50;
->>>>>>> origin/master
   border: none;
   color: white;
   padding: 15px 32px;
@@ -45,25 +34,18 @@
   height: auto;
   padding: 10px;
 }
-<<<<<<< HEAD
 /*added by Rashmitha*/
 img
 {
     width: 100%;
 }
-=======
->>>>>>> origin/master
 /* nesting modified by neha */
 #descr {
   margin: 10px;
   padding: 10px;
   font-family: 'Muli', sans-serif;
   font-size: 16px;
-<<<<<<< HEAD
   color: #000000;
-=======
-  color: white;
->>>>>>> origin/master
 }
 #descr h1 {
   font-size: 30px;
@@ -81,14 +63,9 @@ p
   width: 100%;
 }
 /* nesting modified by neha */
-<<<<<<< HEAD
 
 #startbtn {
   background-color: #FDB116;
-=======
-#startbtn {
-  background-color: #4CAF50;
->>>>>>> origin/master
   border: none;
   color: white;
   padding: 15px 32px;
@@ -137,11 +114,7 @@ p
   padding: 10px;
   font-family: 'Muli', sans-serif;
   font-size: 16px;
-<<<<<<< HEAD
   color: #000000;
-=======
-  color: white;
->>>>>>> origin/master
   display: inline-block;
   margin: 10px;
 }
@@ -152,7 +125,6 @@ p
 .feature h2 {
   text-align: center;
 }
-<<<<<<< HEAD
 /* start add by Rashmitha */
 .indexPageAction1
 {
@@ -167,8 +139,6 @@ p
   margin-left: 25%;
 }
 /*end add by Rashmitha*/
-=======
->>>>>>> origin/master
 @media only screen and (min-width: 768px) {
   #startbtn {
     margin-left: 40%;
