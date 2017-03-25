@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Questionaire</title>
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+  <!-- This is the questionaire slider(main) container -->
+  <div class="questionSlider">
+    <!-- left and right arrows -->
+      <button id = "leftArrow" class="left-arrow" onclick="plusDivs(-1)"><i class="fa fa-angle-double-left"></i></button>
+      <button id = "rightArrow" class="right-arrow" onclick="plusDivs(1)"><i class="fa fa-angle-double-right"></i></button>
+      <!-- questions section(sub container) -->
+      <div class="slider">
+        <h1>What activities you like to do ?</h1>
+        <section class= "options">
+          <!--Modified by rachel--><!-- Start Modified by neha-->
+          <button class= "q1 selector" value="Hiking">Hiking</button>
+          <button class= "q1 selector" value="Swimming">Swimming</button>
+          <button class= "q1 selector" value="Travelling">Travelling</button>
+          <button class= "q1 selector" value="NA"> N/A </button>
+          <!--end-->
+        </section>
+      </div>
+
+      <div class="slider">
+         <h1>Do you have kids ?</h1>
+         <section class= "options">
+            <!--Modified by rachel-->
+           <button class= "q2 selector" value="YES">YES</button>
+           <button class= "q2 selector" value="NO">NO </button>
+           <button class= "q2 selector" value="NA"> N/A </button>
+            <!--end-->
+         </section>
+      </div>
+    <div class="slider">
+     <h1>Select your income range ?</h1>
+     <section class= "options">
+        <!--Modified by rachel-->
+       <button class= "q3 selector" value="10-50">10-50</button>
+       <button class= "q3 selector" value="50-100">50-100</button>
+       <button class= "q3 selector" value="100-150">100-150</button>
+       <button class= "q3 selector" value="NA"> N/A </button>
+        <!--end-->
+     </section>
+    </div>
+    <div class="slider">
+      <h1> How often you use public transportion ?</h1>
+      <section class= "options">
+         <!--Modified by rachel-->
+         <button class= "q4 selector" value="DAILY">DAILY</button>
+         <button class= "q4 selector" value="ONCE A WEEK">ONCE A WEEK</button>
+         <button class= "q4 selector" value="FEW DAYS IN A WEEK">FEW DAYS IN A WEEK</button>
+         <button class= "q4 selector" value="NA"> N/A </button>
+         <!--end-->
+      </section>
+    </div>
+    <!-- end Modified by neha-->
+    <!--start add by neha-->
+    <div class="slider">
+      <h1> Do you want to submit?</h1>
+      <section class= "options">
+        <a href="./suggestionsPage.html"><button class= "submit selector" value="submit">SUBMIT</button>
+      </section>
+    </div>
+  </div>
+  <!--end add by neha-->
+  <script type="text/javascript" src = "../js/slider.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+/* added by neha */
+* {
+  box-sizing: border-box;
+}
+/*#main {
+  padding: 10px;
+  background-image: url("../image/seattle.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+/* modified by neha */
+.indexPageAction1,.indexPageAction2,.indexPageAction3 { /*modified by Rashmitha*/
+  background-color: #FDB116;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 200px;
+  transition: all 0.5s;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+/* added by neha */
+#nav img {
+  width: 110px;
+  height: auto;
+  padding: 10px;
+}
+/*added by Rashmitha*/
+img
+{
+    width: 100%;
+}
+/* nesting modified by neha */
+#descr {
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+#descr h1 {
+  font-size: 30px;
+  text-align: center;
+}
+#descr h2 {
+  text-align: center;
+}
+/*added by Rashmitha*/
+p 
+{
+    text-align: center;
+}
+#start {
+  width: 100%;
+}
+/* nesting modified by neha */
+
+#startbtn {
+  background-color: #FDB116;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 200px;
+  transition: all 0.5s;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+#startbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#startbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#startbtn:hover span {
+  padding-right: 25px;
+}
+#startbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#features {
+  margin-top: 50px;
+  margin-bottom: 200px;
+  padding: 10px;
+  display: flex;
+}
+/* added by neha */
+.feature {
+  padding: 10px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  display: inline-block;
+  margin: 10px;
+}
+.feature h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.feature h2 {
+  text-align: center;
+}
+/* start add by Rashmitha */
+.indexPageAction1
+{
+  margin-left: 20%;
+}
+.indexPageAction2
+{
+  margin-left: 22%;
+}
+.indexPageAction3
+{
+  margin-left: 25%;
+}
+/*end add by Rashmitha*/
+@media only screen and (min-width: 768px) {
+  #startbtn {
+    margin-left: 40%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #suggesbtn {
+    margin-top: 50px;
+  }
+  #findbtn {
+    margin-top: 50px;
+  }
+  #compbtn {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #suggestion {
+    width: 30%;
+  }
+  #find {
+    width: 30%;
+  }
+  #comparation {
+    width: 30%;
+  }
+}
