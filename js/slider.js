@@ -20,22 +20,29 @@ $(function(){
   var survey={"activity":"","kids":"","income":"","transportation":""};
   $(".q1").click(function(){
     survey.activity=$(this).attr("value");
-  });
-
+   });
+  
   //question2
   $(".q2").click(function(){
-     survey.kids=$(this).attr("value");
+     survey.kids=$(this).attr("value");     
    });
  //  //QUESTION3
   $(".q3").click(function(){
     survey.income=$(this).attr("value");
-  });
+   });
 
  //  //question4
   $(".q4").click(function(){
-    survey.transportation=$(this).attr("value");
-    console.log(survey);
+    survey.transportation=$(this).attr("value"); 
+ });
+
+  //add by neha 
+   $(".submit").click(function(){
+   console.log(survey);
+   localStorage.setItem('survey', JSON.stringify(survey));
   });
+  // end neha
 });
 //end rachel
+
 
