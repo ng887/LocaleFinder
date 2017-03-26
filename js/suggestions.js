@@ -3,6 +3,16 @@
 var retrievedObject = localStorage.getItem('survey');
 var survey = JSON.parse(retrievedObject);
 //add by rachel
+/* queations to cretirion mapping explaination:
+1)if user have kis, give top three ares with lowest crime and highest shcool rate ctrdit
+2)if user use public transportation daily or a fews time a week, give top three areas with the most bustop
+3)user's income and house price mapping:
+user's income in '10-50',  suggest top three areas with house price above '200' in ascding order
+user's income in '50-100',  suggest top three areas with house price above '500' in ascding order
+user's income in '100-150',   suggest top three areas with house price above '800' in ascding order
+user's income in '150+',  suggest top three areas with house price above '100' in ascding order
+
+*/
 //each element is in this format:{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":""}}
 var suggestionList = [];
 //question kids mapping
