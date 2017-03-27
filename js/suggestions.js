@@ -4,14 +4,19 @@ var retrievedObject = localStorage.getItem('survey');
 var survey = JSON.parse(retrievedObject);
 //add by rachel
 /* queations to cretirion mapping explaination:
-1)if user have kis, give top three ares with lowest crime and highest shcool rate ctrdit
-2)if user use public transportation daily or a fews time a week, give top three areas with the most bustop
+1)if user have kis, give credit to top three ares with lowest crime and highest shcool rate
+2)if user use public transportation daily or a fews time a week, give credit to top three areas with the most bus stop
 3)user's income and house price mapping:
-user's income in '10-50',  suggest top three areas with house price above '200' in ascding order
-user's income in '50-100',  suggest top three areas with house price above '500' in ascding order
-user's income in '100-150',   suggest top three areas with house price above '800' in ascding order
-user's income in '150+',  suggest top three areas with house price above '100' in ascding order
+user's income in '10-50',  give credit to top three areas with house price above '200' in ascding order
+user's income in '50-100',  give credit to top three areas with house price above '500' in ascding order
+user's income in '100-150',   give credit to top three areas with house price above '800' in ascding order
+user's income in '150+',  give credit to top three areas with house price above '100' in ascding order
+4)user's activity mapping:
+user select hiking, give credit to top three area where support hiking activity
+user select swimming, give credit to top three area where support swimming activity
+user select travelling, give credit to top three area where support travelling activity
 
+At last, sort ares by credit and choose top three
 */
 //each element is in this format:{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":""}}
 var suggestionList = [];
@@ -26,7 +31,7 @@ if (survey.kids === "YES") {
    setScoreToNeighboors(suggestedNeighboors,credit.school,criteria.school);
    console.log(suggestionList);
 }
-//queation income range mapping
+//question income range mapping
 //filter three area with lowest average housing price that over the "housePrice"
 var housePrice = incomeHousePriceMapping[survey.income];
 suggestedNeighboors = getNeighboorByIncome(housePrice);
@@ -37,6 +42,16 @@ if(survey.transportation === "DAILY" || survey.transportation === "FEW DAYS IN A
      suggestedNeighboors = getNeighboorByTransporation();
      setScoreToNeighboors(suggestedNeighboors,credit.transportation,criteria.transportation);
 }
+//question activity mapping
+if(survey.activity === "Hiking" || survey.activity === "Swimming" || survey.activity === "Travelling"){
+     suggestedNeighboors = getNeighboorByActivity(survey.activity);
+     setScoreToNeighboors(suggestedNeighboors,credit[survey.activity.toLowerCase()],criteria.supportingAct);
+}
+//sort suggesting list by credit
+suggestionList.sort(function(a, b) {
+    return (a.score < b.score) ? 1 : ((a.score > b.score) ? -1 : 0)
+});
+console.log(suggestionList);
 //this function to form the suggesting list according to filtered neighboorhood, credit and criteria
 function setScoreToNeighboors(suggestedNeighboors,credit,criteria){
     var modified = false;
@@ -62,11 +77,28 @@ function setScoreToNeighboors(suggestedNeighboors,credit,criteria){
       }else modified = false;
     }
 }
+//get top three neighboors according to activity
+function getNeighboorByActivity(selectedActivity){
+  var activity = localStorage.getItem("activity");
+  var activityObj = JSON.parse(activity);
+  var neighboors= [];
+  for(var n in activityObj){
+      if(activityObj[n].sport == selectedActivity){
+        var places = activityObj[n].place;
+        //get top three area that support that activity
+        neighboors = places.slice(0,neighboorhood.top);
+        break;
+      }
+  }
+  return neighboors;
+}
+//get top three neighboors according to bus stop number
 function getNeighboorByTransporation(){
   var transportation = localStorage.getItem("transportation");
   var transportationObj = JSON.parse(transportation);
-  var neightboors = [transportationObj[0],transportationObj[1],transportationObj[2]];
-  return neightboors;
+  var neighboors = transportationObj.slice(0,neighboorhood.top);
+  // var neightboors = [transportationObj[0],transportationObj[1],transportationObj[2]];
+  return neighboors;
 }
 //get top three neighboors according to income
 function getNeighboorByIncome(minHousePrice){
@@ -89,15 +121,17 @@ function getNeighboorByIncome(minHousePrice){
 function getNeighboorBySchool(){
      var schoolRating = localStorage.getItem("schoolRating");
      var schoolRatingObj = JSON.parse(schoolRating);
-     var neightboors = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
-     return neightboors;
+    //  var neighboors = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
+    neighboors = schoolRatingObj.splice(0,neighboorhood.top);
+     return neighboors;
 }
 //get top three least crime area
 function getNeighboorByCrime(){
   //{ area: 'Queen Anne',          crimeCount: '2,448',  },
    var crimeRecords = localStorage.getItem("crimeRecords");
    var crimeRecordsObj = JSON.parse(crimeRecords);
-   var neighboors = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
+  //  var neighboors = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
+  var neighboors = crimeRecordsObj.splice(0,neighboorhood.top);
    return neighboors;
 }
 //end by rachel
