@@ -18,7 +18,14 @@ user select travelling, give credit to top three area where support travelling a
 
 At last, sort areas by credit and choose top three
 */
-//each element is in this format:{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":""}}
+//each element is in this format:
+/*
+[
+{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":"","supportingAcr":{"sport":"","number":"","detail":{"","",""}}},
+{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":"","supportingAcr":{"sport":"","number":"","detail":{"","",""}}},
+........
+]
+*/
 var suggestionList = [];
 //question kids mapping
 var suggestedNeighboors;
