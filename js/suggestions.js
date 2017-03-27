@@ -16,7 +16,7 @@ user select hiking, give credit to top three area where support hiking activity
 user select swimming, give credit to top three area where support swimming activity
 user select travelling, give credit to top three area where support travelling activity
 
-At last, sort ares by credit and choose top three
+At last, sort areas by credit and choose top three
 */
 //each element is in this format:{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":""}}
 var suggestionList = [];
@@ -29,7 +29,6 @@ if (survey.kids === "YES") {
    //set the score to the area with highest school rating
    suggestedNeighboors  = getNeighboorBySchool();
    setScoreToNeighboors(suggestedNeighboors,credit.school,criteria.school);
-   console.log(suggestionList);
 }
 //question income range mapping
 //filter three area with lowest average housing price that over the "housePrice"
@@ -45,7 +44,7 @@ if(survey.transportation === "DAILY" || survey.transportation === "FEW DAYS IN A
 //question activity mapping
 if(survey.activity === "Hiking" || survey.activity === "Swimming" || survey.activity === "Travelling"){
      suggestedNeighboors = getNeighboorByActivity(survey.activity);
-     setScoreToNeighboors(suggestedNeighboors,credit[survey.activity.toLowerCase()],criteria.supportingAct);
+     setScoreToNeighboors(suggestedNeighboors,credit[survey.activity.toLowerCase()],criteria.supportingAct,survey.activity);
 }
 //sort suggesting list by credit
 suggestionList.sort(function(a, b) {
@@ -53,7 +52,7 @@ suggestionList.sort(function(a, b) {
 });
 console.log(suggestionList);
 //this function to form the suggesting list according to filtered neighboorhood, credit and criteria
-function setScoreToNeighboors(suggestedNeighboors,credit,criteria){
+function setScoreToNeighboors(suggestedNeighboors,credit,criteria,sport){
     var modified = false;
     for(var n in suggestedNeighboors){
       var i = 0;
@@ -64,6 +63,8 @@ function setScoreToNeighboors(suggestedNeighboors,credit,criteria){
             if(typeof suggestionList[i].detail == "undefined")
                   suggestionList[i].detail = {};
             suggestionList[i].detail[criteria] = suggestedNeighboors[n].data;
+            if(typeof sport !="undefined")
+                suggestionList[i].detail[criteria].sport = sport;
             modified = true;
           }
       }
@@ -74,6 +75,8 @@ function setScoreToNeighboors(suggestedNeighboors,credit,criteria){
           if(typeof suggestionList[i].detail == "undefined")
                suggestionList[i].detail = {};
           suggestionList[i].detail[criteria] = suggestedNeighboors[n].data;
+          if(typeof sport !="undefined")
+              suggestionList[i].detail[criteria].sport = sport;
       }else modified = false;
     }
 }
@@ -141,7 +144,7 @@ if (survey.kids === "YES") {
 
     safeAreas.forEach(function(safeArea, i) {
         $('#suggestedArea').append('<div id="area' + i + '"></div>');
-       
+
         //areaName
         $('#area' + i).append('<h2>' + safeArea.area + '</h2>');
 
@@ -163,11 +166,11 @@ if (survey.kids === "YES") {
         //transport
         $('#area' + i).append('<div id="transport"></div>');
         $('#area' + i).find('div#transport').append('<h4 class="suggestions">Transport: ' +  + '</h4>');
-       
+
         //income
         $('#area' + i).append('<div id="income"></div>');
         $('#area' + i).find('div#income').append('<h4 class="suggestions">Income: ' + + '</h4>');
-       
+
 
     });
 }
@@ -201,4 +204,3 @@ function getTop3CrimeRecords() {
     return top3CrimeRecords
 }
 //end Neha
-
