@@ -37,3 +37,25 @@ var housePrice = [
   { area: 'South Lake Union',    data: '900',  },
 ];
 localStorage.setItem('housePrice', JSON.stringify(housePrice));
+var activity = [
+  {sport : 'Hiking',  place :[{area:'Queen Anne',
+                               data: {number:'4',
+                                      detail:['hiking park1','hiking park2','hiking park3','hiking park4']
+                                     }
+                               },
+                             {area:'Capitol Hill',data:{number:'3',detail:['hiking park1','hiking park2','hiking park3']}},
+                             {area:'Fremont',data: {number:'2',detail:['hiking park1','hiking park2']}}
+                            ]
+  },
+  {sport : 'Swimming',  place :[{area:'Queen Anne',data:{number:'4',detail:['hiking park1','hiking park2','hiking park3']}},
+                             {area:'Capitol Hill',data:{number:'3',detail:['hiking park1','hiking park2','hiking park3']}},
+                             {area:'Fremont',data:{number:'2',detail:['hiking park1','hiking park2','hiking park3']}}
+                            ]
+  },
+  {sport : 'Travelling',  place :[{area:'Queen Anne',data:{number:'4',detail:['hiking park1','hiking park2','hiking park3']}},
+                             {area:'Capitol Hill',data:{number:'3',detail:['hiking park1','hiking park2','hiking park3']}},
+                             {area:'Fremont',data:{number:'2',detail:['hiking park1','hiking park2','hiking park3']}}
+                            ]
+  }
+];
+localStorage.setItem('activity', JSON.stringify(activity));
