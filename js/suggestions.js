@@ -21,49 +21,49 @@ At last, sort areas by credit and choose top three
 //each element is in this format:{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":""}}
 var suggestionList = [];
 //question kids mapping
-var suggestedNeighboors;
+var suggestedNeighbours;
 if (survey.kids === "YES") {
-  suggestedNeighboors = getNeighboorByCrime();
-  console.log(suggestedNeighboors);
+  suggestedNeighbours = getNeighbourByCrime();
+  console.log(suggestedNeighbours);
    //set the score to the crime less Areas
-   setScoreToNeighboors(suggestedNeighboors,credit.crime,criteria.crime);
+   setScoreToNeighbours(suggestedNeighbours,credit.crime,criteria.crime);
    //set the score to the area with highest school rating
-   suggestedNeighboors  = getNeighboorBySchool();
-   setScoreToNeighboors(suggestedNeighboors,credit.school,criteria.school);
+   suggestedNeighbours  = getNeighbourBySchool();
+   setScoreToNeighbours(suggestedNeighbours,credit.school,criteria.school);
 }
 //question income range mapping
 //filter three area with lowest average housing price that over the "housePrice"
 var housePrice = incomeHousePriceMapping[survey.income];
-suggestedNeighboors = getNeighboorByIncome(housePrice);
-setScoreToNeighboors(suggestedNeighboors,credit.housePrice,criteria.housePrice);
+suggestedNeighbours = getNeighbourByIncome(housePrice);
+setScoreToNeighbours(suggestedNeighbours,credit.housePrice,criteria.housePrice);
 
 //question public transportation mapping
 if(survey.transportation === "DAILY" || survey.transportation === "FEW DAYS IN A WEEK"){
-     suggestedNeighboors = getNeighboorByTransporation();
-     setScoreToNeighboors(suggestedNeighboors,credit.transportation,criteria.transportation);
+     suggestedNeighbours = getNeighbourByTransporation();
+     setScoreToNeighbours(suggestedNeighbours,credit.transportation,criteria.transportation);
 }
 //question activity mapping
 if(survey.activity === "Hiking" || survey.activity === "Swimming" || survey.activity === "Travelling"){
-     suggestedNeighboors = getNeighboorByActivity(survey.activity);
-     setScoreToNeighboors(suggestedNeighboors,credit[survey.activity.toLowerCase()],criteria.supportingAct,survey.activity);
+     suggestedNeighbours = getNeighbourByActivity(survey.activity);
+     setScoreToNeighbours(suggestedNeighbours,credit[survey.activity.toLowerCase()],criteria.supportingAct,survey.activity);
 }
 //sort suggesting list by credit
 suggestionList.sort(function(a, b) {
     return (a.score < b.score) ? 1 : ((a.score > b.score) ? -1 : 0)
 });
 console.log(suggestionList);
-//this function to form the suggesting list according to filtered neighboorhood, credit and criteria
-function setScoreToNeighboors(suggestedNeighboors,credit,criteria,sport){
+//this function to form the suggesting list according to filtered neighborhood, credit and criteria
+function setScoreToNeighbours(suggestedNeighbours,credit,criteria,sport){
     var modified = false;
-    for(var n in suggestedNeighboors){
+    for(var n in suggestedNeighbours){
       var i = 0;
       for(i = 0;i<suggestionList.length;i++){
-          if(suggestionList[i].area == suggestedNeighboors[n].area){
+          if(suggestionList[i].area == suggestedNeighbours[n].area){
             var origScore = parseInt(suggestionList[i].score);
             suggestionList[i].score = origScore + parseInt(credit)
             if(typeof suggestionList[i].detail == "undefined")
                   suggestionList[i].detail = {};
-            suggestionList[i].detail[criteria] = suggestedNeighboors[n].data;
+            suggestionList[i].detail[criteria] = suggestedNeighbours[n].data;
             if(typeof sport !="undefined")
                 suggestionList[i].detail[criteria].sport = sport;
             modified = true;
@@ -71,85 +71,84 @@ function setScoreToNeighboors(suggestedNeighboors,credit,criteria,sport){
       }
       if(!modified){
           suggestionList[i] = {};
-          suggestionList[i].area = suggestedNeighboors[n].area;
+          suggestionList[i].area = suggestedNeighbours[n].area;
           suggestionList[i].score = credit;
           if(typeof suggestionList[i].detail == "undefined")
                suggestionList[i].detail = {};
-          suggestionList[i].detail[criteria] = suggestedNeighboors[n].data;
+          suggestionList[i].detail[criteria] = suggestedNeighbours[n].data;
           if(typeof sport !="undefined")
               suggestionList[i].detail[criteria].sport = sport;
       }else modified = false;
     }
 
 }
-//get top three neighboors according to activity
-function getNeighboorByActivity(selectedActivity){
+//get top three neighbours according to activity
+function getNeighbourByActivity(selectedActivity){
   var activity = localStorage.getItem("activity");
   var activityObj = JSON.parse(activity);
-  var neighboors= [];
+  var neighbours= [];
   for(var n in activityObj){
       if(activityObj[n].sport == selectedActivity){
         var places = activityObj[n].place;
         //get top three area that support that activity
-        neighboors = places.slice(0,neighboorhood.top);
+        neighbours = places.slice(0,neighborhood.top);
         break;
       }
   }
-  return neighboors;
+  return neighbours;
 }
-//get top three neighboors according to bus stop number
-function getNeighboorByTransporation(){
+//get top three neighbours according to bus stop number
+function getNeighbourByTransporation(){
   var transportation = localStorage.getItem("transportation");
   var transportationObj = JSON.parse(transportation);
-  var neighboors = transportationObj.slice(0,neighboorhood.top);
-  // var neightboors = [transportationObj[0],transportationObj[1],transportationObj[2]];
-  return neighboors;
+  var neighbours = transportationObj.slice(0,neighborhood.top);
+  return neighbours;
 }
-//get top three neighboors according to income
-function getNeighboorByIncome(minHousePrice){
+//get top three neighbours according to income
+function getNeighbourByIncome(minHousePrice){
      var housePrice = localStorage.getItem("housePrice");
      var housePriceObj = JSON.parse(housePrice);
-     var neighboors= [];
+     var neighbours= [];
      for(var n in housePriceObj){
           if(housePriceObj[n].data >= minHousePrice){
-            neighboors[0] = housePriceObj[n];
+            neighbours[0] = housePriceObj[n];
             n++;
-            if(n< housePriceObj.length) neighboors[1] = housePriceObj[n];
+            if(n< housePriceObj.length) neighbours[1] = housePriceObj[n];
             n++;
-            if(n< housePriceObj.length) neighboors[2] = housePriceObj[n];
+            if(n< housePriceObj.length) neighbours[2] = housePriceObj[n];
             break;
           }
      }
-     return neighboors;
+     return neighbours;
 }
 //get top three highest rating school area
-function getNeighboorBySchool(){
+function getNeighbourBySchool(){
      var schoolRating = localStorage.getItem("schoolRating");
      var schoolRatingObj = JSON.parse(schoolRating);
-    //  var neighboors = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
+    //  var neighbours = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
     //Start Edit by sirisha
-    neighboors = schoolRatingObj.slice(0,neighboorhood.top);
+    neighbours = schoolRatingObj.slice(0,neighborhood.top);
     //End edited
-     return neighboors;
+     return neighbours;
 }
 //get top three least crime area
-function getNeighboorByCrime(){
+function getNeighbourByCrime(){
   //{ area: 'Queen Anne',          crimeCount: '2,448',  },
    var crimeRecords = localStorage.getItem("crimeRecords");
    var crimeRecordsObj = JSON.parse(crimeRecords);
    console.log(crimeRecordsObj);
-  //  var neighboors = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
+  //  var neighbours = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
   //Start edit by sirisha
-  var neighboors = crimeRecordsObj.slice(0,neighboorhood.top);
+  var neighbours = crimeRecordsObj.slice(0,neighborhood.top);
   //end edit
-   return neighboors;
+   return neighbours;
 }
 //end by rachel
 //start by neha
 
   //start edit by sirisha
    //Collected the suggestion list and printing the top three nieghbourhood.
-    var safeAreas = suggestionList.slice(0,neighboorhood.top);
+    var safeAreas = suggestionList.slice(0,neighborhood.top);
 
     //Showing each nieghbourhood in suggestionsPage.html
     safeAreas.forEach(function(safeArea, i) {
