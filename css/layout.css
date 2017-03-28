@@ -1,0 +1,4 @@
+.rowLayout {
+  display: flex;
+  flex-direction: row;
+}
