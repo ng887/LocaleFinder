@@ -1,5 +1,5 @@
 
-var neighboorhood = {
+var neighborhood = {
   name:         'Seattle',
   number:       '10',
   top:          '3'
