@@ -18,19 +18,13 @@ user select travelling, give credit to top three area where support travelling a
 
 At last, sort areas by credit and choose top three
 */
-//each element is in this format:
-/*
-[
-{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":"","supportingAcr":{"sport":"","number":"","detail":{"","",""}}},
-{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":"","supportingAcr":{"sport":"","number":"","detail":{"","",""}}},
-........
-]
-*/
+//each element is in this format:{"area":"","score":"","detail":{"crime":"","school":"","transportation":"","housePrice":""}}
 var suggestionList = [];
 //question kids mapping
 var suggestedNeighboors;
 if (survey.kids === "YES") {
   suggestedNeighboors = getNeighboorByCrime();
+  console.log(suggestedNeighboors);
    //set the score to the crime less Areas
    setScoreToNeighboors(suggestedNeighboors,credit.crime,criteria.crime);
    //set the score to the area with highest school rating
@@ -86,6 +80,7 @@ function setScoreToNeighboors(suggestedNeighboors,credit,criteria,sport){
               suggestionList[i].detail[criteria].sport = sport;
       }else modified = false;
     }
+
 }
 //get top three neighboors according to activity
 function getNeighboorByActivity(selectedActivity){
@@ -132,7 +127,9 @@ function getNeighboorBySchool(){
      var schoolRating = localStorage.getItem("schoolRating");
      var schoolRatingObj = JSON.parse(schoolRating);
     //  var neighboors = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
-    neighboors = schoolRatingObj.splice(0,neighboorhood.top);
+    //Start Edit by sirisha
+    neighboors = schoolRatingObj.slice(0,neighboorhood.top);
+    //End edited
      return neighboors;
 }
 //get top three least crime area
@@ -140,19 +137,25 @@ function getNeighboorByCrime(){
   //{ area: 'Queen Anne',          crimeCount: '2,448',  },
    var crimeRecords = localStorage.getItem("crimeRecords");
    var crimeRecordsObj = JSON.parse(crimeRecords);
+   console.log(crimeRecordsObj);
   //  var neighboors = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
-  var neighboors = crimeRecordsObj.splice(0,neighboorhood.top);
+  //Start edit by sirisha
+  var neighboors = crimeRecordsObj.slice(0,neighboorhood.top);
+  //end edit
    return neighboors;
 }
 //end by rachel
-if (survey.kids === "YES") {
-    console.log("Suggest Safe Areas");
-    var safeAreas = getTop3CrimeRecords();
+//start by neha
 
+  //start edit by sirisha
+   //Collected the suggestion list and printing the top three nieghbourhood.
+    var safeAreas = suggestionList.slice(0,neighboorhood.top);
+
+    //Showing each nieghbourhood in suggestionsPage.html
     safeAreas.forEach(function(safeArea, i) {
         $('#suggestedArea').append('<div id="area' + i + '"></div>');
 
-        //areaName
+        //Displays top 3 area/suburb name
         $('#area' + i).append('<h2>' + safeArea.area + '</h2>');
 
         //addClass
@@ -160,54 +163,25 @@ if (survey.kids === "YES") {
 
         //crime
         $('#area' + i).append('<div id="crime"></div>');
-        $('#area' + i).find('div#crime').append('<h4 class="suggestions">No. of crimes(per 100K): ' + safeArea.crimeCount + '</h4>');
+        $('#area' + i).find('div#crime').append('<h4 class="suggestions">No. of crimes(per 100K): ' + safeArea.detail.crime + '</h4>');
 
         //schools
         $('#area' + i).append('<div id="schools"></div>');
-        $('#area' + i).find('div#schools').append('<h4 class="suggestions">Schools: ' +  + '</h4>');
+        $('#area' + i).find('div#schools').append('<h4 class="suggestions">School Rating: ' + safeArea.detail.school + '</h4>');
 
          //grocery
         $('#area' + i).append('<div id="grocery"></div>');
-        $('#area' + i).find('div#grocery').append('<h4 class="suggestions">Grocery: ' + + '</h4>');
+        $('#area' + i).find('div#grocery').append('<h4 class="suggestions">Grocery Stores: ' + + '</h4>');
 
         //transport
         $('#area' + i).append('<div id="transport"></div>');
-        $('#area' + i).find('div#transport').append('<h4 class="suggestions">Transport: ' +  + '</h4>');
+        $('#area' + i).find('div#transport').append('<h4 class="suggestions">Transportion Rating: ' + safeArea.detail.transportation + '</h4>');
 
         //income
         $('#area' + i).append('<div id="income"></div>');
-        $('#area' + i).find('div#income').append('<h4 class="suggestions">Income: ' + + '</h4>');
+        $('#area' + i).find('div#income').append('<h4 class="suggestions">Avg Income Range: ' + safeArea.detail.housePrice +  '</h4>');
 
 
     });
-}
-
-function getCrimeDetails() {
-    var crimeRecords = [
-        { crimeCount: '3,298', area: 'Belltown' },
-        { crimeCount: '2,567', area: 'Capitol Hill' },
-        { crimeCount: '3,903', area: 'South Lake Union' },
-        { crimeCount: '3,749', area: 'Downtown' },
-        { crimeCount: '7,153', area: 'University District' },
-        { crimeCount: '2,448', area: 'Queen Anne' },
-        { crimeCount: '3,292', area: 'Fremont' }
-    ];
-    return crimeRecords;
-}
-
-function getSortedCrimeRecords() {
-    var SortedCrimeRecords = getCrimeDetails();
-    SortedCrimeRecords.sort(function(a, b) {
-        return (a.crimeCount > b.crimeCount) ? 1 : ((b.crimeCount > a.crimeCount) ? -1 : 0)
-    });
-    console.log(SortedCrimeRecords);
-    return SortedCrimeRecords;
-}
-
-function getTop3CrimeRecords() {
-    var top3CrimeRecords = getSortedCrimeRecords();
-    top3CrimeRecords = top3CrimeRecords.slice(0, 3);
-    console.log(top3CrimeRecords);
-    return top3CrimeRecords
-}
-//end Neha
+//end edited by sirisha
+//end by neha
