@@ -13,9 +13,9 @@ var schoolRating = [
   { area: 'Downtown',                     data: '8',  },
   { area: 'South Lake Union',             data: '7',  },
   { area: 'Fremont',                      data: '6',  },
-  { area: 'Downtown',                     data: '5',  },
+  { area: 'Capitol Hill',                 data: '5',  },
   { area: 'South Lake Union',             data: '4',  },
-  { area: 'University District',          data: '3',  },
+  { area: 'Queen Anne',                   data: '3',  },
 ];
 localStorage.setItem('schoolRating', JSON.stringify(schoolRating));
 var transportation = [
@@ -23,7 +23,7 @@ var transportation = [
   { area: 'Capitol Hill',        data: '8',  },
   { area: 'Belltown',            data: '7',  },
   { area: 'Fremont',             data: '6',  },
-  { area: 'Downtown',            data: '5',  },
+  { area: 'Queen Anne',          data: '5',  },
   { area: 'South Lake Union',    data: '4',  },
   { area: 'University District', data: '3',  },
 ];
@@ -33,7 +33,7 @@ var housePrice = [
   { area: 'Capitol Hill',        data: '300',  },
   { area: 'Belltown',            data: '400',  },
   { area: 'Fremont',             data: '700',  },
-  { area: 'Downtown',            data: '800',  },
+  { area: 'Queen Anne',          data: '800',  },
   { area: 'South Lake Union',    data: '900',  },
 ];
 localStorage.setItem('housePrice', JSON.stringify(housePrice));
