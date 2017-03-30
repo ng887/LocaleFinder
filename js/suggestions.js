@@ -43,7 +43,7 @@ if(survey.transportation === "DAILY" || survey.transportation === "FEW DAYS IN A
      setScoreToNeighbours(suggestedNeighbours,credit.transportation,criteria.transportation);
 }
 //question activity mapping
-if(survey.activity === "Hiking" || survey.activity === "Swimming" || survey.activity === "Travelling"){
+if(survey.activity === "outdoor" || survey.activity === "movies" || survey.activity === "bar-hopping"||survey.activity === "foodie"){
      suggestedNeighbours = getNeighbourByActivity(survey.activity);
      setScoreToNeighbours(suggestedNeighbours,credit[survey.activity.toLowerCase()],criteria.supportingAct,survey.activity);
 }
@@ -52,6 +52,21 @@ suggestionList.sort(function(a, b) {
     return (a.score < b.score) ? 1 : ((a.score > b.score) ? -1 : 0)
 });
 console.log(suggestionList);
+//add by reache --03/30
+var suggestedAreaDetail = [];
+var areaDetail = localStorage.getItem('areaDetail');
+var areaDetailObj = JSON.parse(areaDetail);
+suggestionList = suggestionList.slice(0,neighborhood.top);
+for(var i in suggestionList){
+    for(var j in areaDetailObj){
+      if(suggestionList[i].area == areaDetailObj[j].name){
+        suggestedAreaDetail[i] = areaDetailObj[j];
+        break;
+      }
+    }
+}
+console.log(suggestedAreaDetail);
+//end --03/30
 //this function to form the suggesting list according to filtered neighborhood, credit and criteria
 function setScoreToNeighbours(suggestedNeighbours,credit,criteria,sport){
     var modified = false;
@@ -61,11 +76,11 @@ function setScoreToNeighbours(suggestedNeighbours,credit,criteria,sport){
           if(suggestionList[i].area == suggestedNeighbours[n].area){
             var origScore = parseInt(suggestionList[i].score);
             suggestionList[i].score = origScore + parseInt(credit)
-            if(typeof suggestionList[i].detail == "undefined")
+            /*if(typeof suggestionList[i].detail == "undefined")
                   suggestionList[i].detail = {};
             suggestionList[i].detail[criteria] = suggestedNeighbours[n].data;
             if(typeof sport !="undefined")
-                suggestionList[i].detail[criteria].sport = sport;
+                suggestionList[i].detail[criteria].sport = sport;*/
             modified = true;
           }
       }
@@ -73,11 +88,11 @@ function setScoreToNeighbours(suggestedNeighbours,credit,criteria,sport){
           suggestionList[i] = {};
           suggestionList[i].area = suggestedNeighbours[n].area;
           suggestionList[i].score = credit;
-          if(typeof suggestionList[i].detail == "undefined")
+          /*if(typeof suggestionList[i].detail == "undefined")
                suggestionList[i].detail = {};
           suggestionList[i].detail[criteria] = suggestedNeighbours[n].data;
           if(typeof sport !="undefined")
-              suggestionList[i].detail[criteria].sport = sport;
+              suggestionList[i].detail[criteria].sport = sport;*/
       }else modified = false;
     }
 
@@ -136,7 +151,6 @@ function getNeighbourByCrime(){
   //{ area: 'Queen Anne',          crimeCount: '2,448',  },
    var crimeRecords = localStorage.getItem("crimeRecords");
    var crimeRecordsObj = JSON.parse(crimeRecords);
-   console.log(crimeRecordsObj);
   //  var neighbours = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
   //Start edit by sirisha
   var neighbours = crimeRecordsObj.slice(0,neighborhood.top);
@@ -151,7 +165,7 @@ function getNeighbourByCrime(){
     var safeAreas = suggestionList.slice(0,neighborhood.top);
 
     //Showing each nieghbourhood in suggestionsPage.html
-    safeAreas.forEach(function(safeArea, i) {
+/*    safeAreas.forEach(function(safeArea, i) {
         $('#suggestedArea').append('<div id="area' + i + '"></div>');
 
         //Displays top 3 area/suburb name
@@ -181,6 +195,6 @@ function getNeighbourByCrime(){
         $('#area' + i).find('div#income').append('<h4 class="suggestions">Avg Income Range: ' + safeArea.detail.housePrice +  '</h4>');
 
 
-    });
+    });*/
 //end edited by sirisha
 //end by neha
