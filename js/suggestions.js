@@ -157,6 +157,64 @@ function getNeighbourByCrime(){
   //end edit
    return neighbours;
 }
+//data for bar chart
+/*the data object is
+dataObj = {
+title:"",
+ytitle:"",
+detail:[
+{name:"",data:""},
+{name:"",data:""},
+{name:"",data:""}
+]
+}
+
+*/
+//income display
+var dataObj = {
+  title:'Average Income in Three Area',
+  ytitle:'Average Income',
+  detail:[
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].income},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].income},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].income}
+  ]
+}
+$("#incomeChartContainer").CanvasJSChart(displayBarChar(dataObj));
+//house price display
+dataObj = {
+  title:'Average House Price in Three Area',
+  ytitle:'Average House Price',
+  detail:[
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].housePrice},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].housePrice},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].housePrice}
+  ]
+}
+$("#housePriceChartContainer").CanvasJSChart(displayBarChar(dataObj));
+function displayBarChar(dataObj){
+  var options = {
+		title: {
+			text: dataObj.title
+		},
+    axisY: {
+				title: dataObj.ytitle
+			},
+    animationEnabled: true,
+		data: [
+		{
+			type: "column", //change it to line, area, bar, pie, etc
+      indexLabel: "{y}",
+			dataPoints: [
+				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
+				{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data) },
+				{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data) }
+			]
+		}
+		]
+	};
+  return options;
+}
 //end by rachel
 //start by neha
 
