@@ -127,7 +127,7 @@ function getNeighbourBySchool(){
      var schoolRatingObj = JSON.parse(schoolRating);
     //  var neighbours = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
     //Start Edit by sirisha
-    neighbours = schoolRatingObj.slice(0,neighborhood.top);
+    var neighbours = schoolRatingObj.slice(0,neighborhood.top);
     //End edited
      return neighbours;
 }
