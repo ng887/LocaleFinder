@@ -55,7 +55,7 @@ var housePrice = [
     { area: 'Downtown',               data: '528',  },
     { area: 'South Lake Union',       data: '532',  },
 ];
-localStorage.setItem('housePrice', JSON.stringify(housePrice
+localStorage.setItem('housePrice', JSON.stringify(housePrice));
 
 /*var income = [
     { area: 'Queen Anne',             data: '93086',  }, 
