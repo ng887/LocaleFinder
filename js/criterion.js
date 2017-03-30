@@ -86,7 +86,7 @@ var activity = [
                              {area:'Fremont',data:{number:'25',detail:['The Ballroom', 'Fremont Brewing Company']}},
                              {area:'Belltown',data:{number:'20',detail:['Amber']}}
                             ]
-  }
+  },
   {sport : 'foodie',  place :[{area:'Downtown',data:{number:'292',detail:['Sushi Kudasai','Wild Ginger Kitchen','Lecosho']}},
                              {area:'Capitol Hill',data:{number:'209',detail:['Ba Bar', 'Cook Weaver']}},
                              {area:'Belltown',data:{number:'149',detail:['Shiro’s Sushi']}}
