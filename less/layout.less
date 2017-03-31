@@ -1,11 +1,135 @@
 /* added by neha */
+
+.main div{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .rowLayout {
     display: flex;
     flex-direction: row;
 }
 
+#descr.rowLayout {
+    justify-content: center;
+}
+
 .colLayout {
     display: flex;
-    flex-direction: col;
+    flex-direction: column;
 }
+
+#indexMain {
+    .feature {
+        padding: 8%;
+        .colLayout();
+        p {
+            text-align: center;
+        }
+        a {
+            align-self: center;
+        }
+    }
+}
+
+#nav {
+    img {
+        width: 110px;
+        height: auto;
+        padding: 10%;
+        border-radius: 20%;
+    }
+    #down {
+        margin: auto;
+        margin-top: 2%;
+       /* margin-bottom: 2%;
+        margin-left: 70%;*/
+        .line {
+            width: 35px;
+            height: 5px;
+            background-color: #b5b5b5;
+            margin: 6px 0;
+        }
+        #down-icon {
+            margin-left: 230%;
+        }
+        #down-content {
+            display: none;
+            position: absolute;
+            background-color: #707070;
+            z-index: 1;
+        }
+        #down-content a {
+            color: #ffffff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    #down-content-desktop {
+        display: none;
+    }
+}
+
+
+/* mobile orientation: landscape */
+
+@media only screen and (min-device-width: 314px) and (max-device-width: 768px) and (orientation: landscape) {
+    #nav {
+        #down {
+            margin-left: 55%;
+        }
+    }
+}
+
+
+/* ipad orientation: potrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    #nav {
+        #down {
+            margin-left: 65%;
+        }
+    }
+}
+
+
+/* ipad orientation: landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    #nav {
+        #down {
+            margin-left: 75%;
+        }
+    }
+}
+
+
+/*Desktop*/
+
+@media only screen and (min-width: 1025px) {
+    #nav {
+        #down {
+            display: none;
+        }
+        #down-content-desktop {
+            display: block;
+            margin-left: 10%;
+            padding: 2% 0 0 0;
+            width: 100%;
+            a {
+                margin: 10%;
+            }
+        }
+    }
+    #indexMain {
+        .feature {
+            width: 25%;
+            padding: 2%;
+        }
+    }
+}
+
+
 /* end neha */

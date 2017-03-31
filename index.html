@@ -1,4 +1,4 @@
-e<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -10,6 +10,7 @@ e<!DOCTYPE HTML>
     <link rel="stylesheet" type="text/css" href="./css/html-semantics.css" />
     <link rel="stylesheet" type="text/css" href="./css/layout.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/brand.css" />
     <!--end add by neha-->
     <!--start add by rachel-->
     <link rel="stylesheet/less" type="text/css" href="less/index.less" />
@@ -18,91 +19,81 @@ e<!DOCTYPE HTML>
     <!--end add by rachel-->
     <!--start add by neha-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--  <script type="text/javascript" src="./js/loadHeaderFooter.js"></script> -->
+    <script type="text/javascript" src="./js/loadHeaderFooter.js"></script>
     <!--end add by neha-->
 </head>
 
 <body>
     <!-- modified by neha -->
-    <header>
-        <nav id="nav" class="rowLayout">
-            <div>
-                <a href="../index.html"><img src="./image/logo-1.jpg"></a>
-            </div>
-            <div id="down">
-                <div id="down-icon">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div id="down-content">
-                    <!--start edit by Rashmitha-->
-                    <a href="./html/slider.html">Suggestions</a>
-                    <a href="NA.html">Find by area</a>
-                    <a href="NA.html">Comparison</a>
-                    <!--end edit by Rashmitha-->
-                </div>
-            </div>
-            <!--start add by neha-->
-            <div id="down-content-desktop">
-                <a href="./html/slider.html">Suggestions</a>
-                <a href="NA.html">Find by area</a>
-                <a href="NA.html">Comparison</a>
-            </div>
-            <!--end add by neha-->
-        </nav>
-    </header>
+    <div id='header'></div>
     <!-- end modified by neha -->
     <!--<h2>Discover Your Locale  </h2> -->
     <!--<button class="b-quesiotn"><h2>GET STARTED</h2></button> -->
     <!--start add by rachel-->
     <!-- Rashmitha-->
-    <div id="main">
-        <div><img src="./image/seattle3.jpg" /></div>
-        <div id="descr">
-            <!--start modified by neha-->
-            <h2>Discover your dream neighborhood in Seattle</h2>
-            <!--<h3>In Seattle</h3>-->
-            <!--end modified by neha-->
-        </div>
-        <div id="start">
-            <!--start modified by neha-->
-            <a href="./html/slider.html">
-                <button id="startbtn" class="indexPageAction"><span>GET STARTED</span></button>
-            </a>
-            <!--end modified by neha-->
+    <div id="indexMain">
+        <div>
+            <img src="./image/seattle-backdrop.jpg" />
+            <div id="descr" class="rowLayout">
+                <!--start modified by neha-->
+                <div>
+                    <h2>Discover Your Dream Neighborhood In Seattle</h2>
+                </div>
+                <div>
+                    <a href="./html/slider.html">
+                        <button><span>GET STARTED</span></button>
+                    </a>
+                </div>
+                <!--end modified by neha-->
+            </div>
         </div>
         <!--start modified by neha-->
         <div id="features">
             <div id="features-suggestion" class="feature">
+                <center>
+                    <a href="html/slider.html">
+                        <img src="./image/suggest.jpg" />
+                    </a>
+                </center>
                 <p>Fill our questionnaire and we will help you find a suitable neighborhood.
                     <!--text & button Name modified by Rashmitha -->
                 </p>
-                <a href="html/slider.html">
-                    <!-- added by rashmitha-->
-                    <button class="indexPageAction1">SUGGEST ME</button>
+                <a href="./html/slider.html">
+                    <button><span>SUGGEST</span></button>
                 </a>
             </div>
             <div id="features-find" class="feature">
+                <center>
+                    <a href="html/slider.html">
+                        <img src="./image/find.jpg" />
+                    </a>
+                </center>
                 <p>You can find more about a neighborhood if you are already familiar with it.
                     <!--text & button Name modified by Rashmitha -->
                 </p>
-                <button class="indexPageAction2">FIND A NEIGHBORHOOD</button>
+                <a href="./html/slider.html">
+                    <button><span>FIND</span></button>
+                </a>
             </div>
             <div id="features-comparation" class="feature">
+                <center>
+                    <a href="html/slider.html">
+                        <img src="./image/compare.jpg" />
+                    </a>
+                </center>
                 <p>You can compare two neighborhoods.
+                <br/>
                     <!--text & button Name modified by Rashmitha -->
                 </p>
-                <button class="indexPageAction3">COMPARE NEIGHBORHOODS</button>
+                <a href="./html/slider.html">
+                    <button><span>COMPARE</span></button>
+                </a>
             </div>
             <!--end modified by neha-->
         </div>
     </div>
     <!--end add by rachel-->
-    <footer>
-        <p>&copy; Copyright</p>
-        <!--<p>About us:</p>-->
-    </footer>
+    <div id='footer'></div>
     <script type="text/javascript" src="./js/index.js"></script>
 </body>
 
