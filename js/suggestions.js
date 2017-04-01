@@ -216,11 +216,41 @@ function displayBarChar(dataObj){
   return options;
 }
 //end by rachel
+// Transportation section
+// start by sirisha
+$("#transportationContainer1").CanvasJSChart(displayTranDoughnutChart(suggestedAreaDetail[0]));
+$("#transportationContainer2").CanvasJSChart(displayTranDoughnutChart(suggestedAreaDetail[1]));
+$("#transportationContainer3").CanvasJSChart(displayTranDoughnutChart(suggestedAreaDetail[2]));
+function displayTranDoughnutChart(dataObj){
+  var options = {
+		title:{
+			text: dataObj.name
+		},
+    animationEnabled: true,
+		data: [
+		{
+			type: "doughnut",
+			startAngle: -90,
+      indexLabelFontColor: "black",
+      indexLabelFontSize: 20,
+			toolTipContent: "{legendText}: {y}",
+			showInLegend: true,
+			dataPoints: [
+				{y: parseInt(dataObj.transportation), indexLabel: "Transit score: "+dataObj.transportation, legendText: dataObj.name },
+				{y: 100-parseInt(dataObj.transportation), legendText: " " }
+			]
+		}
+		]
+	};
+  return options;
+}
+//End by sirisha
+
 //start by neha
 
   //start edit by sirisha
    //Collected the suggestion list and printing the top three nieghbourhood.
-    var safeAreas = suggestionList.slice(0,neighborhood.top);
+    // var safeAreas = suggestionList.slice(0,neighborhood.top);
 
     //Showing each nieghbourhood in suggestionsPage.html
 /*    safeAreas.forEach(function(safeArea, i) {
