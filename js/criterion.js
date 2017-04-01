@@ -1,14 +1,14 @@
 var crimeRecords = [
-    { area: 'Queen Anne',          data: '2,448'  },
-    { area: 'Alki',                data: '2,448'  },
-    { area: 'Capitol Hill',        data: '2,567'  },
-    { area: 'Belltown',            data: '3,298'  },
-    { area: 'Fremont',             data: '3,292'  },
-    { area: 'Ballard',             data: '3,737'  },
-    { area: 'Downtown',            data: '3,749'  },
-    { area: 'South Lake Union',    data: '3,903'  },
-    { area: 'Northgate',           data: '6,373'  },
-    { area: 'University District', data: '7,153'  }
+    { area: 'Queen Anne',          data: '2448'  },
+    { area: 'Alki',                data: '2448'  },
+    { area: 'Capitol Hill',        data: '2567'  },
+    { area: 'Belltown',            data: '3298'  },
+    { area: 'Fremont',             data: '3292'  },
+    { area: 'Ballard',             data: '3737'  },
+    { area: 'Downtown',            data: '3749'  },
+    { area: 'South Lake Union',    data: '3903'  },
+    { area: 'Northgate',           data: '6373'  },
+    { area: 'University District', data: '7153'  }
 ];
 localStorage.setItem('crimeRecords', JSON.stringify(crimeRecords));
 var schoolRating = [
@@ -88,7 +88,7 @@ var activity = [
 localStorage.setItem('activity', JSON.stringify(activity));
 var areaDetail = [
   {name:'Queen Anne',
-  crimeRecord:'2,448',
+  crimeRecord:'2448',
   schoolRating:'10',
   transportation:'60',
   housePrice:'490',
@@ -99,7 +99,7 @@ var areaDetail = [
     ]
   },
   {name:'Alki',
-  crimeRecord:'2,448',
+  crimeRecord:'2448',
   schoolRating:'1',
   transportation:'34',
   housePrice:'335',
@@ -107,7 +107,7 @@ var areaDetail = [
   activity:[]
   },
   {name:'Capitol Hill',
-  crimeRecord:'2,567',
+  crimeRecord:'2567',
   schoolRating:'8',
   transportation:'73',
   housePrice:'358',
@@ -119,7 +119,7 @@ var areaDetail = [
     ]
   },
   {name:'Belltown',
-  crimeRecord:'3,298',
+  crimeRecord:'3298',
   schoolRating:'4',
   transportation:'100',
   housePrice:'480',
@@ -130,7 +130,7 @@ var areaDetail = [
     ]
   },
   {name:'Fremont',
-  crimeRecord:'3,292',
+  crimeRecord:'3292',
   schoolRating:'3',
   transportation:'64',
   housePrice:'314',
@@ -140,7 +140,7 @@ var areaDetail = [
     ]
   },
   {name:'Ballard',
-  crimeRecord:'3,737',
+  crimeRecord:'3737',
   schoolRating:'7',
   transportation:'53',
   housePrice:'323',
@@ -148,7 +148,7 @@ var areaDetail = [
   activity:[]
   },
   {name:'Downtown',
-  crimeRecord:'3,749',
+  crimeRecord:'3749',
   schoolRating:'3',
   transportation:'100',
   housePrice:'528',
@@ -159,7 +159,7 @@ var areaDetail = [
     ]
   },
   {name:'South Lake Union',
-  crimeRecord:'3,903',
+  crimeRecord:'3903',
   schoolRating:'2',
   transportation:'91',
   housePrice:'532',
@@ -167,7 +167,7 @@ var areaDetail = [
   activity:[]
   },
   {name:'Northgate',
-  crimeRecord:'6,373',
+  crimeRecord:'6373',
   schoolRating:'9',
   transportation:'61',
   housePrice:'252',
@@ -175,7 +175,7 @@ var areaDetail = [
   activity:[]
   },
   {name:'University District',
-  crimeRecord:'7,153',
+  crimeRecord:'7153',
   schoolRating:'10',
   transportation:'77',
   housePrice:'288',
