@@ -157,6 +157,39 @@ function getNeighbourByCrime(){
   //end edit
    return neighbours;
 }
+//crime display
+$("#crimeContainer").CanvasJSChart(displayCrime());
+function displayCrime(){
+  var options = {
+		title:{
+			text: "Crime record in three area"
+		},
+    animationEnabled: true,
+		legend:{
+			verticalAlign: "bottom",
+			horizontalAlign: "center"
+		},
+		data: [
+		{
+			indexLabelFontSize: 20,
+			indexLabelFontFamily: "Monospace",
+			indexLabelFontColor: "darkgrey",
+			indexLabelLineColor: "darkgrey",
+			indexLabelPlacement: "outside",
+			type: "pie",
+			showInLegend: true,
+			toolTipContent: "{y} - <strong>#percent%</strong>",
+			dataPoints: [
+				{  y: parseInt(suggestedAreaDetail[0].crimeRecord), legendText:suggestedAreaDetail[0].name, indexLabel: suggestedAreaDetail[0].name },
+				{  y: parseInt(suggestedAreaDetail[1].crimeRecord), legendText:suggestedAreaDetail[1].name, indexLabel: suggestedAreaDetail[1].name },
+				{  y: parseInt(suggestedAreaDetail[2].crimeRecord), legendText:suggestedAreaDetail[2].name,exploded: true, indexLabel: suggestedAreaDetail[2].name },
+
+			]
+		}
+		]
+	};
+  return options;
+};
 //data for bar chart
 /*the data object is
 dataObj = {
