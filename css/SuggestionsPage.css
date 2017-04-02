@@ -1,46 +1,103 @@
-body
-{
-	background-color: white;
-	margin-top: 4%;
-	font-size: 1.3em;
+#suggestionMain {
+  position: relative;
 }
-
-#suggestedArea{
-	display: flex;
-	flex-direction: row;
-	margin-left: 20%;
+#suggestionMain #suggestionHeader {
+  background-image: url("../image/suggestionMain.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 250px;
+  min-width: 250px;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
-h2
-{
-	color: black;
-	text-align: center;
+#suggestionMain #suggestionHeader .banner {
+  display: inline-block;
+  position: absolute;
+  height: auto;
+  top: 0;
+  margin: 0;
+  margin-top: 4%;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 02%;
+  font-size: 0.92em;
+  width: 86%;
 }
-
-#suggestions,#crime,#schools,#grocery,#transport,#income,#houses
-{
-	</* text-align: center; */>
-	margin-top: 3%;
+#suggestionMain #suggestionNames ul {
+  list-style: none;
+  text-align: center;
+  font-family: cursive;
+  font-size: 1.5em;
 }
-
-.area{
-	margin: 30px;
-	border:solid;
-	padding: 10px;
+#suggestionMain #suggestedArea {
+  margin: 0;
 }
-
-
-@media only screen and (max-device-width:450px) 
-{
-	#suggestions,#crime,#schools,#grocery,#transport,#income,#houses
-	{
-		font-size:2em;
-	}
+#suggestionMain .graphicsWrapper {
+  margin: 2% 0 3% 0;
+  border-radius: 3%;
 }
-@media only screen and (min-device-width:450px) and (max-device-width:700px)
-{
-	#suggestions,#crime,#schools,#grocery,#transport,#income,#houses
-	{
-		font-size:1.5em;
-	}
+#suggestionMain .graphicsWrapper .graphicsContainer {
+  height: 300px;
+  margin: 5% 0;
+  border-top: solid;
+  border-bottom: solid;
+  /*  margin-right: 100%;
+            margin-top: 25%;
+            width: 100%;*/
 }
-
+#suggestionMain .graphicsWrapper .graphicsContainer div {
+  margin: 0;
+}
+#suggestionMain .graphicsWrapper .graphicsContainer div canvas {
+  width: 80%;
+}
+#suggestionMain .graphicItem {
+  height: 50%;
+  width: 100%;
+  margin-bottom: 4% !important;
+}
+.mobileLayout {
+  display: flex;
+  flex-direction: column;
+}
+/*Desktop*/
+@media only screen and (min-width: 1025px) {
+  #suggestionMain {
+    position: relative;
+  }
+  #suggestionMain #suggestionHeader {
+    background-image: url("../image/suggestionMainDesktop.jpg");
+    background-size: 100% 100%;
+    margin-top: 4%;
+  }
+  #suggestionMain #suggestionNames {
+    margin-top: 5%;
+  }
+  #suggestionMain .graphicsWrapper {
+    width: 100%;
+    /*margin: 3%;*/
+    border-radius: 0;
+    /*padding: 3% 0 3% 0;*/
+  }
+  #suggestionMain .graphicsWrapper .graphicsContainer {
+    border: 0;
+  }
+  #suggestionMain .graphicsWrapper div canvas {
+    width: 95% !important;
+    padding: 2%;
+  }
+  #suggestionMain .graphicItem {
+    margin-bottom: 0 !important;
+    height: 60%;
+  }
+  #suggestionMain #transportation.graphicsContainer {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .desktopLayout {
+    display: flex;
+    flex-direction: row;
+  }
+}
