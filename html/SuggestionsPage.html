@@ -1,29 +1,67 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 
 <head>
-    <title>Our Suggestions</title>
-    <link rel="stylesheet" type="text/css" href="../css/suggestionsPage.css">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Locale Finder</title>
+    <!--Common Style Sheets-->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/brand.css" />
+    <!-- end -->
+    <link rel="stylesheet" type="text/css" href="../css/suggestionsPage.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.canvasjs.min.js"></script>
+    <!-- Header Footer Load Script -->
+    <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
 </head>
+
 <body>
-	<div>  <h2 class="suggestions">OUR SUGGESTIONS</h2> </div>
-    <div id='suggestedArea'>
-    <section id="crimeContainer" style="height: 300px; width: 100%;"></section>
-    <section id="incomeChartContainer" style="height: 300px; width: 100%;"></section>
-    <section id="housePriceChartContainer" style="height: 300px; width: 100%;"></section>
+    <!--start add by neha-->
+    <div id='header'></div>
+    <!--end add by neha-->
+    <div class="main colLayout">
+        <div id="suggestionMain">
+            <div id="suggestionHeader">
+                <h2 class='banner'>BEST NEIGHBORHOODS FOR YOU</h2>
+            </div>
+            <div id="suggestionNames">
+                <ul>
+                    <li>Queen Anne</li>
+                    <li>Capitol Hill</li>
+                    <li>Downtown</li>
+                </ul>
+            </div>
+            <div id='suggestedArea' class="mobileLayout desktopLayout">
+                <div class="graphicsWrapper">
+                    <section id="incomeChartContainer" class="graphicsContainer"></section>
+                </div>
+                <div class="graphicsWrapper">
+                    <section id="housePriceChartContainer" class="graphicsContainer"></section>
+                </div>
+            </div>
+            <div class="graphicsWrapper">
+                <div> <h2> Transit Score in Three Areas </h2></div> 
+                <div>
+                    <section id="transportation" class="graphicsContainer mobileLayout desktopLayout" >
+                        <div id="transportationContainer1" class="graphicItem"></div>
+                        <div id="transportationContainer2" class="graphicItem"></div>
+                        <div id="transportationContainer3" class="graphicItem"></div>                       
+                    </section>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- start by sirisha -->
-    <div id="transportation" style="height: 200px; width: 100%;float:left;">
-      <h1 style= "text-align:center"> Transportation Score</h1>
-      <div id="transportationContainer1" style="height: 200px; width: 30%; float:right"></div>
-      <div id="transportationContainer2" style="height: 200px; width: 30%;float:right"></div>
-      <div id="transportationContainer3" style="height: 200px; width: 30%;float:right"></div>
-    </div>
+    <!--start add by neha-->
+    <div id='footer'></div>
+    <!--end add by neha-->
     <!-- Start add by sirisha -->
-    <script type = "text/javascript" src = "../js/suggestRefer.js"></script>
-    <script type = "text/javascript" src = "../js/criterion.js"></script>
+    <script type="text/javascript" src="../js/suggestRefer.js"></script>
+    <script type="text/javascript" src="../js/criterion.js"></script>
     <script type="text/javascript" src="../js/suggestions.js"></script>
     <!-- end by sirisha -->
 </body>
