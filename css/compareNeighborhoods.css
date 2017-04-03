@@ -1,0 +1,72 @@
+#mainDiv {
+    /*border: solid deeppink;*/
+    width: 100%;
+    height: 40rem;
+    padding: 1% 1%;
+}
+.compareContainer {
+    /*border: solid 2px red;*/
+    float: left;
+}
+h1{
+    text-align: center;
+}
+img {
+
+    /*border: 2px solid blue;*/
+    border-radius: 2rem;
+    height: 12rem;
+    width: 17rem;
+    margin: 2% 4%;
+    box-shadow: 10px 10px 5px #888888;
+}
+h3 {
+    margin-left: 2%;
+    text-align: center;
+}
+
+input{
+    border: 2px solid chocolate;
+    margin: 1% 18%;
+    padding: 2% 2%;
+    width: 12rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+#leftNeighborhood{
+    /*border: 2px solid burlywood;*/
+    float: left;
+}
+#rightNeighborhood{
+    /*border: 2px solid burlywood;*/
+    float: left;
+}
+
+/*media query for desktop*/
+@media only screen and (min-width: 1025px) {
+    .compareContainer{
+        width:100%;
+        padding: 1% 1%;
+    }
+    img{
+        width: 30rem;
+        height: 18rem;
+    }
+    .comparison{
+        width:33rem;
+        padding: 1% 2%;
+
+    }
+    #vsSection{
+        width:3rem;
+        height: 10rem;
+        float: left;
+        padding-top: 5rem;
+        margin-top: 5%;
+        font-size: 2rem;
+    }
+    input{
+        width:17rem;
+    }
+
+}
