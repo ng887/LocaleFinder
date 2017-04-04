@@ -1,8 +1,8 @@
 /*Colors*/
 footer,
 header {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000 !important;
+  background-color: #fff !important;
 }
 button {
   background-color: #2E73AC;
@@ -20,4 +20,18 @@ a {
 }
 h2 {
   color: #ffffff;
+}
+.lf-text-color {
+  color: #ffffff;
+}
+.lf-text-white {
+  color: #fff;
+}
+.lf-red {
+  color: #fff !important;
+  background-color: #f44336 !important;
+}
+
+.lf-text-grey, .lf-hover-text-grey:hover{
+  color: #757575!important;
 }

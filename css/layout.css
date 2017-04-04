@@ -1,4 +1,18 @@
 /* added by neha */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+body,
+html {
+  height: 100%;
+  line-height: 1.8;
+}
 .main div {
   margin-left: 5%;
   margin-right: 5%;
@@ -35,7 +49,7 @@
   margin: auto;
   margin-top: 2%;
   /* margin-bottom: 2%;
-        margin-left: 70%;*/
+         margin-left: 70%;*/
 }
 #nav #down .line {
   width: 35px;
@@ -62,6 +76,99 @@
 #nav #down-content-desktop {
   display: none;
 }
+.mobileLayout {
+  display: flex;
+  flex-direction: column;
+}
+/*new Styles */
+.grayscale-min {
+  filter: grayscale(50%);
+}
+.position-left {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+.position-bottomleft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.position-bottomright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+position-bottom {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.position-right {
+  float: right!important;
+}
+.lf-button {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  padding: 10px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: lighter;
+}
+.lf-button:hover {
+  color: #000 !important;
+  background-color: #ccc !important;
+}
+a .header-link {
+  color: #fff!important;
+}
+.wide {
+  letter-spacing: 4px;
+}
+.text-large {
+  font-size: 18px !important;
+}
+.text-xxxlarge {
+  font-size: 48px !important;
+}
+.text-lighter {
+  font-weight: lighter;
+}
+.lf-padding-large {
+  padding: 12px 24px!important;
+}
+.lf-margin-top {
+  margin-top: 16px!important;
+}
+.lf-margin-top-xl {
+  margin-top: 20px!important;
+}
+.lf-large {
+  font-size: 18px!important;
+}
+.lf-opacity,
+.lf-hover-opacity:hover {
+  opacity: 0.60;
+}
+.fa {
+  padding: 4px;
+}
+/*end new styles */
+@media only screen and (min-width: 1025px) {
+  .desktopLayout {
+    display: flex;
+    flex-direction: row;
+  }
+}
 /* mobile orientation: landscape */
 @media only screen and (min-device-width: 314px) and (max-device-width: 768px) and (orientation: landscape) {
   #nav #down {
@@ -87,12 +194,15 @@
   }
   #nav #down-content-desktop {
     display: block;
-    margin-left: 10%;
-    padding: 2% 0 0 0;
     width: 100%;
-  }
-  #nav #down-content-desktop a {
-    margin: 10%;
+    rigth: 0;
+    /* margin-left: 10%;
+           padding: 2% 0 0 0;
+            width: 100%;
+            a {
+                margin: 10%;
+            }
+            */
   }
   #indexMain .feature {
     width: 25%;

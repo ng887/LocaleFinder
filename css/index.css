@@ -1,22 +1,38 @@
 /* modified by neha */
+/*
 #indexMain {
-  /* .feature {
-        button {
-            padding: 6%;
-            margin-top: 0;
-        }
-    }*/
+   #descr {
+       position: relative;
+       top: -10px;
+   }
+ .feature {
+       button {
+           padding: 6%;
+           margin-top: 0;
+       }
+   }
 }
-#indexMain #descr {
+*/
+.bg-main {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../image/NightSeattle2.jpg");
+  min-height: 100%;
+}
+.display-main {
   position: relative;
-  top: -10px;
 }
 /*Desktop*/
+/*
 @media only screen and (min-width: 1025px) {
-  #indexMain #features {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+    
+    #indexMain {
+        #features {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
 }
+*/
 /* end neha */
