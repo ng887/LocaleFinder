@@ -144,6 +144,10 @@ a .header-link {
 .text-right {
   text-align: left!important;
 }
+
+.text-center {
+  text-align: center!important;
+}
 .text-xxxlarge {
   font-size: 48px !important;
 }
