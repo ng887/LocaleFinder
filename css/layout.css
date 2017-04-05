@@ -46,8 +46,8 @@ html {
   border-radius: 20%;
 }
 #nav #down {
-  margin: auto;
-  margin-top: 2%;
+  /*  margin: auto;
+        margin-top: 2%;*/
   /* margin-bottom: 2%;
          margin-left: 70%;*/
 }
@@ -58,13 +58,7 @@ html {
   margin: 6px 0;
 }
 #nav #down #down-icon {
-  margin-left: 230%;
-}
-#nav #down #down-content {
-  display: none;
-  position: absolute;
-  background-color: #707070;
-  z-index: 1;
+  /* margin-left: 230%;*/
 }
 #nav #down #down-content a {
   color: #ffffff;
@@ -75,6 +69,12 @@ html {
 }
 #nav #down-content-desktop {
   display: none;
+}
+#down-content {
+  display: none;
+  position: absolute;
+  background-color: #707070;
+  z-index: 1;
 }
 .mobileLayout {
   display: flex;
@@ -109,6 +109,10 @@ position-bottom {
 .position-right {
   float: right!important;
 }
+.position-topright {
+  top: 0;
+  right: 0;
+}
 .lf-button {
   border: none;
   display: inline-block;
@@ -134,8 +138,11 @@ a .header-link {
 .wide {
   letter-spacing: 4px;
 }
-.text-large {
-  font-size: 18px !important;
+.text-right {
+  text-align: right!important;
+}
+.text-right {
+  text-align: left!important;
 }
 .text-xxxlarge {
   font-size: 48px !important;
@@ -150,7 +157,10 @@ a .header-link {
   margin-top: 16px!important;
 }
 .lf-margin-top-xl {
-  margin-top: 20px!important;
+  margin-top: 30px!important;
+}
+.lf-margin-top-large {
+  margin-top: 28px!important;
 }
 .lf-large {
   font-size: 18px!important;
@@ -161,6 +171,30 @@ a .header-link {
 }
 .fa {
   padding: 4px;
+}
+.lf-sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed!important;
+  z-index: 1;
+  overflow: auto;
+}
+.lf-card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.lf-animate-right {
+  position: relative;
+  animation: animateright 0.4s;
+}
+@keyframes animateright {
+  0% {
+    right: -800px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
 }
 /*end new styles */
 @media only screen and (min-width: 1025px) {
