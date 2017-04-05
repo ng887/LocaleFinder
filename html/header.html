@@ -1,35 +1,39 @@
- <header>
-        <nav id="nav" class="rowLayout">
-            <div><span class="text-xxxlarge">LF</span></div>
-            <div>
-                <a href="/index.html" class="lf-button header-link wide lf-margin-top-xl">LOCALE FINDER</a>
-            </div>
-            <div id="down">
-                <div id="down-icon">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div id="down-content">
-                    <!--start edit by Rashmitha-->
-                    <a href="/html/slider.html">Suggestions</a>
-                    <a href="/html/NA.html">Find by area</a>
-                    <a href="/html/NA.html">Comparison</a>
-                    <!--end edit by Rashmitha-->
-                </div>
-            </div>
-            <div id="down-content-desktop" class="rowLayout">
-                <!--start edit by Rashmitha-->
-                <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
-                    <i class="fa fa-balance-scale lf-hover-opacity "></i>COMPARE
+
+<header>
+    <nav id="nav" class="rowLayout lf-card"  style="justify-content: space-between">
+        <div><span class="text-xxxlarge lf-button">LF</span></div>
+        <div>
+            <a href="/index.html" class="lf-button header-link wide lf-margin-top-xl">LOCALE FINDER</a>
+        </div>
+
+        <div id="down">
+            <div >
+                <a href="javascript:void(0)" class="lf-button text-large lf-margin-top-large" onclick="lfOpen()">
+                    <i class="fa fa-bars"></i>
                 </a>
-                <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
-                    <i class="fa fa-search lf-hover-opacity "></i>FIND
-                </a>
-                <a href="/html/slider.html" class="lf-button header-link position-right lf-margin-top-xl" >
-                    <i class="fa fa-lightbulb-o lf-hover-opacity "></i>SUGGEST
-                </a>
-                <!--end edit by Rashmitha-->
             </div>
-        </nav>
-    </header>
+            <div id="down-content" class="lf-sidebar lf-animate-right lf-black position-topright text-left">
+                <a href="javascript:void(0)" onclick="lfClose()" class="lf-button text-large lf-large lf-margin-top-large">Close &times;</a>
+                <a href="/html/slider.html" class="text-left">SUGGEST</a>
+                <a href="/html/NA.html" class="text-left">FIND</a>
+                <a href="/html/NA.html" class="text-left">COMPARE</a>
+
+            </div>
+        </div>
+
+        <div id="down-content-desktop" class="rowLayout">
+            <!--start edit by Rashmitha-->
+            <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
+                <i class="fa fa-balance-scale lf-hover-opacity "></i>COMPARE
+            </a>
+            <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
+                <i class="fa fa-search lf-hover-opacity "></i>FIND
+            </a>
+            <a href="/html/slider.html" class="lf-button header-link position-right lf-margin-top-xl" >
+                <i class="fa fa-lightbulb-o lf-hover-opacity "></i>SUGGEST
+            </a>
+            <!--end edit by Rashmitha-->
+        </div>
+    </nav>
+</header>
+
