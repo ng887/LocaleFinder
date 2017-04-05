@@ -16,16 +16,18 @@ a img {
   height: auto;
   width: 30%;
 }
+/*
 button {
-  font-size: 0.8em;
-  margin-top: 14%;
-  margin-left: 2%;
-  /*padding:25% 0 20% 3;*/
-  text-align: center;
-  cursor: pointer;
-  border-radius: 12px;
-  /*width: @buttonWidth;*/
+    font-size: @buttonFontSize;
+    margin-top: 14%;
+    margin-left: 2%;
+    padding:25% 0 20% 3;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    width: @buttonWidth;
 }
+*/
 h2 {
   margin: 2%;
   padding: 1%;
