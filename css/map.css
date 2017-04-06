@@ -22,14 +22,14 @@
     margin-left:7%;
    
 }
-.mapLink a:link{
+a:link{
     text-decoration:none;
 }
 
-.mapLink a:visited{
+a:visited{
     color:#000000;
 }
-.mapLink a:hover {
+a:hover {
     color:#5b5b5b;
     opacity:0.8;
 }
@@ -57,14 +57,14 @@
 
 @media only screen and (min-width: 1025px) {
 .mapPage{
-    background-image:url("pike.jpg");
+    background-image:url("../image/pike.jpg");
     background-size: cover;
     filter: grayscale(50%);  
 }
 img {
   border-radius: 12px;
   position: flex; 
-  /*opacity:0.9;*/
+  opacity:0.9;
 }
 
 .imagemap__item {
@@ -118,7 +118,7 @@ a:hover {
 }
 
 .mapText{
-    color:white;
+    color:#ffffff;
     opacity:0.8;
     font-size: 20px;
     font-weight: bold;
@@ -133,4 +133,3 @@ a:hover {
 }
 }
 /* map section ended by Amanda*/
-
