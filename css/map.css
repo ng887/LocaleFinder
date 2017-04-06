@@ -1,0 +1,136 @@
+/* map section made by Amanada */
+
+.imagemap__item {
+  display: none;
+}
+
+.mapDiv{
+    display:inline-block;
+    width:630px;
+    height:710px;
+    margin:1px;
+    margin-left:2%;
+}
+.mapTextDivRight1{
+    position:absolute;
+    display:inline-block;
+    color:black;
+    width:320px;
+    height:650px; 
+    margin:5px;
+    float:right;
+    margin-left:7%;
+   
+}
+.mapLink a:link{
+    text-decoration:none;
+}
+
+.mapLink a:visited{
+    color:#000000;
+}
+.mapLink a:hover {
+    color:#5b5b5b;
+    opacity:0.8;
+}
+
+
+.mapTextDivRight2{
+    display:inline-block;
+    color:black;
+    width:180px;
+    height:650px; 
+    margin:10px;
+    float:right;
+    margin-top:10%;
+}
+
+
+.mapTextTitle{
+    color:black;
+    text-shadow: 3px 3px 5px #ffffff;
+    font-size:27px;
+    font-weight:bold;
+}
+
+
+
+@media only screen and (min-width: 1025px) {
+.mapPage{
+    background-image:url("pike.jpg");
+    background-size: cover;
+    filter: grayscale(50%);  
+}
+img {
+  border-radius: 12px;
+  position: flex; 
+  /*opacity:0.9;*/
+}
+
+.imagemap__item {
+  display: none;
+}
+
+.mapDiv{
+    display:inline-block;
+    width:720px;
+    height:710px;
+    margin:1px;
+    margin-left: 8%;
+    margin-top:1.5%;
+    margin-bottom:0%;
+}
+
+.mapTextDivRight1{
+    position:absolute;
+    display:inline-block;
+    color:black;
+    width:320px;
+    height:650px; 
+    margin:5px;
+    float:right;
+    margin-right:35%;
+    margin-top:2%
+}
+
+a:link{
+    text-decoration:none;
+}
+
+a:visited{
+    color:#ffffff;
+}
+a:hover {
+    color:#000000;
+    opacity:0.8;
+}
+
+
+.mapTextDivRight2{
+    display:inline-block;
+    color:black;
+    width:180px;
+    height:650px; 
+    margin:10px;
+    float:right;
+    margin-right:14%;
+    margin-top:7.5%
+}
+
+.mapText{
+    color:white;
+    opacity:0.8;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px #000000;
+}
+
+.mapTextTitle{
+    color:#000000;
+    text-shadow: 3px 3px 5px #ffffff;
+    font-size:27px;
+    font-weight:bold;
+}
+}
+/* map section ended by Amanda*/
+
