@@ -9,3 +9,12 @@ $(document).ready(function() {
 $(document).on('click','#down',function(){
   $(this).find("#down-content").toggle();
 });
+
+/*drop down- sidebar open close*/
+function lfOpen() {
+    document.getElementById("down-content").style.display = "block";
+}
+
+function lfClose() {
+    document.getElementById("down-content").style.display = "none";
+}
