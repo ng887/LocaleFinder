@@ -1,57 +1,25 @@
-<!-- map section started by Amanda -->   
+<!-- map section started by Amanda -->
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>map</title>
-    <link rel="stylesheet" type="text/css" href="../css/map.css">
-   
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/brand.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="../css/map.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
 </head>
 
 <body>
-<header>
-    <nav id="nav" class="rowLayout lf-card"  style="justify-content: space-between">
-        <div><span class="text-xxxlarge lf-button">LF</span></div>
-        <div>
-            <a href="/index.html" class="lf-button header-link wide lf-margin-top-xl">LOCALE FINDER</a>
-        </div>
-
-        <div id="down">
-            <div >
-                <a href="javascript:void(0)" class="lf-button text-large lf-margin-top-large" onclick="lfOpen()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-            <div id="down-content" class="lf-sidebar lf-animate-right lf-black position-topright text-left">
-                <a href="javascript:void(0)" onclick="lfClose()" class="lf-button text-large lf-large lf-margin-top-large">Close &times;</a>
-                <a href="/html/slider.html" class="text-left">SUGGEST</a>
-                <a href="/html/NA.html" class="text-left">FIND</a>
-                <a href="/html/NA.html" class="text-left">COMPARE</a>
-
-            </div>
-        </div>
-
-        <div id="down-content-desktop" class="rowLayout">
-            <!--start edit by Rashmitha-->
-            <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
-                <i class="fa fa-balance-scale lf-hover-opacity "></i>COMPARE
-            </a>
-            <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
-                <i class="fa fa-search lf-hover-opacity "></i>FIND
-            </a>
-            <a href="/html/slider.html" class="lf-button header-link position-right lf-margin-top-xl" >
-                <i class="fa fa-lightbulb-o lf-hover-opacity "></i>SUGGEST
-            </a>
-            <!--end edit by Rashmitha-->
-        </div>
-    </nav>
-</header>
-
-
- 
+ <div id='header'></div>
     <section class="mapPage">
 	<div class="mapDiv">
-	<img src="../image/map.jpg" alt="SeattleMap" usemap="#imagemap1" height="600" width="600">    
+	<img src="../image/map.jpg" alt="SeattleMap" usemap="#imagemap1" height="600" width="600">
     <map id="imagemap1" name="imagemap1">
     <area shape="rect" alt="Northgate" coords="330,100,430,190" class="neighborDetail" href="neighborDetail.html?name=Northgate" />
     <area shape="rect" alt="U-District" coords="310,230,413,280" class="neighborDetail" href="neighborDetail.html?name=University District" />
@@ -64,22 +32,22 @@
     <area shape="rect" alt="Ballard" coords="85,180,220,230" class="neighborDetail" href="neighborDetail.html?name=Ballard" />
     <area shape="rect" alt="Alki" coords="100,420,170,590" class="neighborDetail" href="neighborDetail.html?name=Alki" />
     </map>
-    </div>    
-    
+    </div>
+
     <div class="mapTextDivRight1">
     <h1 class="mapTextTitle"><img src="../image/pin.png" alt="pin" width="38" height="43" align="middle"> CHOOSE AN AREA</h1>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Northgate">Northgate</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Green Lake">Green Lake</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Ballard">Ballard</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Fremont">Fremont</a></h3>
-    <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=University District">U-District</a></h3>   
+    <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=University District">U-District</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Downtown">Downtown</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Alki">Alki</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">South Lake Union</a></h3>
     </div>
-    
+
     <div class="mapTextDivRight2">
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">North Beach</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">Olympic Hills</a></h3>
@@ -89,8 +57,8 @@
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">Georgetown</a></h3>
     <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">Rainier Valley</a></h3>
     </div>
-    </section>   
-<!-- map section ended by Amanda -->    
-
+    </section>
+<!-- map section ended by Amanda -->
+<div id='footer'></div>
 </body>
 </html>
