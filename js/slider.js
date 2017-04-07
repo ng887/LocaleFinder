@@ -2,8 +2,10 @@ var slideIndex = 1;
 var selected = [false, false, false, false];
 
 showDivs(slideIndex);
-
+$(".counter").html((slideIndex)+"/4");
 function plusDivs(n) {
+  var counter = slideIndex + n;
+  $(".counter").html(counter+"/4");
   showDivs(slideIndex += n);
 }
 //modified by Rashmitha
