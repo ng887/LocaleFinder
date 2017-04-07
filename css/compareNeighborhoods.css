@@ -7,13 +7,15 @@
 }
 #mainDiv h1{
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 6%;
 }
 .compareContainer{
     /*border: solid 2px red;*/
     display: flex;
     flex-wrap: wrap;
+    background-color: #d7babf;
+    height: 40rem;
 }
 .comparison{
   width:50%;
@@ -65,7 +67,9 @@ input{
     input{
         width:17rem;
     }
-
+    .compareContainer{
+      height: 25rem;
+    }
 
 
 
