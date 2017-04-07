@@ -56,15 +56,15 @@ a:hover {
 
 
 @media only screen and (min-width: 1025px) {
+
 .mapPage{
-    background-image:url("../image/pike.jpg");
-    background-size: cover;
-    filter: grayscale(50%);  
+    background-color:black;  
 }
+
 img {
   border-radius: 12px;
-  position: flex; 
-  opacity:0.9;
+  position: flex;
+  opacity:0.9;  
 }
 
 .imagemap__item {
@@ -87,10 +87,10 @@ img {
     color:black;
     width:320px;
     height:650px; 
-    margin:5px;
+    margin:39px;
     float:right;
-    margin-right:35%;
-    margin-top:2%
+    margin-right:15%;
+    margin-top:3%
 }
 
 a:link{
@@ -101,7 +101,7 @@ a:visited{
     color:#ffffff;
 }
 a:hover {
-    color:#000000;
+    color:#606060;
     opacity:0.8;
 }
 
@@ -111,25 +111,27 @@ a:hover {
     color:black;
     width:180px;
     height:650px; 
-    margin:10px;
+    margin:5px;
     float:right;
-    margin-right:14%;
-    margin-top:7.5%
+    margin-right:8%;
+    margin-top:8%
 }
 
 .mapText{
     color:#ffffff;
     opacity:0.8;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
-    text-shadow: 3px 3px 5px #000000;
+    text-shadow: 3px 3px 5px #939393;
 }
 
 .mapTextTitle{
-    color:#000000;
-    text-shadow: 3px 3px 5px #ffffff;
-    font-size:27px;
+    color:#cccccc;
+    text-shadow: 3px 3px 5px #444444;
+    font-size:33px;
     font-weight:bold;
 }
 }
 /* map section ended by Amanda*/
+
+
