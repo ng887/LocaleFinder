@@ -12,35 +12,22 @@
     margin-left:2%;
 }
 .mapTextDivRight1{
-    position:absolute;
     display:inline-block;
     color:black;
     width:320px;
-    height:650px; 
-    margin:5px;
-    float:right;
+    height:400px; 
+    margin:2px;
+    float:none;
     margin-left:7%;
    
 }
-a:link{
-    text-decoration:none;
-}
-
-a:visited{
-    color:#000000;
-}
-a:hover {
-    color:#5b5b5b;
-    opacity:0.8;
-}
-
 
 .mapTextDivRight2{
     display:inline-block;
     color:black;
     width:180px;
-    height:650px; 
-    margin:10px;
+    height:400px; 
+    margin:50px;
     float:right;
     margin-top:10%;
 }
@@ -53,18 +40,29 @@ a:hover {
     font-weight:bold;
 }
 
+a:link{
+    text-decoration:none;
+}
 
+a:visited{
+    color:#000000;
+}
+a:hover {
+    color:#5b5b5b;
+    opacity:0.8;
+}
 
 @media only screen and (min-width: 1025px) {
 
 .mapPage{
     background-color:black;  
+    overflow: auto;
 }
+
 
 img {
   border-radius: 12px;
   position: flex;
-  opacity:0.9;  
 }
 
 .imagemap__item {
@@ -74,7 +72,7 @@ img {
 .mapDiv{
     display:inline-block;
     width:720px;
-    height:710px;
+    height:650px;
     margin:1px;
     margin-left: 8%;
     margin-top:1.5%;
@@ -86,7 +84,7 @@ img {
     display:inline-block;
     color:black;
     width:320px;
-    height:650px; 
+    height:500px; 
     margin:39px;
     float:right;
     margin-right:15%;
@@ -110,7 +108,7 @@ a:hover {
     display:inline-block;
     color:black;
     width:180px;
-    height:650px; 
+    height:500px; 
     margin:5px;
     float:right;
     margin-right:8%;
@@ -133,5 +131,3 @@ a:hover {
 }
 }
 /* map section ended by Amanda*/
-
-
