@@ -1,0 +1,106 @@
+
+.onlyQuestionnaire h1{
+  text-align: center;
+  margin: 3% 0%;
+  font-size: 1rem;
+}
+.counter{
+  font-size: 1.2rem;
+  float: right;
+  margin-right: 5%;
+  margin-top: 7%;
+  color: white;
+}
+.questionSlider{
+  /*border: 2px solid purple;*/
+  margin-top: 10%;
+  background-image: url("../image/backdrop.png");
+  background-position: center;
+}
+.slider{
+  /*border: 2px solid pink;*/
+  text-align: center;
+  padding-top: 2%;
+  height: 25rem;
+}
+.options{
+  /*border: solid 2px orange;*/
+  margin: 1% 0%;
+}
+.slider h1{
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 5%;
+}
+.slider button{
+  width: 14rem;
+  height: 3rem;
+  font-size: 1rem;
+  background-color: #F88D86;
+  margin: 2% 2%;
+  border-radius:10px;
+  cursor: pointer;
+  box-shadow: 0 7px #bfbbbb;
+}
+.slider button:hover{
+  background-color: #B0827F;
+}
+.slider button:active{
+  background-color: #B0827F;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+i{
+  font-size: 2rem;
+}
+.left-arrow{
+  float: left;
+  margin-left: 5%;
+  width: 5rem;
+  height: 3rem;
+  margin-top: 1%;
+  border-radius: 10px;
+  background-color: #F88D86;
+}
+.right-arrow, #doneButton{
+  float: right;
+  margin-right: 5%;
+  margin-top: 1%;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: #F88D86;
+}
+#doneButton{
+  font-size: 1.2rem;
+}
+@media only screen and (min-width: 1025px) {
+
+  .onlyQuestionnaire h1{
+    font-size: 1.5rem;
+  }
+
+  .questionSlider{
+    margin-top: 3%;
+  }
+  .slider{
+    height: 22rem;
+  }
+  .options{
+    margin: 5% 0%;
+  }
+  .counter{
+    margin-top: 1%;
+  }
+  .slider h1{
+    margin: 5% 0%;
+    font-size: 1.5rem;
+  }
+  .slider button{
+    margin: 1% 2%;
+    font-size: 1.2rem;
+    width: 16rem;
+  }
+
+}
