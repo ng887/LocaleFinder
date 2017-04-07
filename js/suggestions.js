@@ -225,6 +225,7 @@ dataObj = {
   ]
 }
 $("#housePriceChartContainer").CanvasJSChart(displayBarChar(dataObj));
+
 function displayBarChar(dataObj){
   var options = {
 		title: {
@@ -237,6 +238,40 @@ function displayBarChar(dataObj){
 		data: [
 		{
 			type: "column", //change it to line, area, bar, pie, etc
+			toolTipContent: "{label}: {y}",
+			dataPoints: [
+				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
+				{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data) },
+				{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data) }
+			]
+		}
+		]
+	};
+  return options;
+}
+var dataObj = {
+  title:'School Rating of the top three areas',
+  ytitle:'School Rating',
+  detail:[
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].schoolRating},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].schoolRating},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].schoolRating}
+  ]
+}
+$("#schoolRatingChartContainer").CanvasJSChart(displayHorizontalBarChart(dataObj));
+
+function displayHorizontalBarChart(dataObj){
+  var options = {
+		title: {
+			text: dataObj.title
+		},
+    axisY: {
+				title: dataObj.ytitle
+			},
+    animationEnabled: true,
+		data: [
+		{
+			type: "bar", 
       indexLabel: "{y}",
 			dataPoints: [
 				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
@@ -277,6 +312,43 @@ function displayTranDoughnutChart(dataObj){
 	};
   return options;
 }
+
+/*dataObj = {
+  title:'School Rating in this area',
+  ytitle:'School Rating',
+  detail:[
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].schoolRating},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].schoolRating},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].schoolRating},
+    {name:total,data:suggestedAreaDetail[0].schoolRating+sugge}
+  ]
+}
+
+$("#schoolRatingChartContainer").CanvasJSChart(displayDoughnutChart(dataObj));
+
+function displayDoughnutChart(dataObj) {
+	var options = {
+	title: { 
+		text: dataObj.title
+	}, 
+	animationEnabled: true,
+	data: [ 
+	{ 
+		type: "doughnut", 
+		indexLabel: "{label}: {y}%",
+		toolTipContent: "{label}: {y}%",	
+		dataPoints: [
+			{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
+			{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data) },
+			{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data) }
+		]
+	} 
+	] 
+};
+return options;
+} */
+//house price display
+
 //End by sirisha
 
 //start by neha
