@@ -203,3 +203,15 @@ section {
     margin-top: 2rem;
   }
 }
+p{
+  font-family: "Philosopher", sans-serif;
+}
+li{
+  font-family: "Philosopher", sans-serif;
+}
+span{
+  font-family: "Philosopher", sans-serif;
+}
+table tr td{
+  font-family: "Philosopher", sans-serif ;
+}
