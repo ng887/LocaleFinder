@@ -158,13 +158,69 @@ function getNeighbourByCrime(){
    return neighbours;
 }
 //crime display
+
+
+/*Theme 01 - Same shades color all graphs*/
+/*
+var graphBgColor='#fff';
+var color1="#ffb3b3";
+var color2="#990000";
+var color3="#4d0000";
+*/
+
+/*Theme 02 - Different Colors dark bg all graphs*/
+/*
+var graphBgColor='#000000';
+var color1="#E0B2FF";
+var color2="#FF9C59";
+var color3="#B2E8B2";
+*/
+
+/*Theme 03 - Different Colors light bg all graphs*/
+var graphBgColor='#fff';
+var color1="#FF7D7D";
+var color2="#B870FF";
+var color3="#73D573";
+
+
+/*------------------Theme 04 - Different Color Graphs -------- DONOT USE IT */
+/*
+var crimeGraphBgColor='#000000';
+var crimeColor1="#6600cc";
+var crimeColor2="#8c1aff";
+var crimeColor3="#cc99ff";
+
+
+var incomeGraphBgColor='#000000';
+var incomeColor1="#993d00";
+var incomeColor2="#ff6600";
+var incomeColor3="#ffd1b3";
+
+
+var priceGraphBgColor='#000000';
+var priceColor1="#006600";
+var priceColor2="#00b300";
+var priceColor3="#e6ffe6";
+
+
+var schoolGraphBgColor='#000000';
+var schoolColor1="#000099";
+var schoolColor2="#0000e6";
+var schoolColor3="#4d4dff";
+*/
+
+
+
 $("#crimeContainer").CanvasJSChart(displayCrime());
+
 function displayCrime(){
   var options = {
+       backgroundColor: graphBgColor,
+
 		title:{
-			text: "Crime record in three area"
+			//text: "Crime record in three area"
 		},
-    animationEnabled: true,
+        animationEnabled: true,
 		legend:{
 			verticalAlign: "bottom",
 			horizontalAlign: "center"
@@ -179,10 +235,11 @@ function displayCrime(){
 			type: "pie",
 			showInLegend: true,
 			toolTipContent: "{y} - <strong>#percent%</strong>",
+
 			dataPoints: [
-				{  y: parseInt(suggestedAreaDetail[0].crimeRecord), legendText:suggestedAreaDetail[0].name, indexLabel: suggestedAreaDetail[0].name },
-				{  y: parseInt(suggestedAreaDetail[1].crimeRecord), legendText:suggestedAreaDetail[1].name, indexLabel: suggestedAreaDetail[1].name },
-				{  y: parseInt(suggestedAreaDetail[2].crimeRecord), legendText:suggestedAreaDetail[2].name,exploded: true, indexLabel: suggestedAreaDetail[2].name },
+				{  y: parseInt(suggestedAreaDetail[0].crimeRecord), legendText:suggestedAreaDetail[0].name, indexLabel: suggestedAreaDetail[0].name,color:color1 },
+				{  y: parseInt(suggestedAreaDetail[1].crimeRecord), legendText:suggestedAreaDetail[1].name, indexLabel: suggestedAreaDetail[1].name,color: color2},
+				{  y: parseInt(suggestedAreaDetail[2].crimeRecord), legendText:suggestedAreaDetail[2].name,exploded: true, indexLabel: suggestedAreaDetail[2].name,color:color3 },
 
 			]
 		}
@@ -205,32 +262,38 @@ detail:[
 */
 //income display
 var dataObj = {
-  title:'Average Income in Three Area',
-  ytitle:'Average Income',
+  //title:'Average Income in Three Area',
+
+  ytitle:'Monthly Average Income in $',
   detail:[
-    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].income},
-    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].income},
-    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].income}
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].income,color:color1},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].income,color:color2},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].income,color:color3}
   ]
 }
 $("#incomeChartContainer").CanvasJSChart(displayBarChar(dataObj));
 //house price display
 dataObj = {
-  title:'Average House Price in Three Area',
-  ytitle:'Average House Price',
+ //title:'Average House Price in Three Area',
+  ytitle:'yearly Average House Price in $(K)',
   detail:[
-    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].housePrice},
-    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].housePrice},
-    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].housePrice}
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].housePrice,color:color1},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].housePrice,color:color2},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].housePrice,color:color3}
   ]
 }
 $("#housePriceChartContainer").CanvasJSChart(displayBarChar(dataObj));
 
+
+
 function displayBarChar(dataObj){
   var options = {
+       backgroundColor: graphBgColor,
 		title: {
+
 			text: dataObj.title
 		},
+
     axisY: {
 				title: dataObj.ytitle
 			},
@@ -240,72 +303,58 @@ function displayBarChar(dataObj){
 			type: "column", //change it to line, area, bar, pie, etc
 			toolTipContent: "{label}: {y}",
 			dataPoints: [
-				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
-				{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data) },
-				{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data) }
+				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data),color:dataObj.detail[0].color },
+				{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data),color:dataObj.detail[1].color },
+				{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data),color:dataObj.detail[2].color }
 			]
 		}
 		]
 	};
   return options;
 }
+
+
 var dataObj = {
-  title:'School Rating of the top three areas',
-  ytitle:'School Rating',
+ // title:'School Rating of the top three areas',
+  ytitle:'School Rating out of 10',
   detail:[
-    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].schoolRating},
-    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].schoolRating},
-    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].schoolRating}
+    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].schoolRating,color:color1},
+    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].schoolRating,color:color2},
+    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].schoolRating,color:color3}
   ]
 }
 $("#schoolRatingChartContainer").CanvasJSChart(displayHorizontalBarChart(dataObj));
 
+var dataObj = {
+    // title:'School Rating of the top three areas',
+    ytitle:'Transit Score out of 100',
+    detail:[
+        {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].transportation,color:color1},
+        {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].transportation,color:color2},
+        {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].transportation,color:color3}
+    ]
+}
+$("#transportationContainer").CanvasJSChart(displayHorizontalBarChart(dataObj));
+
 function displayHorizontalBarChart(dataObj){
   var options = {
+       backgroundColor: graphBgColor,
 		title: {
 			text: dataObj.title
 		},
-    axisY: {
+        axisY: {
 				title: dataObj.ytitle
 			},
-    animationEnabled: true,
+        animationEnabled: true,
 		data: [
 		{
-			type: "bar", 
-      indexLabel: "{y}",
+			type: "bar",
+
+            indexLabel: "{y}",
 			dataPoints: [
-				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
-				{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data) },
-				{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data) }
-			]
-		}
-		]
-	};
-  return options;
-}
-//end by rachel
-// Transportation section
-// start by sirisha
-$("#transportationContainer1").CanvasJSChart(displayTranDoughnutChart(suggestedAreaDetail[0]));
-$("#transportationContainer2").CanvasJSChart(displayTranDoughnutChart(suggestedAreaDetail[1]));
-$("#transportationContainer3").CanvasJSChart(displayTranDoughnutChart(suggestedAreaDetail[2]));
-function displayTranDoughnutChart(dataObj){
-  var options = {
-		title:{
-			text: dataObj.name
-		},
-    animationEnabled: true,
-		data: [
-		{
-			type: "doughnut",
-			startAngle: -90,
-      indexLabelFontColor: "black",
-      indexLabelFontSize: 20,
-			toolTipContent: "{legendText}: {y}",
-			showInLegend: true,
-			dataPoints: [
-				{y: parseInt(dataObj.transportation), indexLabel: "Transit score: "+dataObj.transportation, legendText: dataObj.name },
-				{y: 100-parseInt(dataObj.transportation), legendText: " " }
+				{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data),color:dataObj.detail[0].color },
+				{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data),color:dataObj.detail[1].color },
+				{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data),color:dataObj.detail[2].color }
 			]
 		}
 		]
@@ -313,81 +362,25 @@ function displayTranDoughnutChart(dataObj){
   return options;
 }
 
-/*dataObj = {
-  title:'School Rating in this area',
-  ytitle:'School Rating',
-  detail:[
-    {name:suggestedAreaDetail[0].name,data:suggestedAreaDetail[0].schoolRating},
-    {name:suggestedAreaDetail[1].name,data:suggestedAreaDetail[1].schoolRating},
-    {name:suggestedAreaDetail[2].name,data:suggestedAreaDetail[2].schoolRating},
-    {name:total,data:suggestedAreaDetail[0].schoolRating+sugge}
-  ]
+
+for(i = 0; i < 3; i++) {
+    $('#suggestionNames ul').append(
+        $('<li>').append(
+            $('<a>').attr('href', "neighborDetail.html?name=" + suggestedAreaDetail[i].name).addClass('lf-button lf-opacity').append(suggestedAreaDetail[i].name)));
 }
 
-$("#schoolRatingChartContainer").CanvasJSChart(displayDoughnutChart(dataObj));
 
-function displayDoughnutChart(dataObj) {
-	var options = {
-	title: { 
-		text: dataObj.title
-	}, 
-	animationEnabled: true,
-	data: [ 
-	{ 
-		type: "doughnut", 
-		indexLabel: "{label}: {y}%",
-		toolTipContent: "{label}: {y}%",	
-		dataPoints: [
-			{ label: dataObj.detail[0].name, y: parseInt(dataObj.detail[0].data) },
-			{ label: dataObj.detail[1].name, y: parseInt(dataObj.detail[1].data) },
-			{ label: dataObj.detail[2].name, y: parseInt(dataObj.detail[2].data) }
-		]
-	} 
-	] 
-};
-return options;
-} */
-//house price display
+$('#crimeContent').append('The neighborhood with the least number of crimes is rated as the best. The number of crimes in a year are:'+ '<br/>' );
+$('#incomeContent').append('The neighborhood with high average income is rated as the best. The monthly average incomes are:'+ '<br/>' );
+$('#priceContent').append('The neighborhood with low average house prices is rated as the best. The average house prices are:'+ '<br/>');
+$('#schoolRateContent').append('The neighborhood with high ratings out 10 is rated as best. The school ratings:'+ '<br/>');
+$('#transportContent').append('The neighborhood with high ratings out of 100 is rated as best. The transit scores are:'+ '<br/>');
 
-//End by sirisha
+for(i = 0; i < 3; i++) {
+    $('#crimeContent').append('<b>' + suggestedAreaDetail[i].name + '</b>'+ ' :' + suggestedAreaDetail[i].crimeRecord + ' yearly'+ '<br/>');
+    $('#incomeContent').append('<b>' + suggestedAreaDetail[i].name + '</b>'+ ' :$' + suggestedAreaDetail[i].income + '<br/>' );
+    $('#priceContent').append( '<b>' + suggestedAreaDetail[i].name + '</b>'+ ' :$' + suggestedAreaDetail[i].housePrice + '(K)' + '<br/>');
+    $('#schoolRateContent').append('<b>' + suggestedAreaDetail[i].name + '</b>'+ ' :' + suggestedAreaDetail[i].schoolRating + '<br/>');
+    $('#transportContent').append('<b>' + suggestedAreaDetail[i].name + '</b>'+ ' :' + suggestedAreaDetail[i].transportation + '<br/>');
+}
 
-//start by neha
-
-  //start edit by sirisha
-   //Collected the suggestion list and printing the top three nieghbourhood.
-    // var safeAreas = suggestionList.slice(0,neighborhood.top);
-
-    //Showing each nieghbourhood in suggestionsPage.html
-/*    safeAreas.forEach(function(safeArea, i) {
-        $('#suggestedArea').append('<div id="area' + i + '"></div>');
-
-        //Displays top 3 area/suburb name
-        $('#area' + i).append('<h2>' + safeArea.area + '</h2>');
-
-        //addClass
-        $('#area' + i).addClass('area');
-
-        //crime
-        $('#area' + i).append('<div id="crime"></div>');
-        $('#area' + i).find('div#crime').append('<h4 class="suggestions">No. of crimes(per 100K): ' + safeArea.detail.crime + '</h4>');
-
-        //schools
-        $('#area' + i).append('<div id="schools"></div>');
-        $('#area' + i).find('div#schools').append('<h4 class="suggestions">School Rating: ' + safeArea.detail.school + '</h4>');
-
-         //grocery
-        $('#area' + i).append('<div id="grocery"></div>');
-        $('#area' + i).find('div#grocery').append('<h4 class="suggestions">Grocery Stores: ' + + '</h4>');
-
-        //transport
-        $('#area' + i).append('<div id="transport"></div>');
-        $('#area' + i).find('div#transport').append('<h4 class="suggestions">Transportion Rating: ' + safeArea.detail.transportation + '</h4>');
-
-        //income
-        $('#area' + i).append('<div id="income"></div>');
-        $('#area' + i).find('div#income').append('<h4 class="suggestions">Avg Income Range: ' + safeArea.detail.housePrice +  '</h4>');
-
-
-    });*/
-//end edited by sirisha
-//end by neha
