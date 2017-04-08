@@ -214,6 +214,7 @@
 	}
 	.search__input {
 		font-size: 2em;
+		margin-top: 25%;
 	}
 	.btn--search {
 		font-size: 1.25em;
