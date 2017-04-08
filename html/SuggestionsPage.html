@@ -13,65 +13,82 @@
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
     <!-- end -->
     <link rel="stylesheet" type="text/css" href="../css/suggestionsPage.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.canvasjs.min.js"></script>
     <script type="text/javascript" src="../js/neighborDetail.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+
    
     <!-- Header Footer Load Script -->
     <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
+
 </head>
 
 <body>
     <!--start add by neha-->
     <div id='header'></div>
     <!--end add by neha-->
-    <div class="main colLayout">
+    <div class="colLayout">
         <div id="suggestionMain">
             <div id="suggestionHeader">
                 <h2 class='banner'>BEST NEIGHBORHOODS FOR YOU</h2>
             </div>
             <div id="suggestionNames">
-                <ul>
-                    <li><a class="neighborDetail" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></li>
-                    <li><a class="neighborDetail" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</li>
-                    <li><a class="neighborDetail" href="neighborDetail.html?name=Downtown">Downtown</li>
+                <ul class="text-center">
+                  <!--  <li><a class="lf-button" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></li>
+                    <li><a class="lf-button" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></li>
+                    <li><a class="lf-button" href="neighborDetail.html?name=Downtown">Downtown</a></li> -->
                 </ul>
             </div>
-            <div id='suggestedArea' class="mobileLayout desktopLayout">
-                <div class="graphicsWrapper">
-                    <section id="crimeContainer" class="graphicsContainer"></section>
+            <div class="lf-small-margin">
+                <div class="card-container mobileLayout desktopLayout "><!--id='suggestedArea' -->
+                    <div class="graphicsWrapper lf-card-2">
+                        <div> <h2 class="lf-text-darkred"> Crime record(measured Yearly) for Top Three Areas </h2></div>
+                        <section id="crimeContainer" class="graphicsContainer"></section>
+                        <div id="crimeContent" class="lf-card-block"></div>
+
+                    </div>
+                    <div class="graphicsWrapper lf-card-2">
+                        <div> <h2 class="lf-text-darkred"> Average Income for Top Three Areas </h2></div>
+                        <section id="incomeChartContainer" class="graphicsContainer"></section>
+                        <div id="incomeContent" class="lf-card-block"></div>
+                    </div>
                 </div>
-                <div class="graphicsWrapper">
-                    <section id="incomeChartContainer" class="graphicsContainer"></section>
+                <div class=" mobileLayout desktopLayout">
+                    <div class="graphicsWrapper lf-card-2">
+                        <div> <h2 class="lf-text-darkred"> Average House Price for Top Three Areas </h2></div>
+                        <section id="housePriceChartContainer" class="graphicsContainer"></section>
+                        <div id="priceContent" class="lf-card-block"></div>
+                    </div>
+                    <div class = "graphicsWrapper lf-card-2"><!--id='school'-->
+                        <div> <h2 class="lf-text-darkred"> School Ratings for Top Three Areas </h2></div>
+                        <section id="schoolRatingChartContainer" class="graphicsContainer"></section>
+                        <div id="schoolRateContent" class="lf-card-block"></div>
+                    </div>
                 </div>
-                <div class="graphicsWrapper">
-                    <section id="housePriceChartContainer" class="graphicsContainer"></section>
+
+                <div class=" mobileLayout desktopLayout">
+                    <div class="graphicsWrapper lf-card-2">
+                        <div> <h2 class="lf-text-darkred"> Transit Score for Top Three Areas </h2></div>
+                        <div>
+                            <section id="transportationContainer" class="graphicsContainer"></section>
+                            <div id="transportContent" class="lf-card-block"></div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
 
-            <div class="graphicsWrapper">
-                <div> <h2> Transit Score in Three Areas </h2></div> 
-                <div>
-                    <section id="transportation" class="graphicsContainer mobileLayout desktopLayout" >
-                        <div id="transportationContainer1" class="graphicItem"></div>
-                        <div id="transportationContainer2" class="graphicItem"></div>
-                        <div id="transportationContainer3" class="graphicItem"></div>                       
-                    </section>
-                </div>
-            </div>
-             <div id='school' class="mobileLayout desktopLayout">
-                <div class = "graphicsWrapper">
-                <section id="schoolRatingChartContainer" class="graphicsContainer"></section>
-                </div>
-            </div>
         </div>
     </div>
     <!--start add by neha-->
     <div id='footer'></div>
     <!--end add by neha-->
     <!-- Start add by sirisha -->
+    <script type="text/javascript" src="../js/index.js"></script>
     <script type="text/javascript" src="../js/suggestRefer.js"></script>
     <script type="text/javascript" src="../js/criterion.js"></script>
     <script type="text/javascript" src="../js/suggestions.js"></script>
