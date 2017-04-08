@@ -12,10 +12,10 @@ $(document).on('click','#down',function(){
 });
 
 /*drop down- sidebar open close*/
-function lfOpen() {
+$(document).ready(function lfOpen() {
     document.getElementById("down-content").style.display = "block";
-}
+});
 
-function lfClose() {
+$(document).ready(function lfClose() {
     document.getElementById("down-content").style.display = "none";
-}
+});
