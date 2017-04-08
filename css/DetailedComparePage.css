@@ -1,0 +1,390 @@
+
+/*#headingDiv
+{
+	width:94%;
+	height: 40px;
+	background-color:#e0ebeb;
+	margin-bottom: 0.5%;
+	margin-left: 4%;
+}*/
+#mainDiv
+{
+
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+#metric,#area1,#area2
+{
+	height: 630px;
+	width: 32%;
+	background-color: #e0ebeb  /*#d1e0e0*/;
+}
+#metric,#area1,#area2
+{
+	float: left;
+		
+}
+#head1,#head2,#head3
+{
+	height:92px; 
+	width:92px;
+	background-color: #47d147;
+	color: white;
+	margin-left: 9%;
+	line-height: 43px;
+}
+#head1
+{
+	background-color: #ffb833;
+}
+#crime,#school,#transport,#house,#income
+{
+	height: 92px;
+	width: 92px;
+	background-color:  #606060 /*#75D1FF /*#FF6666/*#3399ff*/;
+	margin-left: 9%;
+	text-align: center;
+	/*line-height: 100px;*/
+	margin-top: 10%;
+	color: white;
+	font-size: 20px;
+}
+#house
+{
+	line-height: 30px;
+}
+#crime
+{
+	line-height: 90px;
+}
+
+#transport
+{
+	line-height: 90px;
+}
+
+/*-----------------------*/
+#a1crime,#a1school,#a1transport,#a1house,#a1income
+{
+	height: 92px;
+	width: 92px;
+	background-color:#FF7373    /* #FFBFBF /*#FF9999 /*#FFB2B2*/ /*#d65cad*/;
+	margin-left: 10%;
+	text-align: center;
+	margin-top: 10%;
+	
+}
+/*-----------------------*/
+#a2crime,#a2school,#a2transport,#a2house,#a2income
+{
+	height: 92px;
+	width: 92px;
+	background-color: #FF7373;
+	margin-left: 9%;
+	text-align: center;
+	margin-top: 10%;
+	
+}
+#area1,#area2
+{
+	margin-left: 2%;
+}
+h2
+{
+	color: black;
+	text-align: center;
+	font-size: 1.3rem;
+	margin-top: 10%;
+}
+h3
+{
+	margin-top: 10%;
+	text-align: center;
+	font-size: 1.2rem;
+
+}
+#homeIcon
+{
+	height:100px; 
+	width:100px;
+}
+#area1 h2, #area2 h2
+{
+	color: white;
+	font-weight: 100%;
+	line-height:90px; 
+	font-size: 40px;
+}
+/*#buttonDiv
+{
+	display: flex;
+	flex-direction: column;
+} */
+button
+{
+	margin-left: 30%;
+}	
+
+#compareOtherAreas
+{
+	margin-left: 20%;
+} 
+
+
+
+ @media only screen and (max-device-width: 680px) and (orientation: landscape)
+ {
+ 	
+ 	#mainDiv
+ 	{
+ 		margin-left: 10%;
+ 		
+ 	}
+ 	#metric,#area1,#area2
+	{
+		height: 900px;
+		width: 32%;
+		
+	}
+	#metric,#area1,#area2
+	{
+		float: left;
+		
+	}
+	#crime,#school,#transport,#house,#income
+	{
+		height: 92px;
+		width: 500px;
+		
+		margin-left: 7%;
+		text-align: center;
+		/*line-height: 100px;*/
+		margin-top: 10%;
+		
+	}
+	#crime
+	{
+		line-height: 90px;
+	}
+	#school 
+	{
+
+	}
+	#transport
+	{
+		line-height: 90px;
+	}
+
+	/*-----------------------*/
+	#a1crime,#a1school,#a1transport,#a1house,#a1income
+	{
+		height: 92px;
+		width: 92px;
+		
+		margin-left: 7%;
+		text-align: center;
+		/*line-height: 100px;*/
+		margin-top: 10%;
+		
+	}
+	/*-----------------------*/
+	#a2crime,#a2school,#a2transport,#a2house,#a2income
+	{
+		height: 92px;
+		width: 92px;
+		
+		margin-left: 7%;
+		text-align: center;
+		/*line-height: 100px;*/
+		margin-top: 10%;
+		
+	}
+ }
+
+
+
+/* ipad/tablet; orientation-portrait */
+
+@media only screen and (device-width:768px) and (orientation:portrait)
+{
+	h2
+	{
+		font-size:1.7rem;
+	}
+	#metric,#area1,#area2
+	{
+		height: 650px;
+		font-size: 1.5rem;
+	}
+	#school,#income
+	{
+		line-height: 90px;
+	}
+	#crime,#school,#transport,#house,#income
+	{
+		height: 92px;
+		width: 190px;
+		margin-left: 9%;
+		margin-top: 10%;
+	}
+	#a1crime,#a1school,#a1transport,#a1house,#a1income
+	{
+		height: 92px;
+		width: 190px;
+		margin-left: 9%;
+		margin-top: 10%;
+	}
+	#a2crime,#a2school,#a2transport,#a2house,#a2income
+	{
+		height: 92px;
+		width: 190px;
+		margin-left: 9%;
+		margin-top: 10%;
+	}
+	#head1,#head2,#head3
+	{
+		height:46px; 
+		width:190px;
+		
+	}
+	#buttonDiv
+	{
+		margin-top: 100%;
+		margin-bottom: 25%;
+		
+	}
+	#findMoreAreas 
+	{
+		margin-left: 47%;
+		margin-right: 0%;
+	}
+	#compareOtherAreas
+	{
+		margin-left: 1%;
+	} 
+
+}
+
+@media only screen and (device-width:768px) and (orientation:landscape)
+{
+	
+	#mainDiv
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	#metric,#area1,#area2
+	{
+		height: 650px;
+		font-size: 1.5rem;
+	}
+	#school,#income
+	{
+		line-height: 90px;
+	}
+	#crime,#school,#transport,#house,#income
+	{
+		height: 92px;
+		width: 190px;
+		margin-left: 9%;
+		margin-top: 10%;
+	}
+	#a1crime,#a1school,#a1transport,#a1house,#a1income
+	{
+		height: 92px;
+		width: 190px;
+		margin-left: 9%;
+		margin-top: 10%;
+	}
+	#a2crime,#a2school,#a2transport,#a2house,#a2income
+	{
+		height: 92px;
+		width: 190px;
+		margin-left: 9%;
+		margin-top: 10%;
+	}
+	#head1,#head2,#head3
+	{
+		height:46px; 
+		width:190px;
+		
+	}
+
+}
+/******************** for desktop *********************/
+
+@media screen  and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)  
+{
+
+	#header,#footer
+	{
+		width: 100%;
+		margin-right: 0%;
+	}
+	#mainDiv
+	{
+
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	#metric,#area1,#area2
+	{
+		height: 730px;
+		width: 30%;
+		
+	}
+	#metric
+	{
+		float: left;
+		margin-left:4%; 
+		
+	}
+	#crime,#school,#transport,#house,#income
+	{
+		height: 100px;
+		width: 230px;
+		margin-left: 10%;
+		text-align: center;
+		line-height: 100px;
+		
+	}
+	
+	#a1crime,#a1school,#a1transport,#a1house,#a1income,#a2crime,#a2school,#a2transport,#a2house,#a2income
+	{
+		width: 230px;
+		height: 100px;
+	}
+	#head1,#head2,#head3
+	{
+		height: 46px;
+		width: 230px;
+		margin-left: 10%;
+	}
+	#head3
+	{
+		margin-left: 9%;
+	}
+	#buttonDiv
+	{
+		margin-top: 65%;
+		margin-bottom: 20%;
+		margin-left: 20%;
+	}
+	/*button
+	{
+		margin-left: 2%;
+		
+	}*/
+	#findMoreAreas 
+	{
+		margin-left: 42%;
+		margin-right: 0%;
+	}
+	#compareOtherAreas
+	{
+		margin-left: 2%;
+	} 
+}
+
+
+
