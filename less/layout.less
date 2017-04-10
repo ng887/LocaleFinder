@@ -81,6 +81,14 @@ body, html {
     z-index: 1;
 }
 
+.sticky-top {
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1;
+}
+
+
 .mobileLayout {
     display: flex;
     flex-direction: column;
@@ -247,6 +255,12 @@ a .header-link{
     position: relative;
     animation: animateright 0.4s;
 }
+
+.lf-animate-right-slow {
+    position: relative;
+    animation: animateright 0.8s;
+}
+
 @keyframes animateright{
     0% {
         right: -800px;
@@ -257,6 +271,25 @@ a .header-link{
         right: 0;
         opacity: 1;
     }
+}
+
+
+
+@keyframes animateleft{
+    0% {
+        left: -800px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.lf-animate-left-slow {
+    position: relative;
+    animation: animateleft 0.8s;
 }
 
 /*end new styles */
@@ -314,6 +347,9 @@ a .header-link{
      .lf-small-margin{
         margin: 1%;
     }
+        .lf-margin-top{
+        margin-top: 30px!important;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -323,8 +359,9 @@ a .header-link{
         }
         #down-content-desktop {
             display: block;
-            width: 100%;
-           rigth: 0;
+           /* width: 100%;
+            right: 0;*/
+            left:0;
 
             /* margin-left: 10%;
            padding: 2% 0 0 0;
