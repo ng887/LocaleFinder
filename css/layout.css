@@ -6,8 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-  /*font-family: "Raleway", sans-serif;*/
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", "Raleway", sans-serif;
 }
 body,
 html {
@@ -15,7 +14,7 @@ html {
   line-height: 1.8;
 }
 .main div {
-  margin-left: 5%;
+  margin-left: 5% ;
   margin-right: 5%;
 }
 .rowLayout {
@@ -48,7 +47,7 @@ html {
 }
 #nav #down {
   /*  margin: auto;
-        margin-top: 2%;*/
+          margin-top: 2%;*/
   /* margin-bottom: 2%;
          margin-left: 70%;*/
 }
@@ -77,7 +76,6 @@ html {
   background-color: #707070;
   z-index: 1;
 }
-
 .sticky-top {
   position: fixed;
   top: 0;
@@ -158,6 +156,15 @@ a .header-link {
 .text-center {
   text-align: center!important;
 }
+.lf-normal {
+  font-size: 15px!important;
+}
+.lf-large {
+  font-size: 18px!important;
+}
+.lf-xlarge {
+  font-size: 28px!important;
+}
 .text-xxxlarge {
   font-size: 32px !important;
 }
@@ -167,22 +174,26 @@ a .header-link {
 .lf-padding-large {
   padding: 12px 24px!important;
 }
+.lf-padding-xlarge {
+  padding: 45px 38px!important;
+}
+.lf-padding-small {
+  padding: 10px 20px!important;
+}
 .lf-margin-top {
   margin-top: 16px!important;
-}
-.lf-margin-top-xl {
-  margin-top: 30px!important;
 }
 .lf-margin-top-large {
   margin-top: 28px!important;
 }
-
-.lf-no-margin{
-    margin:0;
+.lf-margin-top-xl {
+  margin-top: 30px!important;
 }
-
-.lf-large {
-  font-size: 18px!important;
+.lf-margin-top-xxl {
+  margin-top: 50px!important;
+}
+.lf-no-margin {
+  margin: 0;
 }
 .lf-opacity,
 .lf-hover-opacity:hover {
@@ -221,12 +232,6 @@ a .header-link {
   position: relative;
   animation: animateright 0.4s;
 }
-
-.lf-animate-right-slow {
-  position: relative;
-  animation: animateright 0.8s;
-}
-
 @keyframes animateright {
   0% {
     right: -800px;
@@ -237,15 +242,14 @@ a .header-link {
     opacity: 1;
   }
 }
-/*end new styles */
-@media only screen and (min-width: 1025px) {
-  .desktopLayout {
-    display: flex;
-    flex-direction: row;
-  }
+.lf-animate-right {
+  position: relative;
+  animation: animateright 0.4s;
 }
-
-
+.lf-animate-right-slow {
+  position: relative;
+  animation: animateright 0.8s;
+}
 @keyframes animateleft {
   0% {
     left: -800px;
@@ -259,6 +263,13 @@ a .header-link {
 .lf-animate-left-slow {
   position: relative;
   animation: animateleft 0.8s;
+}
+/*end new styles */
+@media only screen and (min-width: 1025px) {
+  .desktopLayout {
+    display: flex;
+    flex-direction: row;
+  }
 }
 /* mobile orientation: landscape
 
@@ -300,8 +311,11 @@ a .header-link {
   .lf-small-margin {
     margin: 1%;
   }
-    .lf-margin-top {
+  .lf-margin-top {
     margin-top: 30px!important;
+  }
+  .lf-margin-top-xxl {
+    margin-top: 80px!important;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -310,9 +324,8 @@ a .header-link {
   }
   #nav #down-content-desktop {
     display: block;
-  /* width: 100%;
-    right: 0;*/
-    left:0;
+    /* width: 100%;*/
+    left: 0;
     /* margin-left: 10%;
            padding: 2% 0 0 0;
             width: 100%;
