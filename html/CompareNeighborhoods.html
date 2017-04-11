@@ -15,7 +15,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- my custom css file -->
-      <link rel="stylesheet" type="text/css" href="../css/compareNeighborhoods.css">
+      <!-- <link rel="stylesheet" type="text/css" href="../css/compareNeighborhoods.css"> -->
+      <link rel="stylesheet" type="text/css" href="../css/compare.css">
       <!-- <script src="js/less.js" type="text/javascript"></script> -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script type="text/javascript" src="../js/compareNeighborhood.js"></script>
@@ -25,52 +26,53 @@
   </head>
   <body>
   <div id='header'></div>
-  <div id="mainDiv">
-      <h1>Enter the neighborhoods you like to compare</h1>
-      <div class="compareContainer">
-          <!-- left section -->
-          <section class="comparison">
-              <img id="leftImg" src="../image/fremont.jpg" alt="">
-              <input id="leftInput" type="text" list="neighborhoods1" name="neighbor_names" placeholder="Enter a neighborhood">
-              <datalist id="neighborhoods1">
-                  <option value="University District">
-                  <option value="Queen Anne">
-                  <option value="South Lake Union">
-                  <option value="Ballard">
-                  <option value="Fremont">
-                  <option value="Downtown">
-                  <option value="Capitol Hill">
-                  <option value="Northgate">
-                  <option value="Alki">
-              </datalist>
-          </section>
-          <!-- <section id="vsSection">
-              <h1>VS</h1>
-          </section> -->
-          <!-- Right section -->
-          <section class="comparison">
-              <img id='rightImg' src="../image/ud.jpg" alt="">
-              <input id="rightInput" type="text" list="neighborhoods2" name="neighbor_names2" placeholder="Enter a neighborhood">
-              <datalist id="neighborhoods2">
-                  <option value="University District">
-                  <option value="Queen Anne">
-                  <option value="South Lake Union">
-                  <option value="Ballard">
-                  <option value="Fremont">
-                  <option value="Downtown">
-                  <option value="Capitol Hill">
-                  <option value="NorthGate">
-                  <option value="Alki">
-              </datalist>
-          </section>
-      </div>
-      <div class="text-center">
-        <button class="lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top" onclick="setValues()">Compare</button>
-      </div>
-
+  <div class="heading">
+     <h1>Let's Compare the neighborhoods</h1>
+  </div>
+  <div class="compareContainer">
+    <section>
+      <img id="leftImg" src="../image/fremont.jpg" alt="">
+      <input id="leftInput" type="text" list="neighborhoods1" name="neighbor_names" placeholder="Enter a neighborhood">
+          <datalist id="neighborhoods1">
+              <option value="University District">
+              <option value="Queen Anne">
+              <option value="South Lake Union">
+              <option value="Ballard">
+              <option value="Fremont">
+              <option value="Downtown">
+              <option value="Capitol Hill">
+              <option value="Northgate">
+              <option value="Alki">
+          </datalist>
+    </section>
+    <section>
+      <img id='rightImg' src="../image/ud.jpg" alt="">
+      <input id="rightInput" type="text" list="neighborhoods2" name="neighbor_names2" placeholder="Enter a neighborhood">
+         <datalist id="neighborhoods2">
+              <option value="University District">
+              <option value="Queen Anne">
+              <option value="South Lake Union">
+              <option value="Ballard">
+              <option value="Fremont">
+              <option value="Downtown">
+              <option value="Capitol Hill">
+              <option value="NorthGate">
+              <option value="Alki">
+          </datalist>
+    </section>
+  </div>
+  <div class="compareButton">
+    <button class="lf-button lf-button-brand  lf-padding-large lf-margin-top lf-large" onclick="setValues()">Compare</button>
+  </div>
+  <div class="compareDetails">
+      <h1>How do we Compare ?</h1>
+      <p> We compare the two neighborhoods which you choose above across the Seattle.
+      <p> We show the score with respect to different criteria for each neighborhood.
+        We take into account the 5 most important metrics for each neighorhood which includes: crime stats, Transit score, cost of living, education and housing.
+        Further information can be explored by clicking the "Compare".
   </div>
   <div id='footer'></div>
-   <script src="../js/setter.js" type="text/javascript"></script>
+  <script src="../js/setter.js" type="text/javascript"></script>
   </body>
 </html>
 <!--end by sirisha-->
