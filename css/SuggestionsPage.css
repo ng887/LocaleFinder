@@ -1,45 +1,20 @@
-#suggestionMain {
-  position: relative;
-  /*  #suggestionNames {
-        ul {
-            list-style: none;
-            text-align: center;
-            font-family: cursive;
-            font-size: 1.5em;
-        }
-    }*/
-}
-#suggestionMain #suggestionHeader {
-  background-image: url("../image/suggestionMain.jpg");
-  background-size: contain;
-  min-height: 250px;
-  min-width: 250px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  margin: 0;
-}
-#suggestionMain #suggestionHeader .banner {
+.banner {
   display: inline-block;
   position: absolute;
   height: auto;
-  top: 0;
   margin: 0;
-  margin-top: 4%;
+  margin-top: 34%;
   background-color: rgba(0, 0, 0, 0.45);
   color: white;
   padding: 02%;
   font-size: 0.92em;
   width: 96%;
 }
-#suggestionMain #suggestedArea {
-  margin: 0;
-}
-#suggestionMain .graphicsWrapper {
+.graphicsWrapper {
   /*margin: 2% 0 3% 0;*/
   border-radius: 3%;
 }
-#suggestionMain .graphicsWrapper .graphicsContainer {
+.graphicsWrapper .graphicsContainer {
   height: 310px;
   margin: 0 4% 4% 4%;
   /* border-top: solid;
@@ -48,54 +23,48 @@
             margin-top: 25%;
             width: 100%;*/
 }
-#suggestionMain .graphicsWrapper .graphicsContainer div {
+.graphicsWrapper .graphicsContainer div {
   margin: 0;
 }
-#suggestionMain .graphicsWrapper .graphicsContainer div canvas {
+.graphicsWrapper .graphicsContainer div canvas {
   width: 80%;
 }
-#suggestionMain .graphicItem {
+.graphicItem {
   height: 50%;
   width: 100%;
   margin-bottom: 4% !important;
 }
+.visible {
+  display: none;
+}
+#graphs {
+  display: none;
+}
 /*Desktop*/
 @media only screen and (min-width: 1025px) {
-  #suggestionMain {
-    position: relative;
-  }
-  #suggestionMain #suggestionHeader {
-    background-image: url("../image/suggestionMainDesktop.jpg");
-    background-size: 100% 100%;
-    margin-top: 4%;
-    min-height: 367px;
-    background-repeat: no-repeat;
-  }
-  #suggestionMain #suggestionNames {
-    margin-top: 5%;
-  }
-  #suggestionMain .graphicsWrapper {
+  .graphicsWrapper {
     width: 100%;
     /*margin: 3%;*/
-    border-radius: 0;
+    border-radius: 3%;
     /*padding: 3% 0 3% 0;*/
   }
-  #suggestionMain .graphicsWrapper .graphicsContainer {
+  .graphicsWrapper .graphicsContainer {
     border: 0;
   }
-  #suggestionMain .graphicsWrapper div canvas {
+  .graphicsWrapper div canvas {
     width: 95% !important;
     padding: 2%;
   }
-  #suggestionMain .graphicItem {
+  .graphicItem {
     margin-bottom: 0 !important;
     height: 60%;
   }
-  #suggestionMain #transportation.graphicsContainer {
-    margin: 0;
+  .map-marker-text {
+    margin-top: -18px;
+    font-size: 0.6em;
+    margin-left: 4px!important;
   }
-  h2 {
-    padding-top: 3%;
-    margin: 0;
+  .visible {
+    display: block;
   }
 }
