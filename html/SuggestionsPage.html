@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
     <!-- end -->
     <link rel="stylesheet" type="text/css" href="../css/suggestionsPage.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/jquery.canvasjs.min.js"></script>
@@ -23,6 +24,8 @@
    
     <!-- Header Footer Load Script -->
     <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+
 
 </head>
 
@@ -31,47 +34,63 @@
     <div id='header'></div>
    
     <div class="colLayout">
-        <div id="suggestionMain">
-            <div id="suggestionHeader">
-                <h2 class='banner'>BEST NEIGHBORHOODS FOR YOU</h2>
+        <div id="suggestionMain" class="lf-margin-top-xl">
+
+            <div id="suggestionNames" class="lf-margin-top-xxl lf-bg text-center">
+                <div class="lf-padding-large"><h2 class="lf-xlarge">BEST NEIGHBORHOODS FOR YOU</h2></div>
+                <div style="padding:0 35% ">
+                    <ul class="text-center desktopLayout" style="list-style-type: none">
+                        <!--  <li><a class="lf-button" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></li>
+                          <li><a class="lf-button" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></li>
+                          <li><a class="lf-button" href="neighborDetail.html?name=Downtown">Downtown</a></li> -->
+                    </ul>
+                </div>
             </div>
-            <div id="suggestionNames">
-                <ul class="text-center">
-                  <!--  <li><a class="lf-button" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></li>
-                    <li><a class="lf-button" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></li>
-                    <li><a class="lf-button" href="neighborDetail.html?name=Downtown">Downtown</a></li> -->
-                </ul>
+
+            <div class="lf-bg text-center lf-large lf-padding-xlarge">
+                <span>We have ranked the neighborhoods in Seattle based on your on your likes and have recommended you the top three neighborhoods in Seattle for you.
+                    Take a look at the neigborhoods that are top rankers and click on the names to explore more about the neighborhoods or see the
+                    <a id='graphDisplay' href="#graphs" class="lf-link">Graphical Representation</a> to compare these
+                    neighborhoods with each other.</span>
+                <div class="text-center">
+                    <br/>
+                    <span><a href="/html/map.html" class="lf-button lf-button-brand">EXPLORE MORE</a></span>
+                    <span><a  class="lf-like lf-button lf-button-brand">I LIKE ONE </a></span>
+
+                </div>
             </div>
-            <div class="lf-small-margin">
-                <div class="card-container mobileLayout desktopLayout "><!--id='suggestedArea' -->
+
+            <div id='graphs' class="lf-bg1">
+                <div class="lf-padding-large"><h2 class="lf-xlarge ">GRAPHICAL REPRESENTATION FOR TOP 3 NEIGHBORHOODS</h2></div>
+                <div class="card-container mobileLayout desktopLayout"><!--id='suggestedArea' -->
                     <div class="graphicsWrapper lf-card-2">
-                        <div> <h2 class="lf-text-darkred"> Crime record(measured Yearly) for Top Three Areas </h2></div>
+                        <div> <h2 class="lf-text-color"> Crime record(measured Yearly)</h2></div>
                         <section id="crimeContainer" class="graphicsContainer"></section>
                         <div id="crimeContent" class="lf-card-block"></div>
 
                     </div>
                     <div class="graphicsWrapper lf-card-2">
-                        <div> <h2 class="lf-text-darkred"> Average Income for Top Three Areas </h2></div>
+                        <div> <h2 class="lf-text-color"> Average Income </h2></div>
                         <section id="incomeChartContainer" class="graphicsContainer"></section>
                         <div id="incomeContent" class="lf-card-block"></div>
                     </div>
                 </div>
-                <div class=" mobileLayout desktopLayout">
+                <div class="card-container mobileLayout desktopLayout">
                     <div class="graphicsWrapper lf-card-2">
-                        <div> <h2 class="lf-text-darkred"> Average House Price for Top Three Areas </h2></div>
+                        <div> <h2 class="lf-text-color"> Average House Price </h2></div>
                         <section id="housePriceChartContainer" class="graphicsContainer"></section>
                         <div id="priceContent" class="lf-card-block"></div>
                     </div>
                     <div class = "graphicsWrapper lf-card-2"><!--id='school'-->
-                        <div> <h2 class="lf-text-darkred"> School Ratings for Top Three Areas </h2></div>
+                        <div> <h2 class="lf-text-color"> School Ratings </h2></div>
                         <section id="schoolRatingChartContainer" class="graphicsContainer"></section>
                         <div id="schoolRateContent" class="lf-card-block"></div>
                     </div>
                 </div>
 
-                <div class=" mobileLayout desktopLayout">
+                <div class="card-container mobileLayout desktopLayout">
                     <div class="graphicsWrapper lf-card-2">
-                        <div> <h2 class="lf-text-darkred"> Transit Score for Top Three Areas </h2></div>
+                        <div> <h2 class="lf-text-color"> Transit Score</h2></div>
                         <div>
                             <section id="transportationContainer" class="graphicsContainer"></section>
                             <div id="transportContent" class="lf-card-block"></div>
@@ -79,21 +98,38 @@
 
                     </div>
                     <div class="graphicsWrapper lf-card-2" style="visibility: hidden">
-
                     </div>
                 </div>
-
+                <div class="text-center">
+                    <br/>
+                    <span><a href="#suggestionNames" class="lf-button lf-button-brand lf-small-margin">TOP</a></span>
+                </div>
             </div>
 
+
         </div>
+
     </div>
-   
+
+    <div id='popup-like' class="popup">
+        <span class="lf-like lf-text-white lf-large lf-padding-large ">
+           <b>
+              I Like:
+               <ul class="colLayout lf-small-margin lf-padding-large"></ul>
+               <!-- <form action=""> </form> -->
+
+           </b>
+        </span>
+        <div class="close ns-close"></div>
+    </div>
+
     <div id='footer'></div>
     <!--end add by neha-->
     <!-- Start add by sirisha -->    
     <script type="text/javascript" src="../js/suggestRefer.js"></script>
     <script type="text/javascript" src="../js/criterion.js"></script>
     <script type="text/javascript" src="../js/suggestions.js"></script>
+
     <!-- end by sirisha -->
 </body>
 
