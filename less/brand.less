@@ -1,14 +1,19 @@
 /*Colors*/
+
 @white:#fff;
 @red:#f44336;
-@brandBgColor: #050F1E;
-@brandTextColor: #ffffff;
+@brandBgColor: #e9ece5; /*#e9ece5  #ddeeeb*/
+@brandBgColor1:#c0dfd9;
+@brandTextColor: #3b3a36;
 @headerFooterTextColor: #000!important;
 @headerFooterBgColor:  #fff!important;
-@brandButtonBgColor: #2E73AC;
+@brandButtonBgColor: #2dbcb6;
 @brandButtonTextColor: #ffffff;
-@linkTextColor: #ffffff;
-@graphicBgColor: rgb(0, 51, 102);
+@linkTextColor: #2dbcb6;
+@linkHoverColor: #ccc;
+@graphicBgColor:#d7babf; /* rgb(0, 51, 102);*/
+
+
 footer,
 header {
     color: @headerFooterTextColor;
@@ -28,6 +33,15 @@ button {
 a {
     color: @linkTextColor;
 }
+
+.lf-link{
+    color: @linkTextColor;
+}
+
+.lf-link:hover{
+    color:tint(@linkTextColor,50%)!important;
+}
+
 
 .graphicsWrapper {
    /* background-color: @graphicBgColor;*/
@@ -57,4 +71,25 @@ h2 {
 
 .lf-text-darkred{
     color:darkred !important;
+}
+
+.lf-button-brand{
+    background-color: @brandButtonBgColor!important;
+    color:@brandButtonTextColor!important;
+}
+
+
+.lf-bg{
+    background-color: @brandBgColor;
+    color:@brandTextColor;
+}
+
+.lf-bg1{
+    background-color: @brandBgColor1;
+    color:@brandTextColor;
+}
+
+.lf-card-2{
+    background-color: @white;
+    /*color:#2dbcb6;*/
 }
