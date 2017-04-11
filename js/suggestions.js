@@ -227,8 +227,8 @@ function displayCrime(){
 		},
 		data: [
 		{
-			indexLabelFontSize: 20,
-			indexLabelFontFamily: "Monospace",
+			//indexLabelFontSize: 20,
+			//indexLabelFontFamily: "Monospace",
 			indexLabelFontColor: "darkgrey",
 			indexLabelLineColor: "darkgrey",
 			indexLabelPlacement: "outside",
@@ -362,18 +362,26 @@ function displayHorizontalBarChart(dataObj){
   return options;
 }
 
-
+/*
+for(i=1; i<4;i++){
+    $('#icons').append('<span class="fa-stack fa-5x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+i +'</strong> </span>')
+}
+*/
+//add by neha
 for(i = 0; i < 3; i++) {
+    y=i+1;
+
     $('#suggestionNames ul').append(
-        $('<li>').append(
-            $('<a>').attr('href', "neighborDetail.html?name=" + suggestedAreaDetail[i].name).addClass('lf-button lf-opacity').append(suggestedAreaDetail[i].name)));
+        $('<li>').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/>')
+            .append(
+            $('<a>').attr('href', "neighborDetail.html?name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase())));
 }
 
 
 $('#crimeContent').append('The neighborhood with the least number of crimes is rated as the best. The number of crimes in a year are:'+ '<br/>' );
 $('#incomeContent').append('The neighborhood with high average income is rated as the best. The monthly average incomes are:'+ '<br/>' );
 $('#priceContent').append('The neighborhood with low average house prices is rated as the best. The average house prices are:'+ '<br/>');
-$('#schoolRateContent').append('The neighborhood with high ratings out 10 is rated as best. The school ratings:'+ '<br/>');
+$('#schoolRateContent').append('The neighborhood with high school ratings out 10 is rated as best. The school ratings are:'+ '<br/>');
 $('#transportContent').append('The neighborhood with high ratings out of 100 is rated as best. The transit scores are:'+ '<br/>');
 
 for(i = 0; i < 3; i++) {
@@ -384,3 +392,15 @@ for(i = 0; i < 3; i++) {
     $('#transportContent').append('<b>' + suggestedAreaDetail[i].name + '</b>'+ ' :' + suggestedAreaDetail[i].transportation + '<br/>');
 }
 
+$(document).ready(function(){
+    $("#graphDisplay").click(function(){
+        $("#graphs").toggle();
+        //console.log($("#graphs").css('display'));
+    });
+    for(i = 0; i < 3; i++) {
+        $('#popup-like ul').append($('<a class="lf-text-white">').attr('href', "/html/final.html").addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase()));
+
+        //$('#popup-like ul').append($('<a class="lf-text-white">').attr('href', "neighborDetail.html?name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase()));
+      //  $('#popup-like form').append('<input type="radio" name="top" value="top' + i + '">'+suggestedAreaDetail[i].name+'</input><br/>');
+    }
+});
