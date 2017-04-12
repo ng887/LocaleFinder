@@ -1,18 +1,7 @@
 $(function(){
     // detect viewport
     var isMobile = window.matchMedia("only screen and (max-width: 768px)");
-    var gallleryShow = '<div class="w3-content w3-display-container" style="max-width:800px">'+
-'<img class="mySlides" src="../image/belltown1.jpg" style="width:100%">'+
-      '<img class="mySlides" src="../image/belltown2.jpg" style="width:100%">'+
-      '<img class="mySlides" src="../image/belltown3.jpg" style="width:100%">'+
-      '<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">'+
-        '<div id="slidePre" class="w3-left w3-hover-text-khaki">&#10094;</div>'+
-        '<div id="slideNext" class="w3-right w3-hover-text-khaki">&#10095;</div>'+
-        '<span id="badge1" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>'+
-        '<span id="badge2" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>'+
-        '<span id="badge3" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>'+
-      '</div>'+
-    '</div>';
+
     if (isMobile.matches) {//mobile viewport
         $("#galleryInfo").click(function(){
             $("#galleryDescM").slideToggle();
@@ -110,8 +99,8 @@ $(function(){
                return results[1] || 0;
             }
         };
-        name = decodeURIComponent($.urlParam("name"));
-        console.log(name);
+        var fromURL = decodeURIComponent($.urlParam("from"));
+        var name = decodeURIComponent($.urlParam("name"));
         //set name
         $(".neighborName span").html(name);
         //get area detial
@@ -124,11 +113,11 @@ $(function(){
         //set background image
         $(".neighborName").css('background-image','url(../image/'+neighborInfo[0].image+')');
         //set table data
-        $("#customers").append('<tr><td><i class="fa fa-check-square-o"></i> Crime Record</td><td>'+neighborInfo[0].crimeRecord+'</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-check-square-o"></i>School Rating </td><td>'+neighborInfo[0].schoolRating+'/10</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-check-square-o"></i>Transit Score </td><td>'+neighborInfo[0].transportation+'/100</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-check-square-o"></i>Ave House Price</td><td>'+neighborInfo[0].housePrice+'(K)</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-check-square-o"></i>Ave Income </td><td>'+neighborInfo[0].income+'</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Crime Record</td><td>'+neighborInfo[0].crimeRecord+'</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>School Rating </td><td>'+neighborInfo[0].schoolRating+'/10</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Transit Score </td><td>'+neighborInfo[0].transportation+'/100</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Ave House Price</td><td>'+neighborInfo[0].housePrice+'(K)</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Ave Income </td><td>'+neighborInfo[0].income+'</td></tr>');
         //get neightbour description
         var galleryInfo = '<img class="mySlides" src="../image/'+neighborInfo[1].gallery[0]+'" style="width:100%">'+
         '<img class="mySlides" src="../image/'+neighborInfo[1].gallery[1]+'" style="width:100%">'+
@@ -157,6 +146,14 @@ $(function(){
         }
         showDivs(slideIndex);
         listenerToSlide();
+        //button actions
+        $("#compareBtn").click(function(){
+            document.location.href = "../html/CompareNeighborhoods.html?name="+name;
+        });
+        fromURL = fromURL == "s" ? "SuggestionsPage.html" : "map.html";
+        $("#backBtn").click(function(){
+             document.location.href = "../html/"+fromURL;
+        });
     });
 function getNeighborInfoByName(name,areaDetailObj,neightbourDescriptionObj){
     var neighbor = [];
