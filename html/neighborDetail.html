@@ -30,36 +30,45 @@
     <div id='header'></div>
     <div class="neighborName"><span></span></div>
     <div class="row">
+      <div id="rowNav">
+        <a href="#galleryDesc"><i class="fa fa-circle"></i></a>
+        <a href="#historyDesc"><i class="fa fa-circle"></i></a>
+        <a href="#schoolDesc"><i class="fa fa-circle"></i></a>
+        <a href="#incomeDesc"><i class="fa fa-circle"></i></a>
+        <a href="#housePriceDesc"><i class="fa fa-circle"></i></a>
+        <a href="#activityDesc"><i class="fa fa-circle"></i></a>
+      </div>
+
         <div class="col-3 menu">
           <ul>
-            <li id="galleryInfo"><i class="fa fa-spinner"></i>Gallery</li>
+            <li id="galleryInfo"><i class="fa fa-circle-o" aria-hidden="true"></i>Gallery</li>
             <!-- image slide -->
             <div id="galleryDescM">
               <div class="w3-content w3-display-container" style="max-width:800px">
               </div>
             </div>
             <!-- end of image slide -->
-            <li id="historyInfo"><i class="fa fa-spinner"></i>History</li>
+            <li id="historyInfo"><i class="fa fa-circle-o"></i>History</li>
             <section id="historyDescM">
               <h1 class="fa fa-home">History</h1>
               <p ></p>
             </section>
-            <li id="schoolInfo"><i class="fa fa-spinner"></i>Education</li>
+            <li id="schoolInfo"><i class="fa fa-circle-o"></i>Education</li>
             <section id="schoolDescM">
             <h1 class="fa fa-graduation-cap icon-female">Education</h1>
             <p></p>
             </section>
-            <li id="incomeInfo"><i class="fa fa-spinner"></i>Who live here</li>
+            <li id="incomeInfo"><i class="fa fa-circle-o"></i>Who live here</li>
             <section id="incomeDescM">
               <h1 class="fa fa-users">Who live here</h1>
             <p></p>
             </section>
-            <li id="housePriceInfo"><i class="fa fa-spinner"></i>House Expense</li>
+            <li id="housePriceInfo"><i class="fa fa-circle-o"></i>House Expense</li>
             <section id="housePriceDescM">
               <h1 class="fa fa-building-o">House Expense</h1>
             <p></p>
             </section>
-            <li id="activtyInfo"><i class="fa fa-spinner"></i>Activities and Attractions</li>
+            <li id="activtyInfo"><i class="fa fa-circle-o"></i>Activities and Attractions</li>
             <section id="activityDescM">
               <h1 class="fa fa-camera-retro"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Activities and Attractions</h1>
             <p></p>
@@ -100,8 +109,9 @@
     <!-- end of row -->
     <div class="footer">
       <!-- <div class="btn-group"> -->
-        <button onclick="window.location.href='../html/CompareNeighborhoods.html" class="button">Compare</button>
-        <button class="button">Favourite</button>
+        <button id="compareBtn" class="button"><i class="fa fa-balance-scale lf-hover-opacity "></i>Compare</button>
+        <button id="favBtn" class="button"><i class="fa fa-heart" aria-hidden="true"></i>Favourite</button>
+        <button id="backBtn" class="button"><i class="fa fa-arrow-left" aria-hidden="true"></i>back</button>
       <!-- </div> -->
     </div>
     <div id='footer'></div>
