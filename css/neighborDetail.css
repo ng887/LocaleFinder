@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body{
+  background-color: #e9ece5;
+}
 .row::after {
   content: "";
   clear: both;
@@ -21,15 +24,17 @@ html {
 .menu li {
   padding: 8px;
   margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #ffffff;
+  /*background-color: #33b5e5;*/
+  background-color: #c0dfd9;
+  color: #3b3a36;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .menu li:hover {
-  background-color: #0099cc;
+  background-color: #b3c2bf;
 }
 .aside {
-  background-color: #33b5e5;
+  /*background-color: #33b5e5;*/
+  background-color: #c0dfd9;
   padding: 15px;
   color: #ffffff;
   text-align: center;
@@ -37,12 +42,15 @@ html {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .footer {
-  background-color: #0099cc;
+  background-color: #c0dfd9;
   /*color: #ffffff;*/
   /*text-align: center;*/
   /*font-size: 12px;*/
   padding: 10px;
   min-height: 60px;
+}
+.footer button{
+  color:#3b3a36;
 }
 /* For desktop: */
 .col-1 {
@@ -94,13 +102,12 @@ html {
   /*background-attachment: fixed;*/
   background-position: center;
   background-size: 100% 100%;
-  color: white;
+  color: #6ed3cf;
   min-height: 10rem;
   padding-top: 7rem;
   padding-left: 2rem;
 }
 .neighborName span {
-  opacity: 0.7;
   background-color: gray;
   padding: 10px;
 }
@@ -118,14 +125,14 @@ section {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #c0dfd9;
 }
 #customers td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #c0dfd9;
   padding: 8px;
 }
-#customers tr:nth-child(even) {
-  background-color: #f2f2f2;
+#customers tr:nth-child(odd) {
+  background-color: #c0dfd9;
 }
 #customers tr:hover {
   background-color: #ddd;
@@ -148,7 +155,7 @@ section {
   border-radius: 0px;
 }
 .button:hover {
-  background-color: white;
+  background-color: #b3c2bf;
   color: #0099cc;
 }
 /*image slide*/
@@ -167,36 +174,95 @@ section {
 }
 #galleryDescM {
   display: none;
+  background-color: #5a5c51;
 }
 #historyDesc h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+.col-6{
+  background-color: #5a5c51;
+}
+#historyDesc p{
+   color:white;
 }
 #schoolDesc h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#schoolDesc p{
+  color:white;
 }
 #incomeDesc h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#incomeDesc p{
+  color:white;
 }
 #housePriceDesc h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#housePriceDesc p{
+  color:white;
 }
 #activityDesc h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#activityDesc p{
+  color:white;
+}
+#historyDescM{
+  background-color: #5a5c51;
 }
 #historyDescM h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#historyDescM p{
+  color:white;
+}
+#schoolDescM{
+  background-color: #5a5c51;
 }
 #schoolDescM h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#schoolDescM p{
+  color:white;
+}
+#incomeDescM{
+  background-color: #5a5c51;
 }
 #incomeDescM h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#incomeDescM p{
+  color:white;
+}
+#housePriceDescM{
+  background-color: #5a5c51;
 }
 #housePriceDescM h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#housePriceDescM p{
+  color:white;
+}
+#activityDescM{
+  background-color: #5a5c51;
 }
 #activityDescM h1 {
   font-size: 1.2rem;
+  color : #6ed3cf;
+}
+#activityDescM p{
+   color:white;
 }
 @media only screen and (min-width: 768px) {
   section {
@@ -214,4 +280,24 @@ span{
 }
 table tr td{
   font-family: "Philosopher", sans-serif ;
+}
+#rowNav{
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  #rowNav{
+    display: block;
+    /*background-color: #6ed3cf;*/
+    color: #6ed3cf;
+    position:fixed;
+    top:300px;
+    right:24vw;
+    z-index: 10;
+  }
+}
+#rowNav i{
+  display: block;
+}
+#rowNav a :hover{
+  color: #fae596;
 }
