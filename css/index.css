@@ -15,8 +15,54 @@
 html {
   overflow-x: hidden;
 }
+.buttonHover{
+  border-radius: 4px;
+  background-color: #2dbcb6;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2% 1%;
+  margin: 1% 1%;
+  width: 70%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.buttonHover{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.buttonHover span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonHover span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: -18px;
+  right: 10px;
+  transition: 0.5s;
+  font-size: 2rem;
+}
+.buttonHover:hover span {
+  padding-right: 25px;
+}
+
+.buttonHover:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 /*Desktop*/
 @media only screen and (min-width: 1025px) {
+  .buttonHover{
+    width: 25%;
+  }
   #optionsSection {
     height: 42rem;
   }
