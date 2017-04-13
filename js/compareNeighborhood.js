@@ -29,5 +29,7 @@ $(function(){
         }
     };
     var name = decodeURIComponent($.urlParam("name"));
-    $("#leftInput").val(name);
+    if(name!="null"){
+       $("#leftInput").val(name);
+    }
 });
