@@ -1,4 +1,8 @@
 /* map section made by Amanada */
+.mapPage{
+    background-color:#ddeeeb;  
+    overflow: auto;
+}
 
 .imagemap__item {
   display: none;
@@ -33,12 +37,21 @@
 }
 
 
+.mapText{
+    font-family: Philosopher;
+    color:#3b3a36;
+    font-size: 22px;
+    text-shadow: 4px 4px 6px #ffffff;
+}
+
 .mapTextTitle{
-    color:black;
-    text-shadow: 3px 3px 5px #ffffff;
-    font-size:27px;
+    font-family: Philosopher;
+    color:#55aa99;
+    text-shadow:4px 4px 6px #ffffff;
+    font-size: 30px;
     font-weight:bold;
 }
+
 
 .mapLink:link{
     text-decoration:none;
