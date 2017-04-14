@@ -24,23 +24,42 @@ $(function(){
     }else{
         $("#galleryInfo").click(function(){
           $("#galleryDescM").css("display","none");
-            $("#galleryDesc").slideToggle();
+            // $("#galleryDesc").slideToggle();
+            hideOtherSection();
+            $("#galleryDesc").css("display","block");
         });
         $("#historyInfo").click(function(){
-            $("#historyDesc").slideToggle();
+            // $("#historyDesc").slideToggle();
+            hideOtherSection();
+            $("#historyDesc").css("display","block");
         });
         $("#schoolInfo").click(function(){
-            $("#schoolDesc").slideToggle();
+            // $("#schoolDesc").slideToggle();
+            hideOtherSection();
+            $("#schoolDesc").css("display","block");
         });
         $("#incomeInfo").click(function(){
-            $("#incomeDesc").slideToggle();
+            // $("#incomeDesc").slideToggle();
+            hideOtherSection();
+            $("#incomeDesc").css("display","block");
         });
         $("#housePriceInfo").click(function(){
-            $("#housePriceDesc").slideToggle();
+            // $("#housePriceDesc").slideToggle();
+            hideOtherSection();
+            $("#housePriceDesc").css("display","block");
         });
         $("#activtyInfo").click(function(){
-            $("#activityDesc").slideToggle();
+            hideOtherSection();
+            $("#activityDesc").css("display","block");
         });
+        function hideOtherSection(){
+            $("#galleryDesc").css("display","none");
+            $("#historyDesc").css("display","none");
+            $("#schoolDesc").css("display","none");
+            $("#incomeDesc").css("display","none");
+            $("#housePriceDesc").css("display","none");
+            $("#activityDesc").css("display","none");
+        }
     }
         // gallery slide
         var slideIndex = 1;
