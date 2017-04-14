@@ -26,31 +26,32 @@ $(function(){
           $("#galleryDescM").css("display","none");
             // $("#galleryDesc").slideToggle();
             hideOtherSection();
-            $("#galleryDesc").css("display","block");
+            // $("#galleryDesc").css("display","block");
+            $("#galleryDesc").fadeIn("slow");
         });
         $("#historyInfo").click(function(){
             // $("#historyDesc").slideToggle();
             hideOtherSection();
-            $("#historyDesc").css("display","block");
+            $("#historyDesc").fadeIn("slow");
         });
         $("#schoolInfo").click(function(){
             // $("#schoolDesc").slideToggle();
             hideOtherSection();
-            $("#schoolDesc").css("display","block");
+            $("#schoolDesc").fadeIn("slow");
         });
         $("#incomeInfo").click(function(){
             // $("#incomeDesc").slideToggle();
             hideOtherSection();
-            $("#incomeDesc").css("display","block");
+            $("#incomeDesc").fadeIn("slow");
         });
         $("#housePriceInfo").click(function(){
             // $("#housePriceDesc").slideToggle();
             hideOtherSection();
-            $("#housePriceDesc").css("display","block");
+            $("#housePriceDesc").fadeIn("slow");
         });
         $("#activtyInfo").click(function(){
             hideOtherSection();
-            $("#activityDesc").css("display","block");
+            $("#activityDesc").fadeIn("slow");
         });
         function hideOtherSection(){
             $("#galleryDesc").css("display","none");
