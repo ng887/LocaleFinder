@@ -24,28 +24,22 @@ $(function(){
     }else{
         $("#galleryInfo").click(function(){
           $("#galleryDescM").css("display","none");
-            // $("#galleryDesc").slideToggle();
             hideOtherSection();
-            // $("#galleryDesc").css("display","block");
             $("#galleryDesc").fadeIn("slow");
         });
         $("#historyInfo").click(function(){
-            // $("#historyDesc").slideToggle();
             hideOtherSection();
             $("#historyDesc").fadeIn("slow");
         });
         $("#schoolInfo").click(function(){
-            // $("#schoolDesc").slideToggle();
             hideOtherSection();
             $("#schoolDesc").fadeIn("slow");
         });
         $("#incomeInfo").click(function(){
-            // $("#incomeDesc").slideToggle();
             hideOtherSection();
             $("#incomeDesc").fadeIn("slow");
         });
         $("#housePriceInfo").click(function(){
-            // $("#housePriceDesc").slideToggle();
             hideOtherSection();
             $("#housePriceDesc").fadeIn("slow");
         });
@@ -76,8 +70,6 @@ $(function(){
 
         function showDivs(n) {
           var i;
-          // var x = document.getElementsByClassName("mySlides");
-          // var dots = document.getElementsByClassName("demo");
           var x = $(".mySlides");
           var dots = $(".demo");
           if (n > x.length) {slideIndex = 1}
