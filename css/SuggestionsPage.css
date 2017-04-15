@@ -40,6 +40,11 @@
 #graphs {
   display: none;
 }
+#pdf a
+{
+  margin-top: 2%;
+  color: #3b3a36;
+}
 /*Desktop*/
 @media only screen and (min-width: 1025px) {
   .graphicsWrapper {
@@ -66,5 +71,9 @@
   }
   .visible {
     display: block;
+  }
+  #pdf
+  {
+    margin-left: 90%;
   }
 }

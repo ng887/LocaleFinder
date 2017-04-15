@@ -9,18 +9,21 @@
     <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
     <link rel="stylesheet" type="text/css" href="../css/layout.css" />
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../css/DetailedComparePage.css"/>
+
+    <link rel="stylesheet" href="DetailedComparePage.css"/>
     
     <script src="../js/less.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
    
    <script type="text/javascript" src="../js/loadHeaderFooter.js"></script> 
-    
 </head>
 
 <body>
@@ -35,50 +38,57 @@
             <h3>METRICS</h3> 
         </div> 
         <div id = "crime">
-            <h4>Crime</h4>
+            <i class="fa fa-eye" aria-hidden="true" style="font-size:40px"></i>
+            <h4>Crime Rating</h4>
             <!--<i id = "homeIcon" class="fa fa-home" aria-hidden="true"></i>-->
         </div>
         <div id = "school">
+            <i class="fa fa-university" aria-hidden="true" style="font-size:40px"></i>
             <h4>School Rating</h4>
         </div>
         <div id = "transport">
-            <h4>Transport</h4>
+            <i class="fa fa-bus" aria-hidden="true" style="font-size:40px"></i>
+            <h4>Transport Rating</h4>
         </div>
         <div id = "house">
-            <h4>Average House Price</h4>
+            <i class="fa fa-home" aria-hidden="true" style="font-size:40px"></i>
+            <h4>House Price</h4>
         </div>
         <div id = "income">
+            <i class="fa fa-money" aria-hidden="true" style="font-size:40px"></i>
             <h4>Average Income </h4>
         </div>  
     </div> <!-- metric div close -->
 
+    <a >
     <div  id = "area1">
         <div id = "head2">
             <h3 id = "a1Name">AREA 1</h3>
         </div> 
          <div id = "a1crime">
-            <h2 id = "a1crimeText" ></h2>
+            <h2 id = "a1crimeText" class = "colorChange"></h2>
         </div>
         <div id = "a1school">
-            <h2 id = "a1schoolText" ></h2>
+            <h2 id = "a1schoolText" class = "colorChange"></h2>
         </div>
         <div id = "a1transport">
-            <h2 id = "a1transportText"></h2>
+            <h2 id = "a1transportText" class = "colorChange" ></h2>
         </div>
         <div id = "a1house">
-            <h2 id = "a1houseText"></h2>
+            <h2 id = "a1houseText" class = "colorChange"></h2>
         </div>
         <div id = "a1income">
-            <h2 id = "a1incomeText"></h2>
+            <h2 id = "a1incomeText" class = "colorChange"></h2>
         </div>  
     </div>
-
+    </a>
+    <a class= "clickableDiv">
     <div  id = "area2">
         <div id = "head3">
             <h3 id = "a2Name">AREA 2</h3>
         </div> 
          <div id = "a2crime">
-            <h2 id = "a2crimeText" ></h2>
+            <h2 id = "a2crimeText"></h2>
         </div>
         <div id = "a2school">
             <h2 id="a2schoolText"></h2>
@@ -93,14 +103,71 @@
             <h2 id = "a2incomeText"></h2>
         </div>     
     </div>
-
+    </a>
     </div> <!-- mainDiv close -->
-    <div id = "buttonDiv">
-   <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top"> FIND MORE</button></a>
-    <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top">COMPARE OTHERS</button></a>
-    </div><!--button div close-->
+    <div id = "pdf">
+        <a id = "sapdf" href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i> save as pdf</a>
+    </div>
+    <div id = "quitornot" class = "quitornot">
+       <!-- <p>Found your dream neighborhood and want to end at this point?</p>-->
+            <!-- <a href="../html/finalPage.html">YES </a>
+            <a id = "no"  href="">  NO</a> -->
+        <p>Found your dream neighborhood? <!--and would like to end at this point --></p>
+        <a  id = "yes" class="lf-like lf-button lf-button-brand">YES </a>
+        <a id = "no" class="lf-not-like lf-button lf-button-brand">NO </a>
+        
+    </div>
+    <div id='popup-like' class="popup">
+        <span class="lf-like lf-text-white lf-large lf-padding-large ">
+           <b>
+              I found my neighborhood and I Like..
+              <ul class="colLayout lf-small-margin lf-padding-large"></ul>
+              <a id = "choice1" class = "choice" onclick="setFinalValue1()"></a><br>
+              <a id = "choice2" class = "choice" onclick="setFinalValue2()"></a>
+            </b>
+        </span>
+            <div class="close ns-close"></div>
+    </div>
+    <div id='popup-not-like' class="popupNotLike">
+        <span class="lf-not-like lf-text-white lf-large lf-padding-large ">
+        <b> I didn't find my neighborhood yet.. </b>
+            <a href="map.html" class = "notLikeButtons lf-button lf-button-brand"> FIND MORE</a>
+        <a href="CompareNeighborhoods.html" class = "notLikeButtons lf-button lf-button-brand">COMPARE OTHERS</a>   
+        </span>
+            <div class="close ns-close"></div>
+    </div>
+        <!--<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">NO</button> 
+        <div id="id01" class = "modal">
+            <div class="modal-content">
+                <div class="modalContainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-button-brand"> FIND MORE</button></a>
+                    <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-button-brand">COMPARE OTHERS</button></a>
+                </div>
+            </div>
+        </div> -->
+    
+    <!--<div id = "buttonDiv">
+        <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top"> FIND MORE</button></a>
+        <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top">COMPARE OTHERS</button></a> 
+    </div>-->
+    <!--<section id = "yesSection" class="yesNoSection">
+        <p> On viewing the comparisons between the two neighborhoods, which one do you like the most?</p>
+            <a id = "option1" href="finalPage.html"> A </a>
+            <a id = "option2" href="finalPage.html"> B </a>
+    </section>
+    <section id = "noSection" class="yesNoSection">
+        <p> Not happy with the above Neighborhoods? You can find more neighborhoods or Compare other neighborhoods </p>
+        <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-button-brand"> FIND MORE</button></a>
+        <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-button-brand">COMPARE OTHERS</button></a>   
+    </section> -->
     <div id='footer'></div>
     <script src="../js/detailedComparePage.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/criterion.js"></script>
+    <script src="../js/pdf.js" type="text/javascript"></script>
+    <script src="../js/sectionHideShow.js" type="text/javascript"></script>
+    <script src="../js/popupRight.js" type="text/javascript"></script> 
+    <script src="../js/popupLeft.js" type="text/javascript"></script>
+
 </body>
 </html>

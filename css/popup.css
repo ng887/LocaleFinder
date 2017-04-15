@@ -1,4 +1,4 @@
-.popup{
+.popup,.popupNotLike{
     width:380px;
     height:180px;
     background:#aeafac;
@@ -17,13 +17,13 @@
     width: 20px;
     height: 20px;
     cursor:pointer;
-    z-index:500;
+    z-index:500;popup-li
 }
 
 .ns-close {
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: absolute;popup-li
     right: 4px;
     top: 4px;
     overflow: hidden;

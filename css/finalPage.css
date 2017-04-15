@@ -1,0 +1,53 @@
+body
+{
+	background-color: #e9ece5;
+	font-size: 1.2rem;
+}
+#awesome
+{
+	margin-top: 15%;
+	color: #55aa99;
+	font-size:40px;
+	font-weight:5% ;
+	margin-bottom: 0%;
+}
+#neighborhoodName,#recommend
+{
+	margin-top:0%; 
+	margin-bottom:0%;
+}
+#recommend, h3,p
+{
+	color: #3b3a36;
+	text-align: center;
+}
+p  a
+{
+	color:#2dbcb6;
+}
+#thankyou
+{
+	margin-top: 2%;
+	margin-bottom:0%;
+}
+#footer
+{
+	margin-bottom:0%;
+
+}
+#neighborhoodName 
+{
+	font-size: 45px;
+}
+p
+{
+	font-weight: bold;
+}
+
+@media only screen  and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)  
+{
+	#awesome
+	{
+		margin-top:7%;
+	}
+}
