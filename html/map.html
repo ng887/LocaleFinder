@@ -1,107 +1,131 @@
-<!-- map section started by Amanda -->
+<!-- map by Neha -->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>map</title>
+    <title>Find Neighborhood</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
     <link rel="stylesheet" type="text/css" href="../css/layout.css" />
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
-
     <link rel="stylesheet" type="text/css" href="../css/map.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 </head>
 
 <body>
- <header>
-    <nav id="nav" class="rowLayout lf-card"  style="justify-content: space-between">
-        <div><span class="text-xxxlarge lf-button">LF</span></div>
-        <div>
-            <a href="../index.html" class="lf-button header-link wide lf-margin-top-xl">LOCALE FINDER</a>
+    <div id='header'></div>
+
+    <div class="desktopLayout  lf-bg">
+        <div id="googleMap" style="width:50%;height:1000px;"></div>
+        <div class="text-center" style="margin:15% 15% 0 15%">
+            <h1 class="mapTextTitle"> CHOOSE AN AREA</h1>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Northgate">Northgate</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Ballard">Ballard</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Fremont">Fremont</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=University District">U-District</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Downtown">Downtown</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Alki">Alki</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Green Lake">Green Lake</a></h3>
+            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">South Lake Union</a></h3>
         </div>
-
-        <div id="down">
-            <div >
-                <a href="javascript:void(0)" class="lf-button text-large lf-margin-top-large" onclick="lfOpen()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-            <div id="down-content" class="lf-sidebar lf-animate-right lf-black position-topright text-left">
-                <a href="javascript:void(0)" onclick="lfClose()" class="lf-button text-large lf-large lf-margin-top-large">Close &times;</a>
-                <a href="../html/slider.html" class="text-left">SUGGEST</a>
-                <a href="../html/NA.html" class="text-left">FIND</a>
-                <a href="../html/CompareNeighborhoods.html" class="text-left">COMPARE</a>
-
-            </div>
-        </div>
-
-        <div id="down-content-desktop" class="rowLayout">
-           
-            <a href="/html/CompareNeighborhoods.html" class="lf-button header-link position-right lf-margin-top-xl">
-                <i class="fa fa-balance-scale lf-hover-opacity "></i>COMPARE
-            </a>
-            <a href="/html/NA.html" class="lf-button header-link position-right lf-margin-top-xl">
-                <i class="fa fa-search lf-hover-opacity "></i>FIND
-            </a>
-            <a href="/html/slider.html" class="lf-button header-link position-right lf-margin-top-xl" >
-                <i class="fa fa-lightbulb-o lf-hover-opacity "></i>SUGGEST
-            </a>
-            
-        </div>
-    </nav>
-</header>
-  
-  
-    <section class="mapPage">
-	<div class="mapDiv">
-	<img src="../image/map1.jpg" alt="SeattleMap" usemap="#imagemap1" height="600" width="500">
-    <map id="imagemap1" name="imagemap1">
-    <area class="heart" shape="rect" alt="Northgate" coords="360,100,520,190" class="neighborDetail" href="neighborDetail.html?name=Northgate" />
-    <area class="heart" shape="rect" alt="U-District" coords="370,230,470,280" class="neighborDetail" href="neighborDetail.html?name=University District" />
-    <area class="heart" shape="rect" alt="Capitol Hill" coords="360,290,444,350" class="neighborDetail" href="neighborDetail.html?name=Capitol Hill" />
-    <area class="heart" shape="rect" alt="Downtown" coords="280,350,390,380" class="neighborDetail" href="neighborDetail.html?name=Downtown" />
-    <area class="heart" shape="rect" alt="South Lake Union" coords="300,320,340,350" class="neighborDetail" href="neighborDetail.html?name=South Lake Union" />
-    <area class="heart" shape="rect" alt="Queen Anne" coords="200,290,280,330" class="neighborDetail" href="neighborDetail.html?name=Queen Anne" />
-    <area class="heart" shape="rect" alt="Fremont" coords="215,240,365,270" class="neighborDetail" href="neighborDetail.html?name=Fremont" />
-    <area class="heart" shape="rect" alt="Green Lake" coords="270,190,370,235" class="neighborDetail" href="neighborDetail.html?name=Green Lake" />
-    <area class="heart" shape="rect" alt="Ballard" coords="95,180,270,230" class="neighborDetail" href="neighborDetail.html?name=Ballard" />
-    <area class="heart" shape="rect" alt="Alki" coords="110,420,180,590" class="neighborDetail" href="neighborDetail.html?name=Alki" />
-    </map>
-    </div>
-    
-   
-
-    <div class="mapTextDivRight1">
-    <h1 class="mapTextTitle">Choose Neighborhood</h1>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Northgate">Northgate</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Ballard">Ballard</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Fremont">Fremont</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=University District">U-District</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Downtown</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Alki">Alki</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Green Lake">Green Lake</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=South Lake Union">South Lake Union</a></h3>
     </div>
 
-    <div class="mapTextDivRight2">
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">North Beach</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Olympic Hills</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Central Seattle</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Magnolia</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Beacon Hill</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Georgetown</a></h3>
-    <h3 class="mapText"><a class="mapLink" href="neighborDetail.html?name=Downtown">Rainier Valley</a></h3>
-    </div>
-    </section>
-<!-- map section ended by Amanda -->
+    <div id='footer'></div>
 
-<!--<div id='footer'><div>-->
-<footer class="lf-card">
-</footer>
+
+
+
+
+
+    <script>
+        function myMap() {
+            var infowindow = new google.maps.InfoWindow();
+            var seattle = {lat: 47.6097, lng: -122.3331};
+            var map = new google.maps.Map(document.getElementById('googleMap'), {
+                zoom: 12,
+                center: seattle
+            });
+            var features = [
+                {
+                    position: new google.maps.LatLng(47.7086, -122.3232),
+                   title:'Northgate'
+                   // type: 'info'
+                }, {
+                    position: new google.maps.LatLng(47.6628, -122.3139),
+                  title:'University District'
+                  //  type: 'info'
+                },
+                {
+                    position: new google.maps.LatLng(47.6253, -122.3222),
+                    title:'Capitol Hill'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.6050, -122.3344),
+                    title:'Downtown'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.6256, -122.3344),
+                    title:'South Lake Union'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.6323, -122.3569),
+                    title:'Queen Anne'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.6542, -122.3500),
+                    title:'Fremont'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.6797, -122.3257),
+                    title:'Green Lake'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.6792, -122.3860),
+                    title:'Ballard'
+                    //  type: 'info'
+                },{
+                    position: new google.maps.LatLng(47.5755, -122.4107),
+                    title:'Alki'
+                    //  type: 'info'
+                }];
+            // Create markers.
+            features.forEach(function(feature) {
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                   // icon: icons[feature.type].icon,
+                    title:feature.title,
+                    map: map
+                });
+
+                //var service = new google.maps.places.PlacesService(map);
+                google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.setContent('<div><strong>' + marker.title + '</strong><br>'
+                            + '<a href="neighborDetail.html?name='+marker.title+'">Click Here</a>' + ' to see more details'
+                           );
+                        infowindow.open(map, this);
+                    });
+                });
+
+          /*  var marker = new google.maps.Marker({
+                position: seattle,
+                map: map
+            });*/
+
+
+
+
+
+        }
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD6p3hRqf_9fLtJ9GdOSt42ZZelflC3IA&callback=myMap"></script>
+    <script type="text/javascript" src="../js/map.js"></script>
 </body>
 </html>
+<!-- map by Neha -->
