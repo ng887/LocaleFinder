@@ -12,6 +12,9 @@ body{
   justify-content: center;
   padding-bottom: 3%;
 }
+.buttonStyling{
+  margin: 0% 2%;
+}
 .compareDetails{
   background-color: #ddeeeb;
   padding: 3%;

@@ -1,3 +1,10 @@
+//Back button functionality at Compare Page//
+// Start add by sirisha
+function goBack() {
+window.history.back();
+}
+//end add by sirisha
+
 $(function(){
   var imageMapping ={'University District':'../image/ud.jpg',
     'Queen Anne':           '../image/queenanne.jpg',

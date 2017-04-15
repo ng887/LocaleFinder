@@ -6,6 +6,9 @@ h1{
   font-size: 1.3rem;
   margin: 1% 1%;
 }
+h2{
+  color: white;
+}
 .intoductionImages{
   width:100%;
   height: 110rem;
