@@ -7,11 +7,11 @@ $(document).ready(function()
 	document.getElementById("a2Name").innerHTML = selection2 
 
 	$('#area1').on('click', function() {
-    location.href = 'neighborDetail.html?name=' + selection1    
+    location.href = 'neighborDetail.html?from=c&name=' + selection1    
 	});
 
 	$('#area2').on('click', function() {
-    location.href = 'neighborDetail.html?name=' + selection2   
+    location.href = 'neighborDetail.html?from=c&name=' + selection2   
 	});
 
 	document.getElementById("choice1").innerHTML = selection1
