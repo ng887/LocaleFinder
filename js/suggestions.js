@@ -374,7 +374,7 @@ for(i = 0; i < 3; i++) {
     $('#suggestionNames ul').append(
         $('<li>').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/>')
             .append(
-            $('<a>').attr('href', "neighborDetail.html?name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase())));
+            $('<a>').attr('href', "neighborDetail.html?from=s&name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase())));
 }
 
 
