@@ -170,7 +170,13 @@ $(function(){
         $("#compareBtn").click(function(){
             document.location.href = "../html/CompareNeighborhoods.html?name="+name;
         });
-        fromURL = fromURL == "s" ? "SuggestionsPage.html" : "map.html";
+        if(fromURL == "s"){
+           fromURL = "SuggestionsPage.html";
+        }else if(fromURL == "c"){
+           fromURL = "DetailedComparePage.html";
+        }else{
+           fromURL = "map.html";
+        }
         $("#backBtn").click(function(){
              document.location.href = "../html/"+fromURL;
         });
