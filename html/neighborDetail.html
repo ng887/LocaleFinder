@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="description" content="Find Your Dream Neighborhood">
+    <meta name="keywords" content="local,neighborhood,seattle">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Neighbourhood Detail</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,11 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
     <link rel="stylesheet" type="text/css" href="../css/layout.css" />
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
-
-<!--     <link rel="stylesheet/less" type="text/css" href="../less/neighborDetail.less" /> -->
-
     <link rel="stylesheet" type="text/css" href="../css/neighborDetail.css" />
-
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
     <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
@@ -27,61 +25,52 @@
     <script type="text/javascript" src="../js/neighborDetail.js"></script>
 </head>
 <body>
-    <div id='header'></div>
+    <header id='header'></header>
     <div class="neighborName"><span></span></div>
-    <div class="row">
-      <!-- <div id="rowNav">
-        <a href="#galleryDesc"><i class="fa fa-circle"></i></a>
-        <a href="#historyDesc"><i class="fa fa-circle"></i></a>
-        <a href="#schoolDesc"><i class="fa fa-circle"></i></a>
-        <a href="#incomeDesc"><i class="fa fa-circle"></i></a>
-        <a href="#housePriceDesc"><i class="fa fa-circle"></i></a>
-        <a href="#activityDesc"><i class="fa fa-circle"></i></a>
-      </div> -->
-
-        <div class="col-3 menu">
+    <main class="row">
+        <article class="col-3 menu">
           <ul>
-            <li id="galleryInfo"><i class="fa fa-circle-o" aria-hidden="true"></i>Gallery</li>
+            <li id="galleryInfo"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</li>
             <!-- image slide -->
             <div id="galleryDescM">
-              <div class="w3-content w3-display-container" style="max-width:800px">
+              <div class="w3-content w3-display-container" >
               </div>
             </div>
             <!-- end of image slide -->
-            <li id="historyInfo"><i class="fa fa-circle-o"></i>History</li>
+            <li id="historyInfo"><i class="fa fa-history"></i>History</li>
             <section id="historyDescM">
-              <h1 class="fa fa-home">History</h1>
+              <h1 class="fa fa-history">History</h1>
               <p ></p>
             </section>
-            <li id="schoolInfo"><i class="fa fa-circle-o"></i>Education</li>
+            <li id="schoolInfo"><i class="fa fa-graduation-cap"></i>Education</li>
             <section id="schoolDescM">
-            <h1 class="fa fa-graduation-cap icon-female">Education</h1>
+            <h1 class="fa fa-graduation-cap">Education</h1>
             <p></p>
             </section>
-            <li id="incomeInfo"><i class="fa fa-circle-o"></i>Who live here</li>
+            <li id="incomeInfo"><i class="fa fa-users"></i>Who live here</li>
             <section id="incomeDescM">
               <h1 class="fa fa-users">Who live here</h1>
             <p></p>
             </section>
-            <li id="housePriceInfo"><i class="fa fa-circle-o"></i>House Expense</li>
+            <li id="housePriceInfo"><i class="fa fa-money"></i>House Expense</li>
             <section id="housePriceDescM">
-              <h1 class="fa fa-building-o">House Expense</h1>
+              <h1 class="fa fa-money">House Expense</h1>
             <p></p>
             </section>
-            <li id="activtyInfo"><i class="fa fa-circle-o"></i>Activities and Attractions</li>
+            <li id="activtyInfo"><i class="fa fa-camera-retro"></i>Activities and Attractions</li>
             <section id="activityDescM">
-              <h1 class="fa fa-camera-retro"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Activities and Attractions</h1>
+              <h1 class="fa fa-camera-retro">Activities and Attractions</h1>
             <p></p>
             </section>
           </ul>
-        </div>
+        </article>
 
-        <div class="col-6">
+        <article class="col-6">
           <div id="galleryDesc">
-            <div class="w3-content w3-display-container" style="max-width:800px"></div>
+            <div class="w3-content w3-display-container"></div>
           </div>
           <section id="historyDesc">
-            <h1 class="fa fa-home">History</h1>
+            <h1 class="fa fa-history">History</h1>
             <p ></p>
           </section>
           <section id="schoolDesc">
@@ -93,29 +82,27 @@
           <p></p>
           </section>
           <section id="housePriceDesc">
-            <h1 class="fa fa-building-o">House Expense</h1>
+            <h1 class="fa fa-money">House Expense</h1>
           <p></p>
           </section>
           <section id="activityDesc">
-            <h1 class="fa fa-camera-retro"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Activities and Attractions</h1>
+            <h1 class="fa fa-camera-retro">Activities and Attractions</h1>
           <p></p>
           </section>
-        </div>
-        <div class="col-3 right">
+        </article>
+        <article class="col-3 right">
           <table id="customers">
-            </table>
-         </div>
-    </div>
-    <!-- end of row -->
-    <div class="footer">
-      <!-- <div class="btn-group"> -->
-        <button id="compareBtn" class="button"><i class="fa fa-balance-scale lf-hover-opacity "></i>Compare</button>
-        <button id="favBtn" class="button"><i class="fa fa-heart" aria-hidden="true"></i>Favourite</button>
-        <button id="backBtn" class="button"><i class="fa fa-arrow-left" aria-hidden="true"></i>back</button>
-      <!-- </div> -->
-    </div>
-    <div id='footer'></div>
+          </table>
+          <div class="footer">
+              <button id="compareBtn" class="button"><i class="fa fa-balance-scale lf-hover-opacity "></i>Compare</button>
+              <button id="viewHouseBtn" class="button"><i class="fa fa-eye" aria-hidden="true"></i>View House</button>
+              <button id="backBtn" class="button"><i class="fa fa-arrow-left" aria-hidden="true"></i>back</button>
+          </div>
+        </article>
 
+    </main>
+    <!-- end of row -->
+    <footer id='footer'></footer>
 </body>
 
 </html>
