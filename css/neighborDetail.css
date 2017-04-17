@@ -24,7 +24,6 @@ html {
 .menu li {
   padding: 8px;
   margin-bottom: 7px;
-  /*background-color: #33b5e5;*/
   background-color: #c0dfd9;
   color: #3b3a36;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -42,16 +41,12 @@ html {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .footer {
+  margin-top: 3rem;
   background-color: #c0dfd9;
-  /*color: #ffffff;*/
-  /*text-align: center;*/
-  /*font-size: 12px;*/
   padding: 10px;
   min-height: 60px;
 }
-.footer button{
-  color:#3b3a36;
-}
+
 /* For desktop: */
 .col-1 {
   width: 8.33%;
@@ -139,9 +134,9 @@ section {
 }
 /*group button*/
 .button {
-  border: 2px solid #fff;
-  background-color: transparent;
-  color: white;
+  background-color: #2dbcb6;
+  color: #ffffff;
+  border: 2px solid #c0dfd9;
   padding: 8px 8px;
   margin: 5px;
   text-align: center;
@@ -156,7 +151,7 @@ section {
 }
 .button:hover {
   background-color: #b3c2bf;
-  color: #0099cc;
+  color: #3b3a36;
 }
 /*image slide*/
 .mySlides {
@@ -182,6 +177,11 @@ section {
 }
 .col-6{
   background-color: #5a5c51;
+}
+@media only screen and (min-width: 768px) {
+  .col-6{
+    min-height: 480px;
+  }
 }
 #historyDesc p{
    color:white;
