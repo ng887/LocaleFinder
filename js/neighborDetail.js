@@ -23,7 +23,6 @@ $(function(){
         });
     }else{
         $("#galleryInfo").click(function(){
-          $("#galleryDescM").css("display","none");
             hideOtherSection();
             $("#galleryDesc").fadeIn("slow");
         });
@@ -125,21 +124,21 @@ $(function(){
         //set background image
         $(".neighborName").css('background-image','url(../image/'+neighborInfo[0].image+')');
         //set table data
-        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Crime Record</td><td>'+neighborInfo[0].crimeRecord+'</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>School Rating </td><td>'+neighborInfo[0].schoolRating+'/10</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Transit Score </td><td>'+neighborInfo[0].transportation+'/100</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Ave House Price</td><td>'+neighborInfo[0].housePrice+'(K)</td></tr>');
-        $("#customers").append('<tr><td><i class="fa fa-star-o"></i>Ave Income </td><td>'+neighborInfo[0].income+'</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-bomb"></i>Crime Record</td><td>'+neighborInfo[0].crimeRecord+'</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-university"></i>School Rating </td><td>'+neighborInfo[0].schoolRating+'/10</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-bus"></i>Transit Score </td><td>'+neighborInfo[0].transportation+'/100</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-home"></i>Ave House Price</td><td>'+neighborInfo[0].housePrice+'(K)</td></tr>');
+        $("#customers").append('<tr><td><i class="fa fa-money"></i>Ave Income </td><td>'+neighborInfo[0].income+'</td></tr>');
         //get neightbour description
         var galleryInfo = '<img class="mySlides" src="../image/'+neighborInfo[1].gallery[0]+'" style="width:100%">'+
         '<img class="mySlides" src="../image/'+neighborInfo[1].gallery[1]+'" style="width:100%">'+
         '<img class="mySlides" src="../image/'+neighborInfo[1].gallery[2]+'" style="width:100%">'+
         '<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">'+
-          '<div id="slidePre" class="w3-left w3-hover-text-khaki">&#10094;</div>'+
-          '<div id="slideNext" class="w3-right w3-hover-text-khaki">&#10095;</div>'+
-          '<span id="badge1" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>'+
-          '<span id="badge2" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>'+
-          '<span id="badge3" class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>'+
+          '<div id="slidePre" class="w3-left"><i class="fa fa-chevron-left" style="font-size:36px;background-color:#000;color:#fff"></i></div>'+
+          '<div id="slideNext" class="w3-right"><i class="fa fa-chevron-right" style="font-size:36px;background-color:#000;color:#fff"></i></div>'+
+          '<span id="badge1" class="w3-badge demo w3-border w3-hover-white"></span>'+
+          '<span id="badge2" class="w3-badge demo w3-border w3-hover-white"></span>'+
+          '<span id="badge3" class="w3-badge demo w3-border w3-hover-white"></span>'+
         '</div>'
         if(isMobile.matches){//show info in center
           $("#galleryDescM div").html(galleryInfo);
@@ -169,9 +168,15 @@ $(function(){
         }else{
            fromURL = "map.html";
         }
+        //back button
         $("#backBtn").click(function(){
              document.location.href = "../html/"+fromURL;
         });
+        //view house button
+        $("#viewHouseBtn").click(function(){
+             document.location.href = "../html/finalPage.html?name="+name;
+        });
+
     });
 function getNeighborInfoByName(name,areaDetailObj,neightbourDescriptionObj){
     var neighbor = [];
