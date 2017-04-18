@@ -7,17 +7,46 @@ body{
     display: none;
 }
 
-#msform .action-button {
+label:hover{
+  color:#2dbcb6;
+}
+li{
+  text-align: center;
+}
+input{
+    margin-left:18%;
+    margin-right: 5%;
+}
+label{
+  cursor: pointer;
+}
+i{
+  cursor: pointer;
+}
+i:hover{
+  color: #2dbcb6;
+}
+.submit{
+  margin-top: 8%;
+}
+
+
+/*#msform .submit .action-button {
     width: 100px;
     background: #2dbcb6;
     font-weight: bold;
     font-size: 1rem;
     color: white;
     border: 0 none;
-    border-radius: 1px;
     cursor: pointer;
     padding: 10px 5px;
     margin: 2% 35%;
+    border: 2px solid black;
+}*/
+#msform .action-button {
+    float: left;
+    padding: 3% 5%;
+    margin-top: 10%;
 }
 #msform{
   /*border: 2px solid purple;*/
@@ -26,16 +55,19 @@ body{
   margin-top: 2%;
 }
 
-#msform .action-button:hover,
+/*#msform .action-button:hover,
 #msform .action-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
-h1{
+}*/
+h2{
   margin-top:100px;
   text-align: center;
 }
-h2{
+h3{
   color: #6ed3cf;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 3%;
 }
 
 
@@ -104,35 +136,35 @@ h2{
     color: white;
 }
 .lf-card-2{
-
   width: 80%;
-  height: auto;
+  height: 57%;
   margin: 2% 10%;
-  /*background-color: #5a5c51;*/
   background-color: grey;
   color:white;
 }
 
-input {
+/*input {
     float: left;
     clear: left;
     width: 50px;
     margin: 6% 5%;
     line-height: 30px;
-}
-label {
+}*/
+/*label {
     float: left;
     margin: 3% 0%;
     vertical-align: middle;
-}
+}*/
 @media screen and (min-width: 600px){
 
-    h1{
+    h2{
         margin-top: 130px;
         font-size: 1.5rem;
     }
-    h2{
-        font-size: 1.3rem;
+    h3{
+        font-size: 1.5rem;
+        padding-top: 5%;
+        padding-bottom: 3%;
     }
     #msform{
         width: 80%;
@@ -148,138 +180,22 @@ label {
         margin-top: 3%;
     }
     input{
-        margin: 3% 15%;
+        margin-left:33%;
+        margin-right: 5%;
     }
     label{
-        margin: 2% 0%;
-    }
-    #msform .action-button{
-        margin-top: 3%;
+      font-size: 1.3rem;
     }
     .lf-card-2{
-        margin: 0% 10%;
+        margin: 0% 22%;
+        width: 55%;
+        height: 70%;
     }
-    .#msform .action-button{
-        margin: 0% 40%;
+    #msform .action-button {
+      margin-top: 8%;
+    }
+    .submit{
+      margin: 5% 20%;
     }
 
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-/*
-.onlyQuestionnaire h1{
-  text-align: center;
-  margin: 3% 0%;
-  font-size: 1rem;
 }
-.counter{
-  font-size: 1.2rem;
-  float: right;
-  margin-right: 5%;
-  margin-top: 7%;
-  color: white;
-}
-.questionSlider{
-
-  margin-top: 10%;
-  background-image: url("../image/backdrop.png");
-  background-position: center;
-}
-.slider{
-
-  text-align: center;
-  padding-top: 2%;
-  height: 25rem;
-}
-.options{
-
-  margin: 1% 0%;
-}
-.slider h1{
-  text-align: center;
-  font-size: 1.3rem;
-  color: white;
-  margin-top: 5%;
-}
-.slider button{
-  width: 14rem;
-  height: 3rem;
-  font-size: 1rem;
-  background-color: #F88D86;
-  margin: 2% 2%;
-  border-radius:10px;
-  cursor: pointer;
-  box-shadow: 0 7px #bfbbbb;
-}
-.slider button:hover{
-  background-color: #B0827F;
-}
-.slider button:active{
-  background-color: #B0827F;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-i{
-  font-size: 2rem;
-}
-.left-arrow{
-  float: left;
-  margin-left: 5%;
-  width: 5rem;
-  height: 3rem;
-  margin-top: 1%;
-  border-radius: 10px;
-  background-color: #F88D86;
-}
-.right-arrow, #doneButton{
-  float: right;
-  margin-right: 5%;
-  margin-top: 1%;
-  width: 5rem;
-  height: 3rem;
-  border-radius: 10px;
-  background-color: #F88D86;
-}
-#doneButton{
-  font-size: 1.2rem;
-}
-@media only screen and (min-width: 1025px) {
-
-  .onlyQuestionnaire h1{
-    font-size: 1.5rem;
-  }
-
-  .questionSlider{
-    margin-top: 3%;
-  }
-  .slider{
-    height: 22rem;
-  }
-  .options{
-    margin: 5% 0%;
-  }
-  .counter{
-    margin-top: 1%;
-  }
-  .slider h1{
-    margin: 5% 0%;
-    font-size: 1.5rem;
-  }
-  .slider button{
-    margin: 1% 2%;
-    font-size: 1.2rem;
-    width: 16rem;
-  }
-
-}
-*/
