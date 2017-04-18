@@ -366,8 +366,7 @@ function displayHorizontalBarChart(dataObj){
 for(i=1; i<4;i++){
     $('#icons').append('<span class="fa-stack fa-5x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+i +'</strong> </span>')
 }
-*/
-//add by neha
+
 for(i = 0; i < 3; i++) {
     y=i+1;
 
@@ -375,8 +374,17 @@ for(i = 0; i < 3; i++) {
         $('<li>').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/>')
             .append(
             $('<a>').attr('href', "neighborDetail.html?from=s&name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase())));
-}
+}*/
 
+for(i = 0; i < 3; i++) {
+    y=i+1;
+
+    $('#suggestionNames ul').append(
+        $('<li class="desktopLayout" style="align-items: center">').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/><p>')
+            .append(suggestedAreaDetail[i].name.toUpperCase()).append(
+            $('<a>').attr('href', "neighborDetail.html?from=s&name=" + suggestedAreaDetail[i].name).addClass('lf-padding-small lf-link').append('view details'))
+            );
+}
 
 $('#crimeContent').append('The neighborhood with the least number of crimes is rated as the best. The number of crimes in a year are:'+ '<br/>' );
 $('#incomeContent').append('The neighborhood with high average income is rated as the best. The monthly average incomes are:'+ '<br/>' );
