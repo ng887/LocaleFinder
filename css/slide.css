@@ -28,7 +28,7 @@
 #right
 {
 	float: right;
-	margin-top: -80px;
+	margin-top: -25px;
 	background-color: #262216;
 }
 .icon:hover{
@@ -38,7 +38,7 @@
 
 @media only screen and (min-width: 768px) {
     #right{
-      margin-top: -170px;
+      margin-top: 20px;
     }
 }
 #sliderHeader,#sliderPara
@@ -51,20 +51,33 @@
 #moreBtn{
   margin-right: 100px;
 	text-align: center;
+	opacity:1;
 }
 #sliderPara{
   font-style: italic;
   font-size:1.2rem;
+	opacity: 1;
 }
 #sliderHeader
 {
 	font-size: 30px;
-	padding-top:200px;
+	opacity: 1;
 }
-@media only screen and (min-width: 768px) {
+#backgroundMask{
+	position: relative;
+	top:100px;
+	background-color:rgba(38,34,22,0.6);
+  width: 70%;
+	margin: auto;
+	height: 350px;
+}
+@media only screen and (min-width: 1025px) {
   #sliderHeader
   {
   	font-size: 52px;
-  	padding-top:230px;
   }
+	#backgroundMask{
+		top:200px;
+		height: 300px;
+	}
 }
