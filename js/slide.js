@@ -8,7 +8,7 @@ $(function(){
 						'We care what matters to you',
             'We care what matters to you',
             'We care what matters to you'];
-    var paraColor = ['#fff','#000','#e05915','#fff','#f2b632','#f2b632'];
+    // var paraColor = ['#fff','#000','#e05915','#fff','#f2b632','#f2b632'];
 		var cnt= 0;
 		var timer;
 		$('#left').click(function(){
@@ -29,10 +29,10 @@ $(function(){
 		    cnt= 0;
 
 		  var slider= $('#indexMain').css("background-image","url(\'"+imgadr[cnt]+"\')");
-		  $('#sliderHeader').html(headArray[cnt]);  //or append?
-		  $('#sliderPara').html(paraArray[cnt]);
-      $('#sliderHeader').css("color",paraColor[cnt]);
-      $('#sliderPara').css("color",paraColor[cnt]);
+		  // $('#sliderHeader').html(headArray[cnt]);  //or append?
+		  // $('#sliderPara').html(paraArray[cnt]);
+      // $('#sliderHeader').css("color",paraColor[cnt]);
+      // $('#sliderPara').css("color",paraColor[cnt]);
 		}
 
 		function next()
@@ -44,10 +44,10 @@ $(function(){
 		    cnt= 0;
 
 		  var slider= $('#indexMain').css("background-image","url(\'"+imgadr[cnt]+"\')");
-		  $('#sliderHeader').html(headArray[cnt]);
-		  $('#sliderPara').html(paraArray[cnt]);
-      $('#sliderHeader').css("color",paraColor[cnt]);
-      $('#sliderPara').css("color",paraColor[cnt]);
+		  // $('#sliderHeader').html(headArray[cnt]);
+		  // $('#sliderPara').html(paraArray[cnt]);
+      // $('#sliderHeader').css("color",paraColor[cnt]);
+      // $('#sliderPara').css("color",paraColor[cnt]);
 		  sliderTimer();
 		}
 
@@ -60,10 +60,10 @@ $(function(){
 		    cnt= imgadr.length-1;
 
 			var slider= $('#indexMain').css("background-image","url(\'"+imgadr[cnt]+"\')");
-		  $('#sliderHeader').html(headArray[cnt]);
-		  $('#sliderPara').html(paraArray[cnt]);
-      $('#sliderHeader').css("color",paraColor[cnt]);
-      $('#sliderPara').css("color",paraColor[cnt]);
+		  // $('#sliderHeader').html(headArray[cnt]);
+		  // $('#sliderPara').html(paraArray[cnt]);
+      // $('#sliderHeader').css("color",paraColor[cnt]);
+      // $('#sliderPara').css("color",paraColor[cnt]);
 		  sliderTimer();
 		}
 });
