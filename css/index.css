@@ -5,6 +5,8 @@
   min-height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 .lf-transform {
   transform: translate3d(0px, -43.6107px, 0px) scale(1) rotate(0deg);
