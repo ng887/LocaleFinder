@@ -27,6 +27,9 @@ img{
   margin: 1% 17%;
   font-size:1rem;
 }
+#errorMessage1, #errorMessage2{
+  color: red;
+}
 .compareButton{
   display: flex;
   justify-content: center;
@@ -67,6 +70,9 @@ button{
    margin-top:-5%;
    margin-bottom: 2%;
  }
- 
+ #errorMessage1, #errorMessage2{
+   margin: 0% 18%;
+ }
+
 
 }
