@@ -1,5 +1,5 @@
-<!-- map by Neha -->
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
     <link rel="stylesheet" type="text/css" href="../css/layout.css" />
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
-   <!-- <link rel="stylesheet" type="text/css" href="../css/map.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/map.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,28 +19,23 @@
     <div id='header'></div>
 
     <div class="desktopLayout  lf-bg">
-        <div id="googleMap" style="width:50%;height:1000px;"></div>
-        <div class="text-center" style="margin:15% 15% 0 15%">
-            <h1 class="mapTextTitle"> CHOOSE AN AREA</h1>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Northgate">Northgate</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Ballard">Ballard</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Fremont">Fremont</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=University District">U-District</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Queen Anne">Queen Anne</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Downtown">Downtown</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Alki">Alki</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=Green Lake">Green Lake</a></h3>
-            <h3 class="mapText"><a class="neighborDetail" href="neighborDetail.html?name=South Lake Union">South Lake Union</a></h3>
+        <div id="googleMap"></div>
+        <div class="text-center" style="margin:15% 5% 0 5%">
+            <h2 style="font-size:140%">Let's choose a neighborhood and view the details</h2>
+            <h3><a href="neighborDetail.html?name=Northgate">Northgate</a></h3>
+            <h3><a href="neighborDetail.html?name=Ballard">Ballard</a></h3>
+            <h3><a href="neighborDetail.html?name=Fremont">Fremont</a></h3>
+            <h3><a href="neighborDetail.html?name=University District">U-District</a></h3>
+            <h3><a href="neighborDetail.html?name=Queen Anne">Queen Anne</a></h3>
+            <h3><a href="neighborDetail.html?name=Capitol Hill">Capitol Hill</a></h3>
+            <h3><a href="neighborDetail.html?name=Downtown">Downtown</a></h3>
+            <h3><a href="neighborDetail.html?name=Alki">Alki</a></h3>
+            <h3><a href="neighborDetail.html?name=Green Lake">Green Lake</a></h3>
+            <h3><a href="neighborDetail.html?name=South Lake Union">South Lake Union</a></h3>
         </div>
     </div>
 
     <div id='footer'></div>
-
-
-
-
-
 
     <script>
         function myMap() {
@@ -101,7 +96,6 @@
                     title:feature.title,
                     map: map
                 });
-
                 //var service = new google.maps.places.PlacesService(map);
                 google.maps.event.addListener(marker, 'click', function() {
                         infowindow.setContent('<div><strong>' + marker.title + '</strong><br>'
@@ -110,22 +104,13 @@
                         infowindow.open(map, this);
                     });
                 });
-
           /*  var marker = new google.maps.Marker({
                 position: seattle,
                 map: map
             });*/
-
-
-
-
-
         }
-
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD6p3hRqf_9fLtJ9GdOSt42ZZelflC3IA&callback=myMap"></script>
     <script type="text/javascript" src="../js/map.js"></script>
 </body>
 </html>
-<!-- map by Neha -->
