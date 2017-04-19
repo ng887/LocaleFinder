@@ -1,43 +1,31 @@
 <!--Start by sirisha-->
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Compare Page</title>
-    <!-- common css styles -->
+    <title>compareNeighborhood Page</title>
       <link rel="stylesheet" type="text/css" href="../css/reset.css" />
       <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
       <link rel="stylesheet" type="text/css" href="../css/layout.css" />
       <link rel="stylesheet" type="text/css" href="../css/brand.css" />
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
       <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- my custom css file -->
-      <!-- <link rel="stylesheet" type="text/css" href="../css/compareNeighborhoods.css"> -->
       <link rel="stylesheet" type="text/css" href="../css/compare.css">
-      <!-- <script src="js/less.js" type="text/javascript"></script> -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <script type="text/javascript" src="../js/compareNeighborhood.js"></script>
-      <!-- Header Footer Load Script -->
       <script type="text/javascript" src="../js/loadHeaderFooter.js"></script>
       <script type="text/javascript" src="../js/criterion.js"></script>
-  </head>
-  <!-- <script>
-         function goBack() {
-         window.history.back();
-         }
-  </script> -->
-  <body>
+</head>
+<body>
   <div id='header'></div>
   <div class="heading">
-     <h1>Let's Compare the neighborhoods</h1>
+     <h2>Let's Compare the neighborhoods</h2>
   </div>
   <div class="compareContainer">
     <section>
-      <img id="leftImg" src="../image/fremont.jpg" alt="">
-      <input id="leftInput" type="text" list="neighborhoods1" name="neighbor_names" placeholder="Enter a neighborhood">
+      <img id="leftImg" src="../image/fremont.jpg" alt="NeighborhoodImage1">
+      <input id="leftInput" type="text" list="neighborhoods1" name="neighbor_names" placeholder="Enter a neighborhood" required>
           <datalist id="neighborhoods1">
               <option value="University District">
               <option value="Queen Anne">
@@ -51,8 +39,8 @@
           </datalist>
     </section>
     <section>
-      <img id='rightImg' src="../image/ud.jpg" alt="">
-      <input id="rightInput" type="text" list="neighborhoods2" name="neighbor_names2" placeholder="Enter a neighborhood">
+      <img id='rightImg' src="../image/ud.jpg" alt="NeighborhoddImage2">
+      <input id="rightInput" type="text" list="neighborhoods2" name="neighbor_names2" placeholder="Enter a neighborhood" required>
          <datalist id="neighborhoods2">
               <option value="University District">
               <option value="Queen Anne">
@@ -64,14 +52,15 @@
               <option value="Northgate">
               <option value="Alki">
           </datalist>
+
     </section>
   </div>
   <div class="compareButton">
-    <button class="lf-button lf-button-brand  lf-padding-large lf-margin-top lf-large buttonStyling"  onclick="setValues()">Compare</button>
-    <button class="lf-button lf-button-brand  lf-padding-large lf-margin-top lf-large buttonStyling"  onclick="goBack()">Back</button>
+    <button type = "submit" class="lf-button lf-button-brand  lf-padding-large lf-margin-top lf-large buttonStyling" onclick="setValues()">Compare</button>
+    <!-- <button class="lf-button lf-button-brand  lf-padding-large lf-margin-top lf-large buttonStyling"  onclick="goBack()">Back</button> -->
   </div>
   <div class="compareDetails">
-      <h1>How do we Compare ?</h1>
+      <h2>How do we Compare ?</h2>
       <p> We compare the two neighborhoods which you choose above across the Seattle.
       <p> We show the score with respect to different criteria for each neighborhood.
         We take into account the 5 most important metrics for each neighorhood which includes: crime stats, Transit score, cost of living, education and housing.
@@ -81,4 +70,3 @@
   <script src="../js/setter.js" type="text/javascript"></script>
   </body>
 </html>
-<!--end by sirisha-->
