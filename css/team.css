@@ -1,12 +1,12 @@
 body{
   margin-top: 120px;
 }
-h1{
+h2{
   text-align: center;
   font-size: 1.3rem;
   margin: 1% 1%;
 }
-h2{
+figcaption h2{
   color: white;
 }
 .intoductionImages{
@@ -118,9 +118,6 @@ figure.snip0016:hover figcaption::before {
   transition-delay: 0s;
 }
 @media only screen and (min-width: 1025px) {
-  h1{
-    font-size: 2rem;
-  }
   .intoductionImages{
     width:90%;
     height: 40rem;
