@@ -26,14 +26,14 @@
 </head>
 <body>
     <header id='header'></header>
-    <div class="neighborName"><span></span></div>
-    <main class="row">
+    <div class="neighborName" itemscope itemtype="http://schema.org/Place"><span itemprop="name"></span></div>
+    <main class="row" itemscope itemtype="http://schema.org/Place">
         <article class="col-3 menu">
           <ul>
             <li id="galleryInfo"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</li>
             <!-- image slide -->
             <div id="galleryDescM">
-              <div class="w3-content w3-display-container" >
+              <div class="w3-content w3-display-container" itemprop="image">
               </div>
             </div>
             <!-- end of image slide -->
@@ -67,7 +67,7 @@
 
         <article class="col-6">
           <div id="galleryDesc">
-            <div class="w3-content w3-display-container"></div>
+            <div class="w3-content w3-display-container" itemprop="image"></div>
           </div>
           <section id="historyDesc">
             <h1 class="fa fa-history">History</h1>
@@ -91,7 +91,7 @@
           </section>
         </article>
         <article class="col-3 right">
-          <table id="customers">
+          <table id="customers" itemprop="aggregateRating">
           </table>
           <div class="footer">
               <button id="compareBtn" class="button"><i class="fa fa-balance-scale lf-hover-opacity "></i>Compare</button>
