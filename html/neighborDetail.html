@@ -27,9 +27,9 @@
 <body>
     <header id='header'></header>
     <div class="neighborName" itemscope itemtype="http://schema.org/Place"><span itemprop="name"></span></div>
-    <main class="row" itemscope itemtype="http://schema.org/Place">
+    <main class="row" itemscope itemtype="http://schema.org/Place" role=”main”>
         <article class="col-3 menu">
-          <ul>
+          <ul role=”navigation”>
             <li id="galleryInfo"><i class="fa fa-picture-o" aria-hidden="true"></i>Gallery</li>
             <!-- image slide -->
             <div id="galleryDescM">
@@ -91,7 +91,7 @@
           </section>
         </article>
         <article class="col-3 right">
-          <table id="customers" itemprop="aggregateRating">
+          <table id="customers" itemprop="aggregateRating" role="complementary">
           </table>
           <div class="footer">
               <button id="compareBtn" class="button"><i class="fa fa-balance-scale lf-hover-opacity "></i>Compare</button>
