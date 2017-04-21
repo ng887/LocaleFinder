@@ -1,546 +1,329 @@
-
-/*#headingDiv
+html,body
 {
-	width:94%;
-	height: 40px;
-	background-color:#e0ebeb;
-	margin-bottom: 0.5%;
-	margin-left: 4%;
-}*/
-body
-{
-	background-color:#e9ece5 /*#b3c2bf */;
-}
-#mainDiv
-{
-
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-}
-#metric,#area1,#area2
-{
-	height: 630px;
-	width: 32%;
-	background-color:  #c6d2cf /*#d5dddb /*#b3c2bf /*#3b3a36 #c0dfd9 /*#e0ebeb /* #d1e0e0*/;
-}
-#metric,#area1,#area2
-{
-	float: left;
-		
-}
-a
-{
-	cursor: pointer;
-}
-#head1,#head2,#head3
-{
-	height:14.6%; 
-	width:84%;
-	background-color:#6a6862/*#ffb833*/;
-	color: white;
-	margin-left: 9%;
-	
-}
-#head1
-{
-	background-color:#6a6862;
-}
-#crime,#school,#transport,#house,#income
-{
-	height: 14.6%;
-	width:84%;
-	/*background-color: #85837a /*#606060 /*#75D1FF /*#FF6666/*#3399ff*/;
-	margin-left: 9%;
-	text-align: center;
-	line-height:100%;
-	margin-top: 10%;
-	color: white;
-	font-size: 20px;
-}
-
-/*-----------------------*/
-#a1crime,#a1school,#a1transport,#a1house,#a1income
-{
-	height: 14.6%;
-	width:84%;
-	/*background-color:#FF7373/* #FFBFBF /*#FF9999 /*#FFB2B2*/ /*#d65cad*/
-	margin-left: 10%;
-	text-align: center;
-	margin-top: 10%;
-	
-}
-/*-----------------------*/
-#a2crime,#a2school,#a2transport,#a2house,#a2income
-{
-	height: 14.6%;
-	width:84%;
-	/*background-color: #FF7373;*/
-	margin-left: 9%;
-	text-align: center;
-	margin-top: 10%;
-	
-}
-#area1,#area2
-{
-	margin-left: 2%;
-}
-h2
-{
-	
-	text-align: center;
-	font-size: 1.3rem;
-	margin-top: 10%;
-}
-h3
-{
-	margin-top: 10%;
-	text-align: center;
-	font-size: 1.2rem;
-
-}
-
-#area1 h2, #area2 h2
-{
-	color: white;
-	font-weight: 100%;
-	line-height:90px; 
-	font-size: 40px;
-}
-/*#buttonDiv
-{
-	display: flex;
-	flex-direction: column;
-} */
-button
-{
-	margin-left: 30%;
-}	
-
-#compareOtherAreas
-{
-	margin-left: 20%;
-} 
-/*-----------------------------------*/
-
-#crime,#school,#transport,#house,#income
-{
-	background-color:#4d9989;
-}
-.AA
-{
-	background-color:#008000;
-}
-.A
-{
-	background-color: #248f24;
-}
-.BB
-{
-	background-color: #29a329  /*#00b300*/; 
-
-}
-.B
-{
-	background-color: #33cc33 /*#2eb82e*/;
-
-}
-.C
-{
-	background-color:#ff9933 /*#ff8533/* #FFAD5C*/;
-}
-.D
-{
-	background-color: #ff5c33 /*#ff704d/* #FF7A59*/;
-} 
-
-/*-------------------------------------*/
-/*
-.AA
-{
-	background-color: #3385ff;
-}
-.A
-{
-	background-color: #3377ff;
-}
-.BB
-{
-	background-color:  #3399ff;
-
-}
-.B
-{
-	background-color: #4db8ff;
-
-}
-.C
-{
-	background-color:  #FFAD5C;
-}
-.D
-{
-	background-color: #FF7A59;
-} */
-#pdf
-{
-	float: right;
-	margin-right: 5%;
-	
-}
-#pdf a
-{
-	color:#3b3a36; 
-}
-#quitornot
-{
-	margin-bottom: 5%;
-}
-#quitornot p
-{
-	margin-top:190%;
-	text-align: center;
-	margin-left: 4%;
-	margin-right: 4%;
-}
-#yes
-{
-	margin-left: 35%;
-}
-#popup-like a
-{
-	color:#3b3a36; 
-	font-weight: bold;
-}
-#popup-like a:hover
-{
-	color: #2dbcb6;
-}
-
-/*.modal
-{
-	z-index:3;
-	display:none;
-	padding-top:100px;
-	position:fixed;
-	left:0;
-	top:0;
-	width:100%;
 	height:100%;
-	overflow:auto;
-	background-color:rgb(0,0,0);
-	background-color:rgba(0,0,0,0.4);
+  background-color:#e9ece5;
 }
-.modal-content
+#viewDetails
 {
-	margin:auto;
-	background-color:#fff;
-	position:relative;
-	padding:0;
-	outline:0;
-	width:600px;
+  text-align:center;
+  margin-right:3%;
 }
-.modal-container
+.container 
 {
-	padding:0.01em 16px;
-} */
-
- @media only screen and (max-device-width: 680px) and (orientation: landscape)
- {
- 	
- 	#mainDiv
- 	{
- 		margin-left: 10%;
- 		
- 	}
- 	#metric,#area1,#area2
-	{
-		height: 900px;
-		width: 32%;
-		
-	}
-	#metric,#area1,#area2
-	{
-		float: left;
-		
-	}
-	#crime,#school,#transport,#house,#income
-	{
-		height: 92px;
-		width: 500px;
-		
-		margin-left: 7%;
-		text-align: center;
-		/*line-height: 100px;*/
-		margin-top: 10%;
-		
-	}
-	#crime
-	{
-		line-height: 90px;
-	}
-	#school 
-	{
-
-	}
-	#transport
-	{
-		line-height: 90px;
-	}
-
-	/*-----------------------*/
-	#a1crime,#a1school,#a1transport,#a1house,#a1income
-	{
-		height: 92px;
-		width: 92px;
-		
-		margin-left: 7%;
-		text-align: center;
-		/*line-height: 100px;*/
-		margin-top: 10%;
-		
-	}
-	/*-----------------------*/
-	#a2crime,#a2school,#a2transport,#a2house,#a2income
-	{
-		height: 92px;
-		width: 92px;
-		
-		margin-left: 7%;
-		text-align: center;
-		/*line-height: 100px;*/
-		margin-top: 10%;
-		
-	}
- }
-
-
-
-/* ipad/tablet; orientation-portrait */
-
-@media only screen and (device-width:768px) and (orientation:portrait)
-{
-	h2
-	{
-		font-size:1.7rem;
-	}
-	#metric,#area1,#area2
-	{
-		height: 650px;
-		font-size: 1.5rem;
-	}
-	#school,#income
-	{
-		line-height: 90px;
-	}
-	#crime,#school,#transport,#house,#income
-	{
-		height: 92px;
-		width: 190px;
-		margin-left: 9%;
-		margin-top: 10%;
-	}
-	#a1crime,#a1school,#a1transport,#a1house,#a1income
-	{
-		height: 92px;
-		width: 190px;
-		margin-left: 9%;
-		margin-top: 10%;
-	}
-	#a2crime,#a2school,#a2transport,#a2house,#a2income
-	{
-		height: 92px;
-		width: 190px;
-		margin-left: 9%;
-		margin-top: 10%;
-	}
-	#head1,#head2,#head3
-	{
-		height:46px; 
-		width:190px;
-		
-	}
-	#buttonDiv
-	{
-		margin-top: 100%;
-		margin-bottom: 25%;
-		
-	}
-	#findMoreAreas 
-	{
-		margin-left: 47%;
-		margin-right: 0%;
-	}
-	#compareOtherAreas
-	{
-		margin-left: 1%;
-	} 
-
+  margin: 0%;
+  margin-left:auto; 
+  margin-right:auto;
+  height: 100%;
+  width: 85%;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-@media only screen and (device-width:768px) and (orientation:landscape)
+.child2,.child3
 {
-	
-	#mainDiv
-	{
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-	#metric,#area1,#area2
-	{
-		height: 650px;
-		font-size: 1.5rem;
-	}
-	#school,#income
-	{
-		line-height: 90px;
-	}
-	#crime,#school,#transport,#house,#income
-	{
-		
-		margin-left: 9%;
-		margin-top: 10%;
-	}
-	#a1crime,#a1school,#a1transport,#a1house,#a1income
-	{
-		
-		margin-left: 9%;
-		margin-top: 10%;
-	}
-	#a2crime,#a2school,#a2transport,#a2house,#a2income
-	{
-		
-		margin-left: 9%;
-		margin-top: 10%;
-	}
-	#head1,#head2,#head3
-	{
-		
-		
-	}
-
+  margin-left: 2%;
 }
-/******************** for desktop *********************/
-
-@media screen  and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)  
+.child1,.child2,.child3
 {
-
-	#header,#footer
-	{
-		width: 100%;
-		margin-right: 0%;
-	}
-	#mainDiv
-	{
-
-		margin-left: 15%;
-		margin-right: 15%;
-	}
-	#metric,#area1,#area2
-	{
-		height: 730px;
-		width: 30%;
-		
-	}
-	#metric
-	{
-		float: left;
-		margin-left:4%; 
-		
-	}
-	#metric h4
-	{
-		margin-top: 3%;
-	}
-	#metric i
-	{
-		margin-top: 5%;
-	}
-	#crime,#school,#transport,#house,#income
-	{
-		height: 100px;
-		width: 230px;
-		margin-left: 10%;
-		text-align: center;
-		font-size: 16px;
-	}
-	#a1crime,#a1school,#a1transport,#a1house,#a1income,#a2crime,#a2school,#a2transport,#a2house,#a2income
-	{
-		width: 230px;
-		height: 100px;
-	}
-	#head1,#head2,#head3
-	{
-		height: 46px;
-		width: 230px;
-		margin-left: 10%;
-	}
-	#head3
-	{
-		margin-left: 9%;
-	}
-	#buttonDiv
-	{
-		margin-top: 5%;
-		margin-bottom: 5%;
-		margin-left: 20%;
-	}
-	
-	#findMoreAreas 
-	{
-		margin-left: 22%;
-		margin-right: 0%;
-	}
-	#compareOtherAreas
-	{
-		margin-left: 2%;
-	} 
-	#pdf
-	{
-		margin-right:17%;
-		margin-top: 2%;
-	}
-	.modal-content
-	{
-		width: 500px;
-	}
-
-	#quitornot p
-	{
-		font-size: 1.3rem;
-		margin-top: 63%;
-		text-align: center;
-		margin-left: 4%;
-		margin-right: 4%;
-	}
-	#yes
-	{
-		margin-left: 45%;
-	 	margin-right: 0%;
-	}
-	#no
-	{
-		margin-left: 0%;
-	}
-	.notLikeButtons
-	{
-		margin-top:12%;
-		margin-left: 4%;
-	}
-	#choice1,#choice2
-	{
-		margin-left: 40%;
-
-	}
-	
-	/*#noSection
-	{
-		margin-top: 5%;
-	}
-	.yesNoSection p
-	{
-		text-align: center;
-	}*/
+	margin-top: 5%;
+	margin-bottom: 5%;
+	height:95%;
+	width: 50%; 
+	background-color: #c6d2cf;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction:column;
+  -moz-flex-direction:column;
+  -ms-flex-direction:column;
+  flex-direction:column;
 }
 
+.metricDiv
+{
+  background-color:#4d9989;
+}
+
+.metricDiv 
+{
+ 
+  margin-top: 6%;
+  height:16%;
+  width: 84%;
+  margin-left: 8%;
+  color: white;
+  text-align: center;
+  line-height: 100%;
+  font-size:1.1em;
+}
+#heading h2
+{
+  color:#3b3a36;
+  font-size:1.5em; 
+  margin-top:10%;
+  margin-bottom: 0%;
+}
+#a1crime,#a1school,#a1school,#a1transport,#a1house,#a1income,#a2crime,#a2school,#a2school,#a2transport,#a2house,#a2income
+{
+  margin-top: 6%;
+  height:16%;
+  width: 84%;
+  margin-left: 8%;
+  text-align: center;
+  color:#ffffff;
+  font-size:2.8em;
+}
+ 
+.head
+{
+  margin-top: 5%;
+  margin-left: 8%;
+  height:8%;
+  width: 84%;
+  background-color:#6a6862;
+  color: white;
+  text-align: center;
+  font-size:1.1em;
+  line-height:100%;
+}
+.head a
+{
+  color:#ffffff;
+  cursor: pointer;
+}
+.head a:hover
+{
+  text-decoration: underline;
+ 
+}
+.head a:visited
+{
+  text-decoration:none;
+ 
+}
+#mName,#a1Name,#a2Name
+{
+  margin-top:3%;
+}
+.AA
+{
+  background-color:#008000;
+}
+.A
+{
+  background-color: #248f24;
+}
+.BB
+{
+  background-color: #29a329; 
+
+}
+.B
+{
+  background-color: #33cc33;
+
+}
+.C
+{
+  background-color:#ff9933;
+}
+.D
+{
+  background-color: #ff5c33;
+} 
+#legendMain
+{
+  width: 80%;
+  height: 35%;
+  border:1px solid #c6d2cf;
+  margin-left:10%;
+  margin-right: 10%;
+}
+.colorLegend
+{
+  display:flex;
+  flex-direction: column;
+  margin-left:30%;
+  margin-top:5%;
+}
+.colorChild-2
+{
+  height:20px;
+  width: 20px;
+  margin-left: 10%;
+  margin-bottom: 2%;
+  margin-top:3%;
+  border:1px black;
+  display: inline-block;
+} 
+#viewHomes
+{
+  margin-top: 7%;
+  margin-bottom:7%;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: flex;
+  flex-direction:column;
+  font-weight: bold;
+  font-size: 1.3em;
+  width:40%;
+}
+#homes
+{
+  cursor: pointer;
+}
+#choices
+{
+  display: flex;
+  flex-direction:column;
+  cursor: pointer;
+}
+
+#details
+{
+  background-color:#c0dfd9; 
+}
+
+#criteriaDescription
+{
+  margin-bottom: 10%;
+}
+#details h3
+{
+  text-align: center;
+  margin-bottom:3%;
+  font-size:1.3em;
+}
+p
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+#backtotop
+{
+  text-align: right;
+  margin-right: 0%;
+}
+#backtotop a:hover
+{
+  color:#3b3a36; 
+}
+
+
+@media only screen and (device-width: 768px)
+{
+  .head
+  {
+    line-height:250%;
+    font-size: 1.3em;
+  }
+  .metricDiv 
+  {
+    font-size: 1.5em;
+  }
+  .metricChild
+  {
+    margin-top:20%;
+  }
+  .contentChild
+  {
+    margin-top: 25%;
+  }
+}
+@media screen  and (min-device-width: 1200px) and (max-device-width: 1600px)
+{
+  .container
+  {
+    margin-left:15%;
+    margin-top:0%;
+    margin-right:0%;
+  }
+	.child1,.child2,.child3
+  {
+   height:100%;
+  }
+  .head
+  {
+    line-height: 180%;
+    font-size:1.3em; 
+  }
+  
+  .child1,.child2,.child3
+  {
+    width: 25%;
+
+  }
+  .metricDiv,#a1crime,#a1school,#a1school,#a1transport,#a1house,#a1income,#a2crime,#a2school,#a2school,#a2transport,#a2house,#a2income
+  {
+    height:15%;
+
+  }
+  .metricDiv
+  {
+    line-height: 200%;
+  }
+  
+  #legendMain
+  {
+    margin-left:18%;
+    margin-top: 8%;
+    width: 60%;
+    height:20%;
+  }
+  .colorLegend
+  {
+    margin-left: 12%;
+    flex-direction: row;
+  }
+  .legendChild
+  {
+    margin-left: 2%;
+  }
+  #viewHomes
+  {
+    margin:auto;
+    margin-top:5%;
+    text-align: center;
+    
+  } 
+  #choices
+  {
+    flex-direction:row;
+    margin-left: 40%;
+    margin-top:4%;
+  } 
+  #homes
+  {
+    width: 25%;
+    margin-left: 35%;
+  }
+  #choice2
+  {
+    margin-left:5%;
+  }
+  #details
+  {
+    margin-top:5%;
+  }
+  #viewDetails
+  {
+   margin-bottom: 0%;
+  }
+
+}
 
 

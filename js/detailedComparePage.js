@@ -4,19 +4,19 @@ $(document).ready(function()
 	var selection1 = localStorage.getItem('neighborhoods1')
 	var selection2 = localStorage.getItem('neighborhoods2')
 	document.getElementById("a1Name").innerHTML = selection1
-	document.getElementById("a2Name").innerHTML = selection2 
+	document.getElementById("a2Name").innerHTML = selection2
+	/*document.getElementById("homeArea1").innerHTML = selection1
+	document.getElementById("homeArea2").innerHTML = selection2 */
 
-	$('#area1').on('click', function() {
-    location.href = 'neighborDetail.html?from=c&name=' + selection1    
+	$('#a1Name').on('click', function() {
+    location.href = 'neighborDetail.html?name=' + selection1    
 	});
 
-	$('#area2').on('click', function() {
-    location.href = 'neighborDetail.html?from=c&name=' + selection2   
+	$('#a2Name').on('click', function() {
+    location.href = 'neighborDetail.html?name=' + selection2   
 	});
 
-	document.getElementById("choice1").innerHTML = selection1
-	document.getElementById("choice2").innerHTML = selection2 
-
+	
 
 
 	var crimes = localStorage.getItem('crimeRecords')
@@ -254,3 +254,4 @@ function setFinalValue2()
 function redirect() {
 	window.location.href = "finalPage.html";
 }
+

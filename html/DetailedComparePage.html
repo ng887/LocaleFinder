@@ -4,26 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Locale Finder</title>
+    <title>Locale Finder: Detailed Compare Page</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/html-semantics.css" />
     <link rel="stylesheet" type="text/css" href="../css/layout.css" />
     <link rel="stylesheet" type="text/css" href="../css/brand.css" />
     <link rel="stylesheet" type="text/css" href="../css/popup.css" />
-
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float" />
-   <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <link rel="stylesheet" href="../css/DetailedComparePage.css"/>
-    
     <script src="../js/less.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-
-   
-   <script type="text/javascript" src="../js/loadHeaderFooter.js"></script> 
+    <script type="text/javascript" src="../js/loadHeaderFooter.js"></script> 
 </head>
 
 <body>
@@ -31,136 +24,123 @@
     <div id = "heading">
         <h2>Here are the comparisons between the areas you chose:</h2>   
     </div>
-    <div id = "mainDiv">
-    
-    <div  id = "metric">
-        <div id = "head1">
-            <h3>METRICS</h3> 
-        </div> 
-        <div id = "crime">
-            <i class="fa fa-eye" aria-hidden="true" style="font-size:40px"></i>
-            <h4>Crime Rating</h4>
-            <!--<i id = "homeIcon" class="fa fa-home" aria-hidden="true"></i>-->
-        </div>
-        <div id = "school">
-            <i class="fa fa-university" aria-hidden="true" style="font-size:40px"></i>
-            <h4>School Rating</h4>
-        </div>
-        <div id = "transport">
-            <i class="fa fa-bus" aria-hidden="true" style="font-size:40px"></i>
-            <h4>Transport Rating</h4>
-        </div>
-        <div id = "house">
-            <i class="fa fa-home" aria-hidden="true" style="font-size:40px"></i>
-            <h4>House Price</h4>
-        </div>
-        <div id = "income">
-            <i class="fa fa-money" aria-hidden="true" style="font-size:40px"></i>
-            <h4>Average Income </h4>
-        </div>  
-    </div> <!-- metric div close -->
-
-    <a >
-    <div  id = "area1">
-        <div id = "head2">
-            <h3 id = "a1Name">AREA 1</h3>
-        </div> 
-         <div id = "a1crime">
-            <h2 id = "a1crimeText" class = "colorChange"></h2>
-        </div>
-        <div id = "a1school">
-            <h2 id = "a1schoolText" class = "colorChange"></h2>
-        </div>
-        <div id = "a1transport">
-            <h2 id = "a1transportText" class = "colorChange" ></h2>
-        </div>
-        <div id = "a1house">
-            <h2 id = "a1houseText" class = "colorChange"></h2>
-        </div>
-        <div id = "a1income">
-            <h2 id = "a1incomeText" class = "colorChange"></h2>
-        </div>  
+    <div id = "viewDetails">
+        <a href="#details"><i class="fa fa-info-circle" aria-hidden="true"></i> View Details</a>
     </div>
-    </a>
-    <a class= "clickableDiv">
-    <div  id = "area2">
-        <div id = "head3">
-            <h3 id = "a2Name">AREA 2</h3>
-        </div> 
-         <div id = "a2crime">
-            <h2 id = "a2crimeText"></h2>
-        </div>
-        <div id = "a2school">
-            <h2 id="a2schoolText"></h2>
-        </div>
-        <div id = "a2transport">
-            <h2 id = "a2transportText"></h2>
-        </div>
-        <div id = "a2house">
-            <h2 id = "a2houseText"></h2>
-        </div>
-        <div id = "a2income">
-            <h2 id = "a2incomeText"></h2>
-        </div>     
-    </div>
-    </a>
-    </div> <!-- mainDiv close -->
-    <div id = "pdf">
-        <a id = "sapdf" href=""><i class="fa fa-file-pdf-o" aria-hidden="true"></i> save as pdf</a>
-    </div>
-    <div id = "quitornot" class = "quitornot">
-       <!-- <p>Found your dream neighborhood and want to end at this point?</p>-->
-            <!-- <a href="../html/finalPage.html">YES </a>
-            <a id = "no"  href="">  NO</a> -->
-        <p>Found your dream neighborhood? <!--and would like to end at this point --></p>
-        <a  id = "yes" class="lf-like lf-button lf-button-brand">YES </a>
-        <a id = "no" class="lf-not-like lf-button lf-button-brand">NO </a>
+    <div id = "mainDiv" class = "container">
         
-    </div>
-    <div id='popup-like' class="popup">
-        <span class="lf-like lf-text-white lf-large lf-padding-large ">
-           <b>
-              I found my neighborhood and I Like..
-              <ul class="colLayout lf-small-margin lf-padding-large"></ul>
-              <a id = "choice1" class = "choice" onclick="setFinalValue1()"></a><br>
-              <a id = "choice2" class = "choice" onclick="setFinalValue2()"></a>
-            </b>
-        </span>
-            <div class="close ns-close"></div>
-    </div>
-    <div id='popup-not-like' class="popupNotLike">
-        <span class="lf-not-like lf-text-white lf-large lf-padding-large ">
-        <b> I didn't find my neighborhood yet.. </b>
-            <a href="map.html" class = "notLikeButtons lf-button lf-button-brand"> FIND MORE</a>
-        <a href="CompareNeighborhoods.html" class = "notLikeButtons lf-button lf-button-brand">COMPARE OTHERS</a>   
-        </span>
-            <div class="close ns-close"></div>
-    </div>
-        <!--<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">NO</button> 
-        <div id="id01" class = "modal">
-            <div class="modal-content">
-                <div class="modalContainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-button-brand"> FIND MORE</button></a>
-                    <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-button-brand">COMPARE OTHERS</button></a>
-                </div>
+        <div  id = "metric" class = "child1">
+            <div id = "head1" class="head">
+                <h3 id = "mName">METRICS</h3>
+            </div> 
+            <div id = "crime"  class = "metricDiv">
+                <i class="fa fa-bomb metricChild" aria-hidden="true" style="font-size:40px"></i>
+                <h4 > Crime Rating</h4>
             </div>
-        </div> -->
+            <div id = "school"  class = "metricDiv">
+                <i class="fa fa-university metricChild" aria-hidden="true" style="font-size:40px"></i>
+                <h4 >School Rating</h4>
+            </div>
+            <div id = "transport"  class = "metricDiv">
+                <i class="fa fa-bus metricChild" aria-hidden="true" style="font-size:40px"></i>
+                <h4>Transport Rating</h4>
+            </div>
+            <div id = "house"  class = "metricDiv">
+                <i class="fa fa-home metricChild" aria-hidden="true" style="font-size:40px"></i>
+                <h4>House Price</h4>
+            </div>
+            <div id = "income"  class = "metricDiv">
+                <i class="fa fa-money metricChild" aria-hidden="true" style="font-size:40px"></i>
+                <h4>Average Income </h4>
+            </div>  
+        </div> <!-- metric div close -->
+
+        <div  id = "area1" class = "child2">
+            <div id = "head2" class="head" itemscope itemtype = " http://schema.org/Place">
+                <a><h3 id = "a1Name">AREA 1</h3></a>
+            </div> 
+             <div id = "a1crime"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a1crimeText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a1school"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a1schoolText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a1transport"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a1transportText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a1house"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a1houseText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a1income"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a1incomeText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>  
+        </div>
+
+        <div  id = "area2" class= "child3">
+            <div id = "head3" class="head" itemscope itemtype = "http://schema.org/Place">
+                <a><h3 id = "a2Name">AREA 2</h3></a>
+            </div> 
+            <div id = "a2crime"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a2crimeText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a2school"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id="a2schoolText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a2transport"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a2transportText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a2house"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a2houseText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div>
+            <div id = "a2income"  class = "contentDiv" itemscope itemtype = "http://schema.org/Rating">
+                <h4 id = "a2incomeText" class = "contentChild" itemprop = "ratingValue"></h4>
+            </div> 
+        </div>
+    </div> <!-- mainDiv close -->
+    <div id = "legendMain">
+        <div  class="colorLegend">
+            <div class = "legendChild">
+                <span class = "color" style="display: inline-block;width: 1.5em;height: 1.5em;margin: 1px 0; border:1px solid black; background-color:#008000;font-size: 100%;text-align: center;"> &nbsp;</span> <i>5-star</i>
+            </div>
+            <div class = "legendChild">
+                <span class = "color" style="display: inline-block;width: 1.5em;height: 1.5em;margin: 1px 0; border:1px solid black; background-color:#248f24;font-size: 100%;text-align: center;"> &nbsp;</span> <i>4.5-star</i>
+            </div>
+            <div class = "legendChild">
+                <span class = "color" style="display: inline-block;width: 1.5em;height: 1.5em;margin: 1px 0; border:1px solid black; background-color:#29a329;font-size: 100%;text-align: center;"> &nbsp;</span> <i>4-star</i>
+            </div>
+            <div class = "legendChild">
+                <span class = "color" style="display: inline-block;width: 1.5em;height: 1.5em;margin: 1px 0; border:1px solid black; background-color:#33cc33;font-size: 100%;text-align: center;"> &nbsp;</span> <i>3.5-star</i>
+            </div>
+            <div class = "legendChild">
+                <span class = "color" style="display: inline-block;width: 1.5em;height: 1.5em;margin: 1px 0; border:1px solid black; background-color:#ff9933;font-size: 100%;text-align: center;"> &nbsp;</span> <i>3-star</i>
+            </div>
+            <div class = "legendChild">
+                <span class = "color" style="display: inline-block;width: 1.5em;height: 1.5em;margin: 1px 0; border:1px solid black; background-color:#ff5c33;font-size: 100%;text-align: center;"> &nbsp;</span> <i>less than 3-star</i>
+            </div>
+        </div>
+    </div>
     
-    <!--<div id = "buttonDiv">
-        <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top"> FIND MORE</button></a>
-        <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-red lf-opacity lf-padding-large lf-margin-top lf-large lf-margin-top">COMPARE OTHERS</button></a> 
-    </div>-->
-    <!--<section id = "yesSection" class="yesNoSection">
-        <p> On viewing the comparisons between the two neighborhoods, which one do you like the most?</p>
-            <a id = "option1" href="finalPage.html"> A </a>
-            <a id = "option2" href="finalPage.html"> B </a>
+    <div id = "viewHomes">
+        <a id = "homes" class ="lf-button lf-button-brand" href="compareFinalPage.html">View homes</a>
+    </div>
+    
+    <section id = "details" >
+        <br/>
+        <div id = "criteriaDescription">
+        <h3>The grades to the above criteria have been given on the following basis:</h3>
+        <p><i class="fa fa-bomb" aria-hidden="true" style="font-size:20px"></i><b>CRIME RATING:</b><br/> Neighborhoods with crime rate below 10% are graded A+. Neighborhoods with crime rate between 10-20%,are given an A grade. Neighborhoods with crime rate between 20-30%, given a B+ grade. Neighborhoods with crime rate between 30-40%,are given a B grade. Neighborhoods with crime rate between 40-50%, are given a C grade.Neighborhoods with crime rate 50% and above are given a D grade.</p> <br/>
+
+        <p><i class="fa fa-university" aria-hidden="true" style="font-size:20px"></i><b>SCHOOL RATING: </b><br/> Neighborhoods with a school rating equal to 10 are graded A+. Neighborhoods with a school rating of 9 are graded A. Neighborhoods with a school rating of 8 are graded B+. Neighborhoods with a school rating of 7 are graded B.Neighborhoods with a school rating of 6 are graded C.Neighborhoods with a school rating of 5 and below are graded D.</p> <br/>
+
+        <p><i class="fa fa-bus" aria-hidden="true" style="font-size:20px"></i><b>TRANSPORT RATING:</b><br/> Neighborhoods with very good public transportation are given A+ grade. Neighborhoods with good public transportation are given an A grade, with average public transportation are given a B grade, with below average public transportation are given a B grade.</p><br/>
+
+        <p><i class="fa fa-home" aria-hidden="true" style="font-size:20px"></i><b>HOUSE PRICE:</b><br/> Lower the average house price, the higher will be the grade. </p><br/>
+
+        <p> <i class="fa fa-money" aria-hidden="true" style="font-size:20px"></i><b>AVERAGE INCOME:</b><br/> If the average income of people living in that neighborhood is above 700K, the grade given is A+. If it is between 50-70K, the grade given is A else the grade given is B.</p>
+        <p id= "backtotop"><a href="#heading">Back to top </a></p>
+        </div>
     </section>
-    <section id = "noSection" class="yesNoSection">
-        <p> Not happy with the above Neighborhoods? You can find more neighborhoods or Compare other neighborhoods </p>
-        <a href="map.html"> <button id = "findMoreAreas" class = "lf-button lf-button-brand"> FIND MORE</button></a>
-        <a href="CompareNeighborhoods.html"><button id = "compareOtherAreas" class = "lf-button lf-button-brand">COMPARE OTHERS</button></a>   
-    </section> -->
+
     <div id='footer'></div>
     <script src="../js/detailedComparePage.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/criterion.js"></script>
