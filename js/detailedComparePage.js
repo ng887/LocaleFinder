@@ -9,11 +9,11 @@ $(document).ready(function()
 	document.getElementById("homeArea2").innerHTML = selection2 */
 
 	$('#a1Name').on('click', function() {
-    location.href = 'neighborDetail.html?name=' + selection1    
+    location.href = 'neighborDetail.html?from=c&name=' + selection1    
 	});
 
 	$('#a2Name').on('click', function() {
-    location.href = 'neighborDetail.html?name=' + selection2   
+    location.href = 'neighborDetail.html?from=c&name=' + selection2   
 	});
 
 	
