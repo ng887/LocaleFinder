@@ -42,6 +42,9 @@ p
 
 @media only screen  and (min-device-width: 1200px) and (max-device-width: 1600px)   
 {
-	
+	#team
+	{
+		margin-bottom: 12%;
+	}
 }
 
