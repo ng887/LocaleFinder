@@ -79,4 +79,8 @@
   {
     margin-left: 90%;
   }
+   #suggestionMain,#suggestionNames{
+      margin:0 !important;
+      padding: 0!important;
+   }
 }
