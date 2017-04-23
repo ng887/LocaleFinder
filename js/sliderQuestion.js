@@ -1,5 +1,3 @@
-
-//add by neha
 $(function() {
 
     var current_fs, next_fs, previous_fs; //fieldsets
@@ -85,7 +83,6 @@ $(function() {
 
 });
 
-//add by rachel
 $(function() {
     var survey = { "activity": "", "kids": "", "income": "", "transportation": "" };
     $(".q1").click(function() {
@@ -115,8 +112,7 @@ $(function() {
         // document.getElementById("doneButton").disabled = false;
         //   selected[3] = true;
     });
-
-    //add by neha 
+  
     $(".submit").click(function() {
 
         console.log(survey);
@@ -124,48 +120,5 @@ $(function() {
         var url = "../html/SuggestionsPage.html";
         window.location(url);
     });
-    // end neha
+   
 });
-
-//add by rashmitha
-/*var slideIndex = 1;
-var selected = [false, false, false, false];
-
-showDivs(slideIndex);
-$(".counter").html((slideIndex)+"/4");
-function plusDivs(n) {
-  var counter = slideIndex + n;
-  $(".counter").html(counter+"/4");
-  showDivs(slideIndex += n);
-}
-//modified by Rashmitha
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slider");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-
-  if (slideIndex == 1) {
-    document.getElementById("leftArrow").disabled = true;
-  } else {
-    document.getElementById("leftArrow").disabled = false;
-  }
-
-  if (slideIndex == x.length) {
-  document.getElementById('doneButton').style.visibility = 'visible';
-  document.getElementById("doneButton").disabled = true;
-  document.getElementById('rightArrow').style.visibility = 'hidden';
-  } else {
-    document.getElementById('doneButton').style.visibility = 'hidden';
-  document.getElementById('rightArrow').style.visibility = 'visible';
-  }
-  if (!selected[slideIndex-1]) {
-    document.getElementById("rightArrow").disabled = true; 
-  } else {
-    document.getElementById("rightArrow").disabled = false; 
-  }
-}*/
