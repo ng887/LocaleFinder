@@ -1,20 +1,18 @@
-
-//add by Neha
 var retrievedObject = localStorage.getItem('survey');
 var survey = JSON.parse(retrievedObject);
-//add by rachel
+
 /* queations to cretirion mapping explaination:
 1)if user have kis, give credit to top three ares with lowest crime and highest shcool rate
 2)if user use public transportation daily or a fews time a week, give credit to top three areas with the most bus stop
 3)user's income and house price mapping:
-user's income in '10-50',  give credit to top three areas with house price above '200' in ascding order
-user's income in '50-100',  give credit to top three areas with house price above '500' in ascding order
-user's income in '100-150',   give credit to top three areas with house price above '800' in ascding order
-user's income in '150+',  give credit to top three areas with house price above '100' in ascding order
+	user's income in '10-50',  give credit to top three areas with house price above '200' in ascding order
+	user's income in '50-100',  give credit to top three areas with house price above '500' in ascding order
+	user's income in '100-150',   give credit to top three areas with house price above '800' in ascding order
+	user's income in '150+',  give credit to top three areas with house price above '100' in ascding order
 4)user's activity mapping:
-user select hiking, give credit to top three area where support hiking activity
-user select swimming, give credit to top three area where support swimming activity
-user select travelling, give credit to top three area where support travelling activity
+	user select hiking, give credit to top three area where support hiking activity
+	user select swimming, give credit to top three area where support swimming activity
+	user select travelling, give credit to top three area where support travelling activity
 
 At last, sort areas by credit and choose top three
 */
@@ -52,7 +50,7 @@ suggestionList.sort(function(a, b) {
     return (a.score < b.score) ? 1 : ((a.score > b.score) ? -1 : 0)
 });
 console.log(suggestionList);
-//add by reache --03/30
+
 var suggestedAreaDetail = [];
 var areaDetail = localStorage.getItem('areaDetail');
 var areaDetailObj = JSON.parse(areaDetail);
@@ -66,7 +64,7 @@ for(var i in suggestionList){
     }
 }
 console.log(suggestedAreaDetail);
-//end --03/30
+
 //this function to form the suggesting list according to filtered neighborhood, credit and criteria
 function setScoreToNeighbours(suggestedNeighbours,credit,criteria,sport){
     var modified = false;
@@ -76,23 +74,13 @@ function setScoreToNeighbours(suggestedNeighbours,credit,criteria,sport){
           if(suggestionList[i].area == suggestedNeighbours[n].area){
             var origScore = parseInt(suggestionList[i].score);
             suggestionList[i].score = origScore + parseInt(credit)
-            /*if(typeof suggestionList[i].detail == "undefined")
-                  suggestionList[i].detail = {};
-            suggestionList[i].detail[criteria] = suggestedNeighbours[n].data;
-            if(typeof sport !="undefined")
-                suggestionList[i].detail[criteria].sport = sport;*/
             modified = true;
           }
       }
       if(!modified){
           suggestionList[i] = {};
           suggestionList[i].area = suggestedNeighbours[n].area;
-          suggestionList[i].score = credit;
-          /*if(typeof suggestionList[i].detail == "undefined")
-               suggestionList[i].detail = {};
-          suggestionList[i].detail[criteria] = suggestedNeighbours[n].data;
-          if(typeof sport !="undefined")
-              suggestionList[i].detail[criteria].sport = sport;*/
+          suggestionList[i].score = credit;          
       }else modified = false;
     }
 
@@ -139,77 +127,25 @@ function getNeighbourByIncome(minHousePrice){
 //get top three highest rating school area
 function getNeighbourBySchool(){
      var schoolRating = localStorage.getItem("schoolRating");
-     var schoolRatingObj = JSON.parse(schoolRating);
-    //  var neighbours = [schoolRatingObj[0],schoolRatingObj[1],schoolRatingObj[2]];
-    //Start Edit by sirisha
-    var neighbours = schoolRatingObj.slice(0,neighborhood.top);
-    //End edited
+     var schoolRatingObj = JSON.parse(schoolRating);   
+    var neighbours = schoolRatingObj.slice(0,neighborhood.top);   
      return neighbours;
 }
 //get top three least crime area
 function getNeighbourByCrime(){
-  //{ area: 'Queen Anne',          crimeCount: '2,448',  },
    var crimeRecords = localStorage.getItem("crimeRecords");
    var crimeRecordsObj = JSON.parse(crimeRecords);
-  //  var neighbours = [crimeRecordsObj[0],crimeRecordsObj[1],crimeRecordsObj[2]];
-  //Start edit by sirisha
-  var neighbours = crimeRecordsObj.slice(0,neighborhood.top);
-  //end edit
+   var neighbours = crimeRecordsObj.slice(0,neighborhood.top);
    return neighbours;
 }
 //crime display
 
-//add by Neha
-/*Theme 01 - Same shades color all graphs*/
-/*
-var graphBgColor='#fff';
-var color1="#ffb3b3";
-var color2="#990000";
-var color3="#4d0000";
-*/
 
-/*Theme 02 - Different Colors dark bg all graphs*/
-/*
-var graphBgColor='#000000';
-var color1="#E0B2FF";
-var color2="#FF9C59";
-var color3="#B2E8B2";
-*/
-
-/*Theme 03 - Different Colors light bg all graphs*/
+/*Graph Color Theme - Different Colors light bg all graphs*/
 var graphBgColor='#fff';
 var color1="#FF7D7D";
 var color2="#B870FF";
 var color3="#73D573";
-
-
-/*------------------Theme 04 - Different Color Graphs -------- DONOT USE IT */
-/*
-var crimeGraphBgColor='#000000';
-var crimeColor1="#6600cc";
-var crimeColor2="#8c1aff";
-var crimeColor3="#cc99ff";
-
-
-var incomeGraphBgColor='#000000';
-var incomeColor1="#993d00";
-var incomeColor2="#ff6600";
-var incomeColor3="#ffd1b3";
-
-
-var priceGraphBgColor='#000000';
-var priceColor1="#006600";
-var priceColor2="#00b300";
-var priceColor3="#e6ffe6";
-
-
-var schoolGraphBgColor='#000000';
-var schoolColor1="#000099";
-var schoolColor2="#0000e6";
-var schoolColor3="#4d4dff";
-*/
-
-
 
 $("#crimeContainer").CanvasJSChart(displayCrime());
 
@@ -247,19 +183,7 @@ function displayCrime(){
 	};
   return options;
 };
-//data for bar chart
-/*the data object is
-dataObj = {
-title:"",
-ytitle:"",
-detail:[
-{name:"",data:""},
-{name:"",data:""},
-{name:"",data:""}
-]
-}
 
-*/
 //income display
 var dataObj = {
   //title:'Average Income in Three Area',
@@ -362,25 +286,12 @@ function displayHorizontalBarChart(dataObj){
   return options;
 }
 
-/*
-for(i=1; i<4;i++){
-    $('#icons').append('<span class="fa-stack fa-5x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+i +'</strong> </span>')
-}
-
+/* Top Three Suggested Neighborhood Names */
 for(i = 0; i < 3; i++) {
     y=i+1;
 
     $('#suggestionNames ul').append(
-        $('<li>').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/>')
-            .append(
-            $('<a>').attr('href', "neighborDetail.html?from=s&name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase())));
-}*/
-
-for(i = 0; i < 3; i++) {
-    y=i+1;
-
-    $('#suggestionNames ul').append(
-        $('<li class="desktopLayout" style="align-items: center">').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/><p>')
+        $('<li role="menuitem" class="desktopLayout" style="align-items: center">').append('<div class="visible"><span class="fa-stack fa-4x">  <i class="fa fa-map-marker fa-stack-2x"></i> <strong class="fa-stack-1x map-marker-text">'+y +'</strong> </span></div><br/><p>')
             .append(suggestedAreaDetail[i].name.toUpperCase()).append(
             $('<a>').attr('href', "neighborDetail.html?from=s&name=" + suggestedAreaDetail[i].name).addClass('lf-padding-small lf-link').append('view details'))
             );
@@ -408,8 +319,7 @@ $(document).ready(function(){
     for(i = 0; i < 3; i++) {
         $('#popup-like ul').append($('<a class="lf-text-white">').attr('href', "../html/finalPage.html")
           .attr('onclick', 'setFinalSelection("'+suggestedAreaDetail[i].name+'")')
-          .addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase()));
-          
+          .addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase()));          
 
         //$('#popup-like ul').append($('<a class="lf-text-white">').attr('href', "neighborDetail.html?name=" + suggestedAreaDetail[i].name).addClass('lf-link').append(suggestedAreaDetail[i].name.toUpperCase()));
       //  $('#popup-like form').append('<input type="radio" name="top" value="top' + i + '">'+suggestedAreaDetail[i].name+'</input><br/>');
