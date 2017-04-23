@@ -10,8 +10,8 @@ figcaption h2{
   color: white;
 }
 .intoductionImages{
-  width:100%;
-  height: 110rem;
+ /* width:100%;
+  height: 110rem;*/
   background-color: #ddeeeb;
   border-radius: 5px;
 }
