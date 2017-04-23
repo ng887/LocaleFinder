@@ -119,8 +119,8 @@ figure.snip0016:hover figcaption::before {
 }
 @media only screen and (min-width: 1025px) {
   .intoductionImages{
-    width:90%;
-    height: 40rem;
+    /*  width:90%;
+    height: 40rem;*/
     margin: 1% 4%;
   }
 }
