@@ -15,7 +15,7 @@
   border-radius: 3%;
 }
 .graphicsWrapper .graphicsContainer {
-  height: 310px;
+  height: 280px;
   margin: 0 4% 4% 4%;
   /* border-top: solid;
             border-bottom: solid;
@@ -27,7 +27,8 @@
   margin: 0;
 }
 .graphicsWrapper .graphicsContainer div canvas {
-  width: 80%;
+  width: auto!important;
+  height: 277px!important
 }
 .graphicItem {
   height: 50%;
@@ -48,7 +49,8 @@
 /*Desktop*/
 @media only screen and (min-width: 1025px) {
   .graphicsWrapper {
-    width: 100%;
+    width: 77%;
+
     /*margin: 3%;*/
     border-radius: 3%;
     /*padding: 3% 0 3% 0;*/
@@ -57,7 +59,8 @@
     border: 0;
   }
   .graphicsWrapper div canvas {
-    width: 95% !important;
+    width: auto!important;
+    height: 280px!important;
     padding: 2%;
   }
   .graphicItem {
