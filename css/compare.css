@@ -43,6 +43,12 @@ img{
   padding: 3%;
   text-align: center;
 }
+select{
+  width:100%;
+  height: 50px;
+  font-size: 1rem;
+  margin: 3% 2%;
+}
 
 button{
   font-weight: bold;
@@ -73,6 +79,12 @@ button{
  }
  #errorMessage1, #errorMessage2{
    margin: 0% 18%;
+ }
+ select{
+   width:70%;
+   height: 50px;
+   font-size: 1rem;
+   margin: 3% 10%;
  }
 
 
