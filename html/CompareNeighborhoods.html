@@ -32,13 +32,12 @@
     <div class="heading">
         <h2 role="heading">Let's Compare the neighborhoods</h2>
     </div>
-    <form>
     <div class="compareContainer" role="main">
         <section>
             <img itemprop="photo" itemscope itemtype="http://schema.org/photo" id="leftImg" src="../image/fremont.jpg" alt="NeighborhoodImage1" required aria-required="true">
-            <!-- <input id="leftInput" type="text" list="neighborhoods1" name="neighbor_names" placeholder="Enter a neighborhood" > -->
-            <!-- <p id="errorMessage1" aria-hidden=true></p> -->
-            <!-- <datalist itemscope itemtype="http://schema.org/Place" id="neighborhoods1" 	role="listbox" aria-multiselectable="false" >
+            <input id="leftInput" type="text" list="neighborhoods1" name="neighbor_names" placeholder="Enter a neighborhood" >
+            <p id="errorMessage1" aria-hidden=true></p>
+             <datalist itemscope itemtype="http://schema.org/Place" id="neighborhoods1" 	role="listbox" aria-multiselectable="false" >
                 <option itemprop="name" value="University District">
                     <option itemprop="name" value="Queen Anne"></option>
                     <option itemprop="name" value="South Lake Union"></option>
@@ -48,25 +47,13 @@
                     <option itemprop="name" value="Capitol Hill"></option>
                     <option itemprop="name" value="Northgate"></option>
                     <option itemprop="name" value="Alki"></option>
-            </datalist> -->
-            <select required id="leftInput" id="neighborhoods1" name="neighborhoodNames">
-              <p id="errorMessage1" aria-hidden=true></p>
-                <option value="" disabled selected>Select a Neighborhood</option>
-                <option value="Queen Anne">Queen Anne</option>
-                <option value="South Lake Union">South Lake Union</option>
-                <option value="Ballard">Ballard</option>
-                <option value="Fremont">Fremont</option>
-                <option value="Capitol Hill">Capitol Hill</option>
-                <option value="Northgate">Northgate</option>
-                <option value="Downtown">Downtown</option>
-                <option value="Alki">Alki</option>
-            </select>
+            </datalist>
         </section>
         <section>
             <img itemprop="photo" itemscope itemtype="http://schema.org/photo" id='rightImg' src="../image/ud.jpg" alt="NeighborhoddImage2">
-            <!-- <input id="rightInput" type="text" list="neighborhoods2" name="neighbor_names2" placeholder="Enter a neighborhood" required> -->
-            <!-- <p id="errorMessage2" aria-hidden=true></p> -->
-            <!-- <datalist itemscope itemtype="http://schema.org/Place" id="neighborhoods2" 	role="listbox" aria-multiselectable="false" aria-required="true">
+            <input id="rightInput" type="text" list="neighborhoods2" name="neighbor_names2" placeholder="Enter a neighborhood" required>
+            <p id="errorMessage2" aria-hidden=true></p>
+            <datalist itemscope itemtype="http://schema.org/Place" id="neighborhoods2" 	role="listbox" aria-multiselectable="false" aria-required="true">
                 <option itemprop="name" value="University District"></option>
                 <option itemprop="name" value="Queen Anne"></option>
                 <option itemprop="name" value="South Lake Union"></option>
@@ -76,19 +63,7 @@
                 <option itemprop="name" value="Capitol Hill"></option>
                 <option itemprop="name" value="Northgate"></option>
                 <option itemprop="name" value="Alki"></option>
-            </datalist> -->
-            <select required id="rightInput" id="neighborhoods2" name="neighborhoodNames">
-              <p id="errorMessage2" aria-hidden=true></p>
-                <option value="" disabled selected>Select a Neighborhood</option>
-                <option value="Queen Anne">Queen Anne</option>
-                <option value="South Lake Union">South Lake Union</option>
-                <option value="Ballard">Ballard</option>
-                <option value="Fremont">Fremont</option>
-                <option value="Capitol Hill">Capitol Hill</option>
-                <option value="Northgate">Northgate</option>
-                <option value="Downtown">Downtown</option>
-                <option value="Alki">Alki</option>
-            </select>
+            </datalist>
         </section>
     </div>
     <div class="compareButton">
