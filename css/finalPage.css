@@ -28,7 +28,7 @@ p  a
 }
 #thankyou
 {
-	margin-top:12%;
+	margin-top:31%;
 	margin-bottom:3%;
 	
 }
@@ -46,6 +46,10 @@ p
 	#team
 	{
 		margin-bottom: 12%;
+	}
+	#thankyou
+	{
+	margin-top:12%;
 	}
 }
 
